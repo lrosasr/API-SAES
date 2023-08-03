@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+			body{
+				margin: 0;
+				box-sizing: border-box;
+			}
+			main{
+				height: 100vh;
+				width: 100vw;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			header{
+				z-index:100;
+				position: fixed;
+				width:100%;
+				font-size:1.3em;
+				padding:0.7em;
+				color: #fff;
+				background-color:#6e0139;
+				flex-direction: column;
+			}
+			footer{
+				z-index:100;
+				width: 100vw;
+				padding:0.7em;
+				font-size: 1.1em;
+				color: rgb(178, 178, 178);
+				background-color:#6e0139;	
+				position: fixed;
+				bottom: 0;
+				display: flex;
+				flex-flow: row wrap;
+			}
+			footer p{
+				font-size: 0.7em;
+				margin:0;
+				width: 49%;
+			}
+			footer a{
+				color: rgb(178, 178, 178);
+				font-weight: bold;
+
+			}
+			.cpc_p{
+				padding: 0;
+				display: flex;
+				align-items: center;
+				text-align: right;
+				justify-content: end;
+			}
+			.cpc_p span{
+				margin: 0 3px 0 3px;
+				font-size: 1.5em;
+			}
+			.cpc_p a{
+				margin: 0 0 0 3px;
+			}
+			.login-cont{
+				box-sizing: border-box;
+				text-align: center;
+				font-size: 1.5em;
+			}
+			.login-cont input{
+				width:8em;
+				font-size: 0.8em;
+
+			}
+			#captcha-wall{
+				visibility: hidden;
+				z-index:50;
+				position: fixed;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100vw;
+				height: 100vh;
+				background-color: #cccccc;
+			}
+			#captcha-cont{
+				width: 25%;
+				padding: 20px;
+				border-radius: 10px;
+				
+			}
+			.boton{
+				border:0;
+				border-radius: 10px;
+				background-color: #6e0139;
+				color: #fff;
+				padding: 0.2em;
+			}
+
+			#captcha-img{
+				border: 1px solid #000;
+				width: 100%;
+				height: 100px;
+				margin-bottom: 10px;
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+			}
+			#error{
+				display: none;
+				margin:0px;
+				background-color: #ff4a4a;
+				width: 100%;
+				height: 100%;
+			}
+			#captcha-input{
+				font-family:'Courier New', Courier, monospace;
+				width:40%;
+				height: 34px;
+				padding: 0;
+				text-align: center;
+				font-size: 1.5em;
+				letter-spacing: 0.7em;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h2 style="margin:0;">1. Ingresa tus datos de acceso del SAES</h2>
+		</header>
+		<main>
+			<div id="captcha-wall">
+				<section id="captcha-cont">
+					<img id="captcha-img">
+					<input type="text" id="captcha-input" maxlength="3"><button onclick="main('captcha')" class="boton" style="width:30%;height: 34px;float: right;">Verificar</button>
+				</section>
+			</div>
+			<section class="login-cont">
+				<table>
+					<tr>
+						<td style="text-align: right;">Boleta:</td>
+						<td><input type="text" id="saes_usr" maxlength="13" class="test"></td>
+					</tr>
+					<tr>
+						<td style="text-align: right;">Contraseña:</td>
+						<td><input type="password" name="saes_psw"></td>
+					</tr>
+					<tr>
+						<td id="status-cont" colspan="2">
+							<div id="error"><p style="margin: 0px;">Error: XD</p></div>
+							<!-- aqui poner captcha y errores -->
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2"><div class="boton" id="botonLgn" onclick="inicar()">Enviar datos</div></td>
+					</tr>
+				</table>
+			</section>
+		</main>
+		<footer>
+			<p>*datos de contacto*, , derechos de redistribucion**</p><p class="cpc_p">Hecho con <span>&hearts;</span> por el <a href="#">Club de Programacion Competitiva ESFM</a></p>
+			<p><em>version 0.0.1 (23/jul/2023)</em> git:<a href="github.com">**poner el hash del ultimo push a master con href al repo**</a></p>
+		</footer>
+	</body>
+	<script>
+		clientID = "";
+
+		function xhr(data){
+			let xhttp = new XMLHttpRequest();
+			let r = {"status":null,"response":null};
+			xhttp.onload = function() {
+				r["status"] = xhttp.status;
+				r["response"] = JSON.parse(this.responseText);
+			};
+			xhttp.open("POST", "/xhr", true);
+			xhttp.setRequestHeader('Content-type', 'application/json');
+			xhttp.send(data);
+			return r;
+		}
+
+		function main(f=null){
+			switch(f){
+				case "getID":
+					let respID = post(JSON.stringify({}))
+					clientID = respID.id
+					break;
+				case "wait":
+					break;
+				case "captcha":
+					let data = {}
+					data["boleta"] = document.getElementById("saes_usr").value;
+					data["password"] = document.getElementById("saes_psw").value;
+					data["captcha"] = document.getElementById("captcha-input").value;
+					let resp = xhr(JSON.stringify(data))
+					if(resp["status"] == 200){
+						//crear un iframe y renderizar ahi el template 
+					}else{
+						//mostrar el error y reiniciar proceseso
+					};
+					break;
+				default:
+					//main llamado sin argumentos
+					break;
+			}
+		};
+
+		function fila_loop(){
+			let data = JSON.stringify({"id":clientID,"req":"alive"})
+			let xhttp = new XMLHttpRequest();
+			xhttp.onload = function() {
+				resp = JSON.parse(this.responseText);
+				switch (xhttp.status) {
+					case 200:
+						document.getElementById("captcha-img").style.backgroundImage = "url('" + resp.img + "')"
+						//pasar directo al captcha
+						//no hacer self-timeout
+						document.getElementById("captcha-wall").style.visibility = "visible"
+						break;
+					case 530:
+						let tmp = document.getElementById("error")
+						tmp.style.display = "block"
+						tmp.innerHTML = "Espera por favor. Lugar en la fila: " + resp.pos;
+						//seguir esperando en la fila y mostrar lugar recibido
+						setTimeout(() => {
+							fila_loop()
+						}, 3000);
+						break;
+					case 552:
+						//el ID no esta en el server. recargar pagina
+						break;
+					default:
+						break;
+				}
+			}
+			xhttp.open("POST", "/xhr", true);
+			xhttp.setRequestHeader('Content-type', 'application/json')
+			xhttp.send(data);		
+		};
+
+
+
+		function inicar() {
+			//verificar que bolta y password esten llenados
+			let xhttp = new XMLHttpRequest();
+			xhttp.onload = function() {
+				//leer si se nos asigno un id 
+				///////document.getElementById("demo").innerHTML = this.responseText;
+				//resp = this.JSON
+				if(xhttp.status == 200){
+					let resp = JSON.parse(this.responseText);
+					clientID = resp.id;
+					setTimeout(() => {
+						fila_loop()
+					}, 700);
+				}else{
+					alert("Error al contactar con el backend");
+				}
+			}
+			xhttp.open("POST", "/xhr", true);
+			xhttp.setRequestHeader('Content-type', 'application/json')
+			xhttp.send(JSON.stringify({}));
+		}
+	</script>
+</html>
