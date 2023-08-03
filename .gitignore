@@ -1,3 +1,21 @@
+# Ignorando seguimiento de archivos 
+# Dependiendo de cada aportacion se pueden
+# ignorar otros path o extensiones.
+
+# Flutter
+
+uiapi/android/
+uiapi/ios/
+uiapi/linux/
+uiapi/macos/
+uiapi/test/
+uiapi/windows/
+uiapi/.gitignore
+
+
+######################################
+######################################
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
