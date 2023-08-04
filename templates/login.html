@@ -46,6 +46,14 @@
 				font-weight: bold;
 
 			}
+			iframe{
+				visibility: hidden;
+				z-index: 200;
+				position: fixed;
+				width: 100vw;
+				height: 100vh;
+				background-color: rgba(50, 50,50, 0.5)
+			}
 			.cpc_p{
 				padding: 0;
 				display: flex;
@@ -79,7 +87,7 @@
 				align-items: center;
 				width: 100vw;
 				height: 100vh;
-				background-color: #cccccc;
+				background-color: #cccccc; /* rgba(50, 50,50, 0.5) */
 			}
 			#captcha-cont{
 				width: 25%;
@@ -126,6 +134,7 @@
 			<h2 style="margin:0;">1. Ingresa tus datos de acceso del SAES</h2>
 		</header>
 		<main>
+			<iframe id="editar" title="Editar datos personales"></iframe>
 			<div id="captcha-wall">
 				<section id="captcha-cont">
 					<img id="captcha-img">
@@ -171,14 +180,14 @@
 			};
 			xhttp.open("POST", "/xhr", true);
 			xhttp.setRequestHeader('Content-type', 'application/json');
-			xhttp.send(data);
+			xhttp.send(JSON.stringify(data));
 			return r;
-		}
+		};
 
 		function main(f=null){
 			switch(f){
 				case "getID":
-					let respID = post(JSON.stringify({}))
+					let respID = post({})
 					clientID = respID.id
 					break;
 				case "wait":
@@ -188,9 +197,14 @@
 					data["boleta"] = document.getElementById("saes_usr").value;
 					data["password"] = document.getElementById("saes_psw").value;
 					data["captcha"] = document.getElementById("captcha-input").value;
-					let resp = xhr(JSON.stringify(data))
+					let resp = xhr(data)
 					if(resp["status"] == 200){
-						//crear un iframe y renderizar ahi el template 
+						let iframe = document.getElementById("editar") //TODO: poner el iframe en el body
+						//renderizar respuesta (editar.html) en un iframe
+						iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(resp["respose"].html);
+						//deberiamos invisibilizar todo lo demas?
+						iframe.style.visibility = "visible";
+						//
 					}else{
 						//mostrar el error y reiniciar proceseso
 					};
