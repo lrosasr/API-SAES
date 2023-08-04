@@ -87,7 +87,7 @@
 				align-items: center;
 				width: 100vw;
 				height: 100vh;
-				background-color: #cccccc; /* rgba(50, 50,50, 0.5) */
+				background-color: rgba(50, 50,50, 0.5)
 			}
 			#captcha-cont{
 				width: 25%;
@@ -106,7 +106,7 @@
 			#captcha-img{
 				border: 1px solid #000;
 				width: 100%;
-				height: 100px;
+				height: 120px;
 				margin-bottom: 10px;
 				background-repeat: no-repeat;
 				background-size: 100% 100%;
@@ -165,7 +165,7 @@
 		</main>
 		<footer>
 			<p>*datos de contacto*, , derechos de redistribucion**</p><p class="cpc_p">Hecho con <span>&hearts;</span> por el <a href="#">Club de Programacion Competitiva ESFM</a></p>
-			<p><em>version 0.0.1 (23/jul/2023)</em> git:<a href="github.com">**poner el hash del ultimo push a master con href al repo**</a></p>
+			<p><em>version 0.0.2 (23/jul/2023)</em> git:<a href="github.com">**poner el hash del ultimo push a master con href al repo**</a></p>
 		</footer>
 	</body>
 	<script>
@@ -184,9 +184,18 @@
 			return r;
 		};
 
+		function mostrarError(info){
+			let tmp = document.getElementById("error");
+			tmp.style.display = "block";
+			tmp.innerHTML = info;
+		};
+
 		function main(f=null){
 			switch(f){
 				case "getID": //Obtener ID del server
+					if(document.getElementById("saes_usr").value == "" || document.getElementById("saes_psw").value == ""){
+						mostrarError("Debes escribir tus credenciales de acceso para continuar");
+					};
 					let respID = xhr({})
 					clientID = respID.id
 					main("wait");
@@ -201,9 +210,7 @@
 							tmp2.style.visibility = "visible";
 							break;			
 						case 530: //seguir esperando en la fila y mostrar lugar recibido
-							let tmp = document.getElementById("error")
-							tmp.style.display = "block"
-							tmp.innerHTML = "Espera por favor. Lugar en la fila: " + respw["response"].pos;
+							mostrarError("Espera por favor. Lugar en la fila: " + respw["response"].pos);
 							setTimeout(() => {main("wait")}, 2500);
 							break;
 						case 552:
@@ -221,7 +228,7 @@
 					data["captcha"] = document.getElementById("captcha-input").value;
 					let resp = xhr(data)
 					if(resp["status"] == 200){
-						let iframe = document.getElementById("editar") //TODO: poner el iframe en el body
+						let iframe = document.getElementById("editar");
 						//renderizar respuesta (editar.html) en un iframe
 						iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(resp["respose"].html);
 						//deberiamos invisibilizar todo lo demas?
@@ -235,6 +242,23 @@
 					break;
 			}
 		};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		function fila_loop(){
 			let data = JSON.stringify({"id":clientID,"req":"alive"})
