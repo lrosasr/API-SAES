@@ -222,15 +222,16 @@
 					};
 					break;
 				case "captcha":
-					let data = {}
+					//verificar de nuevo credenciales escritas??
+					//TODO: Verificar que se haya escrito algo en el captcha-input
+					let data = {"req":"captcha"};
 					data["boleta"] = document.getElementById("saes_usr").value;
 					data["password"] = document.getElementById("saes_psw").value;
 					data["captcha"] = document.getElementById("captcha-input").value;
-					let resp = xhr(data)
+					let resp = xhr(data);
 					if(resp["status"] == 200){
 						let iframe = document.getElementById("editar");
-						//renderizar respuesta (editar.html) en un iframe
-						iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(resp["respose"].html);
+						iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(resp["respose"].html);//renderizar respuesta (editar.html) en un iframe
 						//deberiamos invisibilizar todo lo demas?
 						iframe.style.visibility = "visible";
 					}else{

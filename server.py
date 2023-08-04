@@ -85,6 +85,16 @@ def index_login():
 						return jsonify({"img":"data:image/png;base64," + imagen_captcha}), 200
 					else:
 						return jsonify({"pos":lugar}), 530
+				case "captcha":
+					if( not (data.get("boleta") and data.get("password") and data.get("captcha")) ):
+						fila.eliminar(data.get("id"))
+						return jsonify({"error":"informacion de login incompleta"}), 505
+					if(not (nav.login(boleta=data.get("boleta"), password=data.get("password"), captcha=data.get("captcha")))):
+						fila.eliminar(data.get("id"))
+						return jsonify({"error":nav.errorMsg}), 506
+					#TODO: escribir en main.py la rutina para extraer la info necesaria
+					r = make_response(render_template('editar.html'))
+					return 
 				case _ :
 					print("default")
 					return ""
@@ -97,8 +107,9 @@ def index_login():
 
 @app.route('/')
 def pagina_principal():
-	r = make_response(render_template('login.html'))
-	return r, 200
+	return app.send_static_file('login.html'), 200
+	#r = make_response(render_template('login.html'))
+	#return r, 200
 
 
 
