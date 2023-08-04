@@ -11,6 +11,7 @@ uiapi/macos/
 uiapi/test/
 uiapi/windows/
 uiapi/.gitignore
+uiapi/README.md
 
 
 ######################################

@@ -11,6 +11,7 @@ Para poder ejecutar una vista previa de la UI es necesario tener instalado flutt
 
 ```bash
 cd apiui
+flutter create
 flutter run 
 ```
 
