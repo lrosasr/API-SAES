@@ -203,7 +203,7 @@
 						case 530: //seguir esperando en la fila y mostrar lugar recibido
 							let tmp = document.getElementById("error")
 							tmp.style.display = "block"
-							tmp.innerHTML = "Espera por favor. Lugar en la fila: " + resp.pos;
+							tmp.innerHTML = "Espera por favor. Lugar en la fila: " + respw["response"].pos;
 							setTimeout(() => {main("wait")}, 2500);
 							break;
 						case 552:
