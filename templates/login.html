@@ -158,7 +158,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td colspan="2"><div class="boton" id="botonLgn" onclick="inicar()">Enviar datos</div></td>
+						<td colspan="2"><div class="boton" id="botonLgn" onclick="main('getID')">Enviar datos</div></td>
 					</tr>
 				</table>
 			</section>
@@ -186,11 +186,33 @@
 
 		function main(f=null){
 			switch(f){
-				case "getID":
-					let respID = post({})
+				case "getID": //Obtener ID del server
+					let respID = xhr({})
 					clientID = respID.id
+					main("wait");
 					break;
-				case "wait":
+				case "wait": //Rutina de fila
+					respw = xhr({"id":clientID,"req":"alive"});
+					switch(respw["status"]){
+						case 200: //pasar directo al captcha
+							//TODO: Cuenta regresiva de 20 seg
+							let tmp2 = document.getElementById("captcha-img");
+							tmp2.style.backgroundImage = "url('" + respw["response"].img + "')";
+							tmp2.style.visibility = "visible";
+							break;			
+						case 530: //seguir esperando en la fila y mostrar lugar recibido
+							let tmp = document.getElementById("error")
+							tmp.style.display = "block"
+							tmp.innerHTML = "Espera por favor. Lugar en la fila: " + resp.pos;
+							setTimeout(() => {main("wait")}, 2500);
+							break;
+						case 552:
+							//TODO: EL server no reconoce el ID, recargar pagina(?)
+							break;
+						default:
+							//TODO: Mostrar un mensaje de error generico
+							break;
+					};
 					break;
 				case "captcha":
 					let data = {}
@@ -204,7 +226,6 @@
 						iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(resp["respose"].html);
 						//deberiamos invisibilizar todo lo demas?
 						iframe.style.visibility = "visible";
-						//
 					}else{
 						//mostrar el error y reiniciar proceseso
 					};
@@ -247,29 +268,5 @@
 			xhttp.setRequestHeader('Content-type', 'application/json')
 			xhttp.send(data);		
 		};
-
-
-
-		function inicar() {
-			//verificar que bolta y password esten llenados
-			let xhttp = new XMLHttpRequest();
-			xhttp.onload = function() {
-				//leer si se nos asigno un id 
-				///////document.getElementById("demo").innerHTML = this.responseText;
-				//resp = this.JSON
-				if(xhttp.status == 200){
-					let resp = JSON.parse(this.responseText);
-					clientID = resp.id;
-					setTimeout(() => {
-						fila_loop()
-					}, 700);
-				}else{
-					alert("Error al contactar con el backend");
-				}
-			}
-			xhttp.open("POST", "/xhr", true);
-			xhttp.setRequestHeader('Content-type', 'application/json')
-			xhttp.send(JSON.stringify({}));
-		}
 	</script>
 </html>

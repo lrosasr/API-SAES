@@ -51,7 +51,7 @@ class saes:
 				self.navegador.find_element(By.ID, 'ctl00_leftColumn_LoginUser_UserName').send_keys(boleta)
 				self.navegador.find_element(By.ID, 'ctl00_leftColumn_LoginUser_Password').send_keys(password)
 				self.navegador.find_element(By.ID, 'ctl00_leftColumn_LoginUser_CaptchaCodeTextBox').send_keys(captcha)
-				#self.navegador.find_element(By.ID, "ctl00_leftColumn_LoginUser_LoginButton").click()
+				self.navegador.find_element(By.ID, "ctl00_leftColumn_LoginUser_LoginButton").click()
 			except Exception as e:
 				self.setError("Hubo un error al intentar enviar tus credenciales.", e) #regresar a la fila?
 				self.cerrar()
