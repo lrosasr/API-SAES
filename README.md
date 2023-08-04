@@ -1,6 +1,19 @@
 # API-SAES
 API para simplificar el llenado de la hoja de inscripcion
 
+# Server python
+
+[TODO: Documentar el uso del server de python, dependencias vm etc,]
+
+# UI
+
+Para poder ejecutar una vista previa de la UI es necesario tener instalado flutter y ejecutar el siguiente comando:
+
+```bash
+cd apiui
+flutter run 
+```
+
 # TODO:
 
 Entre las tareas pendientes tenemos:
