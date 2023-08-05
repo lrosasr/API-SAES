@@ -56,47 +56,14 @@ class saes:
 			self.cerrar()
 			return False
 		elem = WebDriverWait(self.navegador, 15).until(EC.any_of( #verificar si el inicio de sesion fue exitoso (o no)
-			EC.presence_of_element_located((By.ID, "ctl00_mainCopy_FormView1_nombrelabel")),
-			EC.visibility_of_element_located(By.XPATH, "/html/body/form/div[3]/div[3]/div[1]/div[2]/div/div[2]/div/anonymoustemplate/table/tbody/tr/td/span")
+			EC.presence_of_element_located((By.ID, "ctl00_mainCopy_FormView1")),
+			EC.visibility_of_element_located((By.XPATH, "/html/body/form/div[3]/div[3]/div[1]/div[2]/div/div[2]/div/anonymoustemplate/table/tbody/tr/td/span"))
 		))
-		#si elemento es un span, verificar si tiene dentro un <p> y extraer texto de <p>, si no, extraer texto del span
 		if(elem.tag_name == "span"): #no se pudo :(
-			s = bs(elem.get_attribute("innerHTML"))
+			s = bs(elem.get_attribute("innerHTML"), features="html.parser")
 			self.setError(s.get_text(" ", strip=True), None)
 			self.cerrar()
 			return False
 		else: # we're in
+			#ctl00_mainCopy_FormView1_nombrelabel    -> Nombre completo
 			return True
-		
-
-
-
-#r = {"type":0,"msg":""} #0:error  1:imagen/base64 
-
-def conectar_saes():
-	#esperar a que la pagina del saes rederize
-	#hacer screenshot del captcha
-	#mandarlo al cliente
-	driver = webdriver.Firefox(timeout=10) #iniciar navegador con timeout de 10s
-	driver.get("https://www.saes.esfm.ipn.mx/")
-	captcha = driver.find_element(By.CLASS_NAME, 'LBD_CaptchaImage')
-	print(captcha.screenshot_as_base64)
-
-	driver.quit()
-
-	saes_form = driver.find_element(By.ID, 'ctl00_leftColumn_LoginUser_UserName')
-	saes_form.send_keys("boleta")
-	saes_form = driver.find_element(By.ID, '')
-	saes_form.send_keys("password")
-	saes_form.send_keys("captcha")
-#except NoSuchElementException as e:
-#	print("error")
-#finally:
-#	if(r["error"]>0):
-#		print(r["msg"])
-#		driver.quit()
-	#return r
-
-#saes = API.saes()
-#saes = saes()
-#print(saes.error)

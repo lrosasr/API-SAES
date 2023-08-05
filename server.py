@@ -54,30 +54,25 @@ class _fila:
 					self.clientes[cliente][0] = self.clientes[cliente][0] - tmp[2]
 		
 fila = _fila()
-
+nav = ""
 
 @app.route('/xhr', methods = ['POST', 'GET'])
 def index_login():
+	global nav
 	if request.method == 'POST':
 		if(request.headers.get("Content-Type") == "application/json"):
 			data = request.json
 		else:
 			return jsonify({"err":1, "txt":"Request invalido"}), 500
-		#msg = {"err":0, "tipo":"txt","data":""} #err:1, mostrar reintantar
 		if "id" in data:
 			if not (data.get("id") in fila.clientes):
 				return jsonify({"err":1, "txt":"Tiempo limite de espera alcanzado. Intentalo de nuevo."}), 530
-			match data.get("req"): ##PONER UN MATCH-CASE PARA VALIDAR CAPTCHA RECIBIDO
+			match data.get("req"):
 				case "alive":
-					print("======1")
 					lugar = fila.pos(data.get("id"))
-					print(lugar)
-					print("======2")
 					if(lugar == 1):
-						print("======3")
 						nav = saes.saes()
 						if nav.errorMsg:
-							print("======4")
 							fila.eliminar(data.get("id"))
 							return jsonify({"err":1, "txt":nav.errorMsg}), 520
 						imagen_captcha = nav.get_captcha()
@@ -93,7 +88,7 @@ def index_login():
 						return jsonify({"error":"informacion de login incompleta"}), 505
 					if(not (nav.login(boleta=data.get("boleta"), password=data.get("password"), captcha=data.get("captcha")))):
 						fila.eliminar(data.get("id"))
-						return jsonify({"error":nav.errorMsg}), 506
+						return jsonify({"error":nav.errorMsg}), 506  
 					#TODO: escribir en main.py la rutina para extraer la info necesaria
 					r = render_template('editar.html')
 					print(r)
