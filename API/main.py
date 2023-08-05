@@ -1,8 +1,9 @@
 from selenium import webdriver
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+from bs4 import BeautifulSoup as bs
 #from selenium.common.exceptions import *
 
 
@@ -31,9 +32,7 @@ class saes:
 	def get_captcha(self):
 		self.limpiarError()
 		try:
-			wait = WebDriverWait(self.navegador, 4)
-			captcha = wait.until(EC.visibility_of(self.navegador.find_element(By.CLASS_NAME, 'LBD_CaptchaImage')))
-			#captcha = self.navegador.find_element(By.CLASS_NAME, 'LBD_CaptchaImage')
+			captcha = WebDriverWait(self.navegador, 10).until(EC.visibility_of(self.navegador.find_element(By.CLASS_NAME, 'LBD_CaptchaImage')))
 			captchab64 = captcha.screenshot_as_base64
 		except Exception as e:
 			print("error captcha")
@@ -44,21 +43,32 @@ class saes:
 	def login(self, boleta="", password="", captcha=""):
 		self.limpiarError()
 		if(boleta == "" or password == "" or captcha == ""):
-			self.setError("Informacion incompleta", "---") #regresar a la fila?
+			self.setError("Informacion incompleta", None) #regresar a la fila?
 			self.cerrar()
 			return
-			try:
-				self.navegador.find_element(By.ID, 'ctl00_leftColumn_LoginUser_UserName').send_keys(boleta)
-				self.navegador.find_element(By.ID, 'ctl00_leftColumn_LoginUser_Password').send_keys(password)
-				self.navegador.find_element(By.ID, 'ctl00_leftColumn_LoginUser_CaptchaCodeTextBox').send_keys(captcha)
-				self.navegador.find_element(By.ID, "ctl00_leftColumn_LoginUser_LoginButton").click()
-			except Exception as e:
-				self.setError("Hubo un error al intentar enviar tus credenciales.", e) #regresar a la fila?
-				self.cerrar()
-				return
-			elem = WebDriverWait(driver, 30).until(
-EC.presence_of_element_located((By.ID, "Element_to_be_found")) #This is a dummy element
-)
+		try:
+			self.navegador.find_element(By.ID, 'ctl00_leftColumn_LoginUser_UserName').send_keys(boleta)
+			self.navegador.find_element(By.ID, 'ctl00_leftColumn_LoginUser_Password').send_keys(password)
+			self.navegador.find_element(By.ID, 'ctl00_leftColumn_LoginUser_CaptchaCodeTextBox').send_keys(captcha)
+			self.navegador.find_element(By.ID, "ctl00_leftColumn_LoginUser_LoginButton").click()
+		except Exception as e:
+			self.setError("Hubo un error al intentar usar tus credenciales.", e) #regresar a la fila?
+			self.cerrar()
+			return False
+		elem = WebDriverWait(self.navegador, 15).until(EC.any_of( #verificar si el inicio de sesion fue exitoso (o no)
+			EC.presence_of_element_located((By.ID, "ctl00_mainCopy_FormView1_nombrelabel")),
+			EC.visibility_of_element_located(By.XPATH, "/html/body/form/div[3]/div[3]/div[1]/div[2]/div/div[2]/div/anonymoustemplate/table/tbody/tr/td/span")
+		))
+		#si elemento es un span, verificar si tiene dentro un <p> y extraer texto de <p>, si no, extraer texto del span
+		if(elem.tag_name == "span"): #no se pudo :(
+			s = bs(elem.get_attribute("innerHTML"))
+			self.setError(s.get_text(" ", strip=True), None)
+			self.cerrar()
+			return False
+		else: # we're in
+			return True
+		
+
 
 
 #r = {"type":0,"msg":""} #0:error  1:imagen/base64 

@@ -123,4 +123,7 @@ def page_not_found(error):
 
 
 if __name__ == '__main__':
+	#TODO: Implementar los argumentos debug y online
+	# debug true/false : imprimir mensajes de error especificos
+	# online true/false : el server sera visible en localhost o en una interfaz publica
 	app.run(host="0.0.0.0", port=6969)
