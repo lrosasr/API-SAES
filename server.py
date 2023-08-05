@@ -95,8 +95,11 @@ def index_login():
 						fila.eliminar(data.get("id"))
 						return jsonify({"error":nav.errorMsg}), 506
 					#TODO: escribir en main.py la rutina para extraer la info necesaria
-					r = make_response(render_template('editar.html'))
-					return 
+					r = render_template('editar.html')
+					print(r)
+					print("=====================")
+					print(dir(r))
+					return jsonify({"html":r}), 200
 				case _ :
 					print("default")
 					return ""

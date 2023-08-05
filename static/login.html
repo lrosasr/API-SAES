@@ -94,7 +94,7 @@
 				width: 25%;
 				padding: 20px;
 				border-radius: 10px;
-				
+				background-color: #fff;
 			}
 			.boton{
 				border:0;
@@ -172,17 +172,15 @@
 	<script>
 		clientID = "";
 
-		function xhr(data){
-			let xhttp = new XMLHttpRequest();
-			let r = {"status":null,"response":null};
-			xhttp.onload = function() {
-				r["status"] = xhttp.status;
-				r["response"] = JSON.parse(this.responseText);
-			};
-			xhttp.open("POST", "/xhr", true);
-			xhttp.setRequestHeader('Content-type', 'application/json');
-			xhttp.send(JSON.stringify(data));
-			return r;
+		async function xhr(data){
+			let response = await fetch('/xhr', { 
+    			method: 'POST', 
+    			headers: { 'Content-Type': 'application/json' }, 
+    			body: JSON.stringify(data)
+				//mode: same-origin
+				//cache: no-cache
+			});
+			return {"response":await response.json(), "status":response.status};
 		};
 
 		function mostrarError(info){
@@ -191,27 +189,24 @@
 			tmp.innerHTML = info;
 		};
 
-		function main(f=null){
+		async function main(f=null){
 			switch(f){
 				case "getID": //Obtener ID del server
 					if(document.getElementById("saes_usr").value == "" || document.getElementById("saes_psw").value == ""){
 						mostrarError("Debes escribir tus credenciales de acceso para continuar");
 						return;
 					};
-					let respID = xhr({});
+					let respID = await xhr({});
 					clientID = respID["response"].id;
-					console.log(clientID);
 					main("wait");
 					break;
 				case "wait": //Rutina de fila
-					console.log("wait")
-					respw = xhr({"id":clientID,"req":"alive"});
+					respw = await xhr({"id":clientID,"req":"alive"});
 					switch(respw["status"]){
 						case 200: //pasar directo al captcha
 							//TODO: Cuenta regresiva de 20 seg
-							let tmp2 = document.getElementById("captcha-img");
-							tmp2.style.backgroundImage = "url('" + respw["response"].img + "')";
-							tmp2.style.visibility = "visible";
+							document.getElementById("captcha-img").style.backgroundImage = "url('" + respw["response"].img + "')";
+							document.getElementById("captcha-wall").style.visibility = "visible";
 							break;			
 						case 530: //seguir esperando en la fila y mostrar lugar recibido
 							mostrarError("Espera por favor. Lugar en la fila: " + respw["response"].pos);
@@ -228,17 +223,18 @@
 				case "captcha":
 					//verificar de nuevo credenciales escritas??
 					//TODO: Verificar que se haya escrito algo en el captcha-input
-					let data = {"req":"captcha"};
+					let data = {"id":clientID,"req":"captcha"};
 					data["boleta"] = document.getElementById("saes_usr").value;
 					data["password"] = document.getElementById("saes_psw").value;
 					data["captcha"] = document.getElementById("captcha-input").value;
-					let resp = xhr(data);
+					let resp = await xhr(data);
 					if(resp["status"] == 200){
 						let iframe = document.getElementById("editar");
 						iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(resp["respose"].html);//renderizar respuesta (editar.html) en un iframe
-						//deberiamos invisibilizar todo lo demas?
+						//deberiamos invisibilizar todo lo demas primero?
 						iframe.style.visibility = "visible";
 					}else{
+						console.log(resp["status"]);
 						//mostrar el error y reiniciar proceseso
 					};
 					break;
