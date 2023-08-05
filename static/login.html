@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<style>
+			/*TODO: Hacer mejor el estilo y moverlo a un .css*/
 			body{
 				margin: 0;
 				box-sizing: border-box;
@@ -149,7 +150,7 @@
 					</tr>
 					<tr>
 						<td style="text-align: right;">Contraseña:</td>
-						<td><input type="password" name="saes_psw"></td>
+						<td><input type="password" id="saes_psw"></td>
 					</tr>
 					<tr>
 						<td id="status-cont" colspan="2">
@@ -195,12 +196,15 @@
 				case "getID": //Obtener ID del server
 					if(document.getElementById("saes_usr").value == "" || document.getElementById("saes_psw").value == ""){
 						mostrarError("Debes escribir tus credenciales de acceso para continuar");
+						return;
 					};
-					let respID = xhr({})
-					clientID = respID.id
+					let respID = xhr({});
+					clientID = respID["response"].id;
+					console.log(clientID);
 					main("wait");
 					break;
 				case "wait": //Rutina de fila
+					console.log("wait")
 					respw = xhr({"id":clientID,"req":"alive"});
 					switch(respw["status"]){
 						case 200: //pasar directo al captcha

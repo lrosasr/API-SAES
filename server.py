@@ -1,15 +1,16 @@
-import time
-
-
-#sys.path.append('../API')
+#TODO: Aprender a programar bien
 from API import main as saes
 
 
-from random import randint
 from flask import Flask, render_template, request, Response, make_response, abort, jsonify
 from markupsafe import escape
+from random import randint
+import time
+
 
 app = Flask(__name__)
+
+
 
 class _fila:
 	def __init__(self):
@@ -39,6 +40,7 @@ class _fila:
 		return self.clientes[id][0]
 
 	def update(self):
+		#TODO: Escribir CORRECTACTAMENTE esta rutina (el dict puede ser modificado mientras es iterado, no no no)
 		eph = time.time()-10
 		tmp = [0, 0, 0] #ordenar, apartir de, restar
 		for cliente in self.clientes:
@@ -60,11 +62,11 @@ def index_login():
 		if(request.headers.get("Content-Type") == "application/json"):
 			data = request.json
 		else:
-			abort(500, description="Request invalido")
+			return jsonify({"err":1, "txt":"Request invalido"}), 500
 		#msg = {"err":0, "tipo":"txt","data":""} #err:1, mostrar reintantar
 		if "id" in data:
 			if not (data.get("id") in fila.clientes):
-				abort(530, "Tiempo limite de espera alcanzado. Intentalo de nuevo.")
+				return jsonify({"err":1, "txt":"Tiempo limite de espera alcanzado. Intentalo de nuevo."}), 530
 			match data.get("req"): ##PONER UN MATCH-CASE PARA VALIDAR CAPTCHA RECIBIDO
 				case "alive":
 					print("======1")
@@ -102,7 +104,7 @@ def index_login():
 			id = fila.agregar()
 			return jsonify({"id":id}), 200
 	else:
-		abort(476)
+		return "???", 666
 	return ""
 
 @app.route('/')
