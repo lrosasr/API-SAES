@@ -7,11 +7,11 @@
 		<title></title>
 		<style>
 			body{
+				display: flex;
+				justify-content: center;
 				background-color: #808080;
 			}
 			main {
-				margin-left: auto;
-				margin-right: auto;
 				max-width: 80%;
 			}
 			header{
@@ -20,19 +20,12 @@
 			}
 			section{
 				text-align: center;
-				margin-left: auto;
-				margin-right: auto;
-				width: 90%;
 				background-color: #fff;
 				padding: 30px 70px 10px 70px;
 			}
 			input{
 				border: 0px;
 				box-sizing: border-box;
-			}
-			input:placeholder-shown {
-				border-radius: 10px;
-    			border: 3px solid #fa2053;
 			}
 			table{
 				margin-bottom: 30px;
@@ -51,6 +44,9 @@
 			}
 			.contenedor{
 				width: 100%;
+			}
+			.contenedor input{
+				border-bottom:2px solid #000;
 			}
 			.nb_cnt td{
 				padding-bottom: 10px;
@@ -91,13 +87,23 @@
 			.tbl_creditos tr td{
 				border: 2px solid #000;
 			}
+
+
+			.hoja input[type=text]{
+				border:2px solid #fff;
+				border-bottom: 2px solid #000;
+			}
+			.hoja input:placeholder-shown {
+				border-radius: 10px;
+    			border: 2px solid #fa2053;
+			}
 		</style>
 	</head>
 	
 	
 	<body>
 		<main>
-			<section>
+			<section class="hoja">
 				<header>
 					<img style="float:left;width: 10%;height: 15%;" src="https://www.ipn.mx/assets/files/imageninstitucional/imagenes/identidad/LOGO-POLIGUINDA-PANTONE222.png"/>
 					<div class="cabecera">
@@ -109,7 +115,7 @@
 					<img style="float: right;width:10%;height: 15%;" src="https://www.esfm.ipn.mx/assets/files/esfm/img/ESCUDO_ESFM.png"/>
 				</header>
 				<div class="contenedor" style="text-align: right;">
-					<p>Ciudad de México a <input type="number" value="-1" style="max-width: 60px;"> de <input type="number" value="-1"> de 2023</p>
+					<p>Ciudad de México a <input type="number" value="-1" style="width: 50px;"> de <input type="text" value="-1"> de 2023</p>
 				</div>
 				<table>
 					<colgroup>

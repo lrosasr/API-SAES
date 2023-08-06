@@ -237,8 +237,9 @@
 					let resp = await xhr(data);
 					if(resp["status"] == 200){
 						let iframe = document.getElementById("editar");
-						iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(resp["respose"].html);//renderizar respuesta (editar.html) en un iframe
-						//deberiamos invisibilizar todo lo demas primero?
+						//iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(resp["response"].html);//renderizar respuesta (editar.html) en un iframe
+						iframe.src = 'data:text/html;charset=utf-8,' + resp["response"].html;
+						document.getElementById("captcha-wall").style.visibility = "hidden";
 						iframe.style.visibility = "visible";
 					}else{
 						mostrarError(resp["response"].error);

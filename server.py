@@ -3,6 +3,7 @@ from API import main as saes
 
 
 from flask import Flask, render_template, request, Response, make_response, abort, jsonify
+from urllib.parse import quote
 from markupsafe import escape
 from random import randint
 import time
@@ -90,10 +91,7 @@ def index_login():
 						fila.eliminar(data.get("id"))
 						return jsonify({"error":nav.errorMsg}), 506  
 					#TODO: escribir en main.py la rutina para extraer la info necesaria
-					r = render_template('editar.html')
-					print(r)
-					print("=====================")
-					print(dir(r))
+					r = quote(render_template('editar.html'))
 					return jsonify({"html":r}), 200
 				case _ :
 					print("default")

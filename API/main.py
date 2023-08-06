@@ -46,7 +46,7 @@ class saes:
 			self.setError("Informacion incompleta", None) #regresar a la fila?
 			self.cerrar()
 			return
-		try:
+		try: #Intentar escribir datos de acceso
 			self.navegador.find_element(By.ID, 'ctl00_leftColumn_LoginUser_UserName').send_keys(boleta)
 			self.navegador.find_element(By.ID, 'ctl00_leftColumn_LoginUser_Password').send_keys(password)
 			self.navegador.find_element(By.ID, 'ctl00_leftColumn_LoginUser_CaptchaCodeTextBox').send_keys(captcha)
@@ -55,15 +55,23 @@ class saes:
 			self.setError("Hubo un error al intentar usar tus credenciales.", e) #regresar a la fila?
 			self.cerrar()
 			return False
-		elem = WebDriverWait(self.navegador, 15).until(EC.any_of( #verificar si el inicio de sesion fue exitoso (o no)
-			EC.presence_of_element_located((By.ID, "ctl00_mainCopy_FormView1")),
-			EC.visibility_of_element_located((By.XPATH, "/html/body/form/div[3]/div[3]/div[1]/div[2]/div/div[2]/div/anonymoustemplate/table/tbody/tr/td/span"))
-		))
-		if(elem.tag_name == "span"): #no se pudo :(
-			s = bs(elem.get_attribute("innerHTML"), features="html.parser")
-			self.setError(s.get_text(" ", strip=True), None)
+		try: #Verificar si el login fue exitoso, o no
+			elem = WebDriverWait(self.navegador, 15).until(EC.any_of( #verificar si el inicio de sesion fue exitoso (o no)
+				EC.presence_of_element_located((By.ID, "ctl00_mainCopy_FormView1")),
+				EC.visibility_of_element_located((By.XPATH, "/html/body/form/div[3]/div[3]/div[1]/div[2]/div/div[2]/div/anonymoustemplate/table/tbody/tr/td/span"))
+			))
+			if(elem.tag_name == "span"): #no se pudo :(
+				#leer el mensaje de error
+				s = bs(elem.get_attribute("innerHTML"), features="html.parser")
+				self.setError(s.get_text(" ", strip=True), None)
+				self.cerrar()
+				return False
+			else: # we're in
+				return True
+		except Exception as e:
+			self.setError("Hubo un error al determinar si el inicio de sesion fue correcto o no.", e)
 			self.cerrar()
 			return False
-		else: # we're in
-			#ctl00_mainCopy_FormView1_nombrelabel    -> Nombre completo
-			return True
+	def leer_datos(self):
+		#ctl00_mainCopy_FormView1_nombrelabel    -> Nombre completo
+		return None

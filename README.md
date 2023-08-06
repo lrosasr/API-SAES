@@ -5,17 +5,17 @@ API para simplificar el llenado de la hoja de inscripcion para alumnos de la ESF
 
 [TODO: Documentar el uso del server de python, dependencias vm etc,]
 
-## Requerimientos
+### Requerimientos
 [TODO: Implementar compatibilidad con navegadores basados en Chromium]
  - Python >= 3.11
  - Firefox >= 100.0
  - geckodriver
 
-## Intalacion
+### Intalacion
 [TODO]
 Descarga o clona este repositorio :)
 
-## Instalar dependencias
+### Instalar dependencias
 ```bash
 $ pip3 install -r requirements.txt
 ```
