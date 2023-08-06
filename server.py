@@ -1,6 +1,6 @@
 #TODO: Aprender a programar bien
-from API import main as saes
-
+from API.webscr import main as saes
+#from API.pdf import main as pdf
 
 from flask import Flask, render_template, request, Response, make_response, abort, jsonify
 from urllib.parse import quote
@@ -14,6 +14,7 @@ app = Flask(__name__)
 
 
 class _fila:
+	#TODO: Mover este class a su propio modulo en API/
 	def __init__(self):
 		self.gID = 0
 		self.clientes = {}
@@ -55,7 +56,13 @@ class _fila:
 					self.clientes[cliente][0] = self.clientes[cliente][0] - tmp[2]
 		
 fila = _fila()
-nav = ""
+nav = "" #TODO: Hacer esto mas seguro
+
+
+@app.route('/api', methods = ['POST'])
+def api_():
+	return None
+
 
 @app.route('/xhr', methods = ['POST', 'GET'])
 def index_login():
@@ -72,7 +79,7 @@ def index_login():
 				case "alive":
 					lugar = fila.pos(data.get("id"))
 					if(lugar == 1):
-						nav = saes.saes()
+						nav = saes()
 						if nav.errorMsg:
 							fila.eliminar(data.get("id"))
 							return jsonify({"err":1, "txt":nav.errorMsg}), 520
@@ -90,7 +97,7 @@ def index_login():
 					if(not (nav.login(boleta=data.get("boleta"), password=data.get("password"), captcha=data.get("captcha")))):
 						fila.eliminar(data.get("id"))
 						return jsonify({"error":nav.errorMsg}), 506  
-					#TODO: escribir en main.py la rutina para extraer la info necesaria
+					#TODO: escribir en API/webscr.py>main la rutina para extraer la info necesaria
 					r = quote(render_template('editar.html'))
 					return jsonify({"html":r}), 200
 				case _ :
@@ -117,7 +124,8 @@ def page_not_found(error):
 
 
 if __name__ == '__main__':
-	#TODO: Implementar los argumentos debug y online
+	#TODO: Implementar los argumentos:
 	# debug true/false : imprimir mensajes de error especificos
 	# online true/false : el server sera visible en localhost o en una interfaz publica
+	# frontend true/false : permitir interactuar con el frontend de la API (web)
 	app.run(host="0.0.0.0", port=6969)

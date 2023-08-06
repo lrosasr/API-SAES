@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup as bs
 
 
 
-class saes:
+class main:
 	def setError(self, msg, e):
 		self.error = e
 		self.errorMsg = msg
