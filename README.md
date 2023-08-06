@@ -1,9 +1,24 @@
 # API-SAES
-API para simplificar el llenado de la hoja de inscripcion
+API para simplificar el llenado de la hoja de inscripcion para alumnos de la ESFM
 
-# Server python
+# Server
 
 [TODO: Documentar el uso del server de python, dependencias vm etc,]
+
+## Requerimientos
+[TODO: Implementar compatibilidad con navegadores basados en Chromium]
+ - Python >= 3.11
+ - Firefox >= 100.0
+ - geckodriver
+
+## Intalacion
+[TODO]
+Descarga o clona este repositorio :)
+
+## Instalar dependencias
+```bash
+$ pip3 install -r requirements.txt
+```
 
 # UI
 
