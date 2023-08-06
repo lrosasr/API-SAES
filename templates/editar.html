@@ -8,17 +8,23 @@
 		<style>
 			body{
 				display: flex;
-				justify-content: center;
+				flex-flow: column nowrap;
 				background-color: #808080;
+				padding: 0;
+				margin:0;
 			}
 			main {
-				max-width: 80%;
+				display: flex;
+				flex-flow: column nowrap;
+				align-items: center;
+				width: 100%;
 			}
 			header{
 				text-align: center;
 				margin-bottom: 40px;
 			}
 			section{
+				max-width: 60%;
 				text-align: center;
 				background-color: #fff;
 				padding: 30px 70px 10px 70px;
@@ -35,6 +41,33 @@
 			}
 			td {
 				padding: 4px 5px 4px 5px;
+			}
+			.bar{
+				color: #fff;
+				font-size:1.3em;
+				padding:0.7em;
+				background-color: #6c1d45;
+				margin-bottom: 10px;
+			}
+			.guardar{
+				font-size: 0.7em;
+				font-family: Arial, Helvetica, sans-serif;
+				font-weight: bold;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				color:#fff;
+				position: fixed;
+				bottom:0;
+				background-color: #9e005c;
+				padding:10px;
+				border-radius: 16px;
+				margin: 20px;
+				right: 0;
+			}
+			.guardar svg{
+				color: #fff;
+				width: 50px;
 			}
 			.cabecera{
 				display: inline-block;
@@ -102,7 +135,13 @@
 	
 	
 	<body>
+		<div class="bar">2. Verifica tu informacion antes de guardar</div>
+		<div class="guardar"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+			<path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+			<path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+		 </svg><p>GUARDAR</p></div>
 		<main>
+			
 			<section class="hoja">
 				<header>
 					<img style="float:left;width: 10%;height: 15%;" src="https://www.ipn.mx/assets/files/imageninstitucional/imagenes/identidad/LOGO-POLIGUINDA-PANTONE222.png"/>
@@ -115,7 +154,7 @@
 					<img style="float: right;width:10%;height: 15%;" src="https://www.esfm.ipn.mx/assets/files/esfm/img/ESCUDO_ESFM.png"/>
 				</header>
 				<div class="contenedor" style="text-align: right;">
-					<p>Ciudad de México a <input type="number" value="-1" style="width: 50px;"> de <input type="text" value="-1"> de 2023</p>
+					<p>Ciudad de México a <input type="number" value="-1" style="width: 50px;"> de <input type="text" value="-1" style="width:90px;"> de 2023</p>
 				</div>
 				<table>
 					<colgroup>
