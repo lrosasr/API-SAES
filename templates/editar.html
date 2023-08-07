@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
-	
-
 	<head>
 		<meta charset="utf-8">
-		<title></title>
-		<style>
+		<link rel="preload" as="image" href="/static/assets/0.jpeg">
+		<link rel="preload" as="image" href="/static/assets/1.jpeg">
+		<!-- 		
+			TODO: Remmplazar el color rojo  #fa2053 por alguna
+			gama de azul o naranja para las personas con daltonismo
+
+			TODO: Mover el <style> a /static/css/
+		-->
+		<style>  
 			body{
 				display: flex;
 				flex-flow: column nowrap;
@@ -101,7 +106,8 @@
 			.ct_cnt td {
 				padding-bottom: 10px;
 			}
-			.select_periodo td{
+			.select_periodo td:not(:first-child){
+				border: 2px solid #fa2053;
 				background-repeat: no-repeat;
 				background-size: 100% 100%;
 			}
@@ -117,10 +123,18 @@
 				box-sizing: border-box;
 				font-size: 2em;
 			}
-			.tbl_creditos tr td{
-				border: 2px solid #000;
+			.tbl_creditos td{
+				border: 2px solid #000;			
 			}
-
+			.esp_cnt{
+				padding:5px;
+			}
+			.esp_chk{
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				border:3px solid #fa2053;
+				aspect-ratio: 1/1;
+			}
 
 			.hoja input[type=text]{
 				border:2px solid #fff;
@@ -263,13 +277,13 @@
 						<col style="width: 7%;"/>
 					</colgroup>
 					<tr>
-						<td colspan="6">Marque en el recuadro su programa académico (especialidad)</td>
+						<td colspan="6">Click en el recuadro de su programa académico (especialidad)</td>
 					</tr>
 					<tr>
-						<td rowspan="2">#</td>
+						<td rowspan="2" class="esp_cnt"><div data-carrera="1" onclick="selecCarrera(this.dataset.carrera)" class="esp_chk"></div></td>
 						<td rowspan="2">Tronco común de la L.F. y M.</td>
 						<td>Créditos totales: 312</td>
-						<td rowspan="2">#</td>
+						<td rowspan="2" class="esp_cnt"><div data-carrera="1.4" onclick="selecCarrera(this.dataset.carrera)" class="esp_chk"></div></td>
 						<td rowspan="2">Opción en Matemática Educativa</td>
 						<td>Créditos totales: 318</td>
 					</tr>
@@ -278,10 +292,10 @@
 						<td>Carga media: 40</td>
 					</tr>
 					<tr>
-						<td rowspan="2">#</td>
+						<td rowspan="2" class="esp_cnt"><div data-carrera="1.1" onclick="selecCarrera(this.dataset.carrera)" class="esp_chk"></div></td>
 						<td rowspan="2">Opción en Matemáticas</td>
 						<td>Créditos totales:312</td>
-						<td rowspan="2">#</td>
+						<td rowspan="2" class="esp_cnt"><div data-carrera="2" onclick="selecCarrera(this.dataset.carrera)" class="esp_chk"></div></td>
 						<td rowspan="2">Ing. Matemática</td>
 						<td>Créditos totales: 336</td>
 					</tr>
@@ -290,10 +304,10 @@
 						<td>Carga media: 42</td>
 					</tr>
 					<tr>
-						<td rowspan="2">#</td>
+						<td rowspan="2" class="esp_cnt"><div data-carrera="1.2" onclick="selecCarrera(this.dataset.carrera)" class="esp_chk"></div></td>
 						<td rowspan="2">Opción en Física</td>
 						<td>Créditos totales:316</td>
-						<td rowspan="2">#</td>
+						<td rowspan="2" class="esp_cnt"><div data-carrera="3" onclick="selecCarrera(this.dataset.carrera)" class="esp_chk"></div></td>
 						<td rowspan="2">Matemática Algorítmica</td>
 						<td>Créditos totales: 394</td>
 					</tr>
@@ -302,7 +316,7 @@
 						<td>Carga media: 49</td>
 					</tr>
 					<tr>
-						<td rowspan="2">#</td>
+						<td rowspan="2" class="esp_cnt"><div data-carrera="1.3" onclick="selecCarrera(this.dataset.carrera)" class="esp_chk"></div></td>
 						<td rowspan="2">Opción en Ing. Nuclear</td>
 						<td>Créditos totales: 309</td>
 						<td rowspan="2" colspan="3"></td>
@@ -341,18 +355,31 @@
 		function selecPeriodo(e,num){
 			if(num===undefined){return;};
 			document.getElementById("td_pe").innerHTML = num;
-			elems = e.children;
+			let elems = e.children;
 			document.getElementsByName("num_periodos")[0].value = num;
 			calcCociente()
 			for(let i=1;i<=12;i++){
+				elems[i].style.border = "2px solid #000"
 				if(i<=num){
 					//seleccionar todos hasta num
-					elems[i].style.backgroundImage = "url('assets/1.jpeg')";
+					elems[i].style.backgroundImage = "url('/static/assets/1.jpeg')";
 				}else{
 					//hacer algo con los restantes
-					elems[i].style.backgroundImage = "url('assets/0.jpeg')";
+					elems[i].style.backgroundImage = "url('/static/assets/0.jpeg')";
 				};
 			};
+		};
+		function selecCarrera(num){
+			//alert(num);
+			//console.log(document.getElementsByClassName("esp_chk"))
+			Object.entries(document.getElementsByClassName("esp_chk")).forEach(function(element) {
+				element[1].style.border = "3px solid #000";
+				if(element[1].dataset.carrera == num){
+					element[1].style.backgroundImage = "url('/static/assets/1.jpeg')";
+				}else{
+					element[1].style.backgroundImage = "url('/static/assets/0.jpeg')";
+				};
+			});
 		};
 	</script>
 </html>

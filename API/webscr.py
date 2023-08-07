@@ -3,6 +3,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
+#from selenium.webdriver import ActionChains
 from bs4 import BeautifulSoup as bs
 #from selenium.common.exceptions import *
 
@@ -22,7 +23,7 @@ class main:
 	def __init__(self):
 		self.limpiarError()
 		try:
-			##CAMBIAR EL DRIVER POR chromedriver (Chrome es el navegador mas comun)
+			#TODO: Soporte para chromedriver
 			self.navegador = webdriver.Firefox()
 			self.navegador.set_page_load_timeout(6) #si en 6 segundos no responde, morir
 			self.navegador.get("https://www.saes.esfm.ipn.mx/")
@@ -47,9 +48,9 @@ class main:
 			self.cerrar()
 			return
 		try: #Intentar escribir datos de acceso
-			self.navegador.find_element(By.ID, 'ctl00_leftColumn_LoginUser_UserName').send_keys(boleta)
-			self.navegador.find_element(By.ID, 'ctl00_leftColumn_LoginUser_Password').send_keys(password)
-			self.navegador.find_element(By.ID, 'ctl00_leftColumn_LoginUser_CaptchaCodeTextBox').send_keys(captcha)
+			self.navegador.find_element(By.ID, "ctl00_leftColumn_LoginUser_UserName").send_keys(boleta)
+			self.navegador.find_element(By.ID, "ctl00_leftColumn_LoginUser_Password").send_keys(password)
+			self.navegador.find_element(By.ID, "ctl00_leftColumn_LoginUser_CaptchaCodeTextBox").send_keys(captcha)
 			self.navegador.find_element(By.ID, "ctl00_leftColumn_LoginUser_LoginButton").click()
 		except Exception as e:
 			self.setError("Hubo un error al intentar usar tus credenciales.", e) #regresar a la fila?
@@ -73,5 +74,21 @@ class main:
 			self.cerrar()
 			return False
 	def leer_datos(self):
-		#ctl00_mainCopy_FormView1_nombrelabel    -> Nombre completo
-		return None
+		datos = {}
+		self.navegador.get("https://www.saes.esfm.ipn.mx/Alumnos/info_alumnos/Datos_Alumno.aspx")
+		# ^^^ Ir directamente a la info personal. Al mover el mouse en el menu
+		# lateral un script hace que los atributos de ciertos elementos cambien.
+		# Investigar si es necesario simular un click (o engañar al script)
+		datos[0] = self.navegador.find_element(By.ID, "ctl00_mainCopy_TabContainer1_Tab_Generales_Lbl_Nombre").get_attribute('innerHTML') #Nombre
+		datos[1] = self.navegador.find_element(By.ID, "ctl00_mainCopy_TabContainer1_Tab_Generales_Lbl_Boleta").get_attribute('innerHTML') #Boleta
+		#ActionChains(self.navegador)\
+		#	.context_click(self.navegador.find_element(By.ID, "__tab_ctl00_mainCopy_TabContainer1_Tab_Direccion"))\
+		#	.perform() #Simular click
+		# ^^^ No es necesario simular click. dejar el codigo por si acaso
+		datos[2] = self.navegador.find_element(By.ID, "ctl00_mainCopy_TabContainer1_Tab_Direccion_Lbl_Tel").get_attribute('innerHTML') #telefono
+		datos[3] = self.navegador.find_element(By.ID, "ctl00_mainCopy_TabContainer1_Tab_Direccion_Lbl_eMail").get_attribute('innerHTML') #email
+		self.navegador.get("https://www.saes.esfm.ipn.mx/Alumnos/boleta/kardex.aspx") #Ir al kardex
+		datos[4] = self.navegador.find_element(By.ID, "ctl00_mainCopy_Lbl_Carrera").get_attribute('innerHTML') #carrea (¿con especialidad?)
+		
+		#leer todas las tablas dentro del span id "ctl00_mainCopy_Lbl_Kardex" con bs4
+		return datos

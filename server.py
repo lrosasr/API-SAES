@@ -59,7 +59,7 @@ fila = _fila()
 nav = "" #TODO: Hacer esto mas seguro
 
 
-@app.route('/api', methods = ['POST'])
+@app.route('/api', methods = ['POST']) #TODO: Escribir la API
 def api_():
 	return None
 
