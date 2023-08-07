@@ -35,9 +35,9 @@ $ flutter run
 Entre las tareas pendientes tenemos:
 
 - [ ] Crear calendario o lineamientos para contribucion (contribute.md)
-- [ ] #1
-- [ ] #2
-- [ ] #3
+- [ ] https://github.com/cpesfm/API-SAES/issues/1
+- [ ] https://github.com/cpesfm/API-SAES/issues/2
+- [ ] https://github.com/cpesfm/API-SAES/issues/3
 - [ ] Crear contenedores docker para cada version estable del proyecto
 - [ ] Generar `releases` de cada version estable
 - [ ] Alojar el servicio en la nube 
