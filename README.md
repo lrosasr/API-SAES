@@ -25,18 +25,22 @@ $ pip3 install -r requirements.txt
 Para poder ejecutar una vista previa de la UI es necesario tener instalado flutter y ejecutar el siguiente comando:
 
 ```bash
-cd apiui
-flutter create .
-flutter run 
+$ cd apiui
+$ flutter create .
+$ flutter run 
 ```
 
 # TODO:
 
 Entre las tareas pendientes tenemos:
 
-- Crear calendario o lineamientos para contribucion (contribute.md)
-- Generar el archivo *.pdf
-- Alojar el servicio en la nube 
+- [ ] Crear calendario o lineamientos para contribucion (contribute.md)
+- [ ] #1
+- [ ] #2
+- [ ] #3
+- [ ] Crear contenedores docker para cada version estable del proyecto
+- [ ] Generar `releases` de cada version estable
+- [ ] Alojar el servicio en la nube 
 
 # Tecnologias propuestas
 
