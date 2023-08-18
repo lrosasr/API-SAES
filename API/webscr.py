@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 #from selenium.webdriver import ActionChains
@@ -20,11 +21,13 @@ class main:
 			if self.error : print(self.error)
 			self.navegador.close()
 			self.navegador.quit()
-	def __init__(self):
+	def __init__(self, headless=True):
 		self.limpiarError()
 		try:
 			#TODO: Soporte para chromedriver
-			self.navegador = webdriver.Firefox()
+			options = Options()
+			options.headless = headless
+			self.navegador = webdriver.Firefox(options=options)
 			self.navegador.set_page_load_timeout(6) #si en 6 segundos no responde, morir
 			self.navegador.get("https://www.saes.esfm.ipn.mx/")
 		except Exception as e:
