@@ -100,10 +100,7 @@ def index_login():
 					#TODO: escribir en API/webscr.py>main la rutina para extraer la info necesaria
 					d = nav.leer_datos()
 					r = quote(render_template('editar.html',\
-					 nombre=d[0],\
-					 boleta=d[1],\
-					 tel=d[2],\
-					 mail=d[3]))
+						nombre=d[0],boleta=d[1],telefono=d[2],mail=d[3],ingreso_a=d[1][0:4]))
 					return jsonify({"html":r}), 200
 				case _ :
 					print("default")
@@ -114,6 +111,11 @@ def index_login():
 	else:
 		return "???", 666
 	return ""
+
+@app.route("/hoja")
+def hoja_en_blanco(): #enviar al navegador un editar.html en blanco
+	return render_template("editar.html", \
+	nombre="",boleta="",telefono="") 
 
 @app.route('/')
 def pagina_principal():

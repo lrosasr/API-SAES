@@ -168,7 +168,22 @@
 					<img style="float: right;width:10%;height: 15%;" src="https://www.esfm.ipn.mx/assets/files/esfm/img/ESCUDO_ESFM.png"/>
 				</header>
 				<div class="contenedor" style="text-align: right;">
-					<p>Ciudad de México a <input type="number" value="-1" style="width: 50px;"> de <input type="text" value="-1" style="width:90px;"> de 2023</p>
+					<p>Ciudad de México a <input type="number" id="dia" style="width: 50px;"> de 
+						<select id="mes" name="mes">
+							<option value="0">enero</option>
+							<option value="1">febrero</option>
+							<option value="2">marzo</option>
+							<option value="3">abril</option>
+							<option value="4">mayo</option>
+							<option value="5">junio</option>
+							<option value="6">julio</option>
+							<option value="7">agosto</option>
+							<option value="8">septiembre</option>
+							<option value="9">octubre</option>
+							<option value="10">noviembre</option>
+							<option value="11">diciembre</option>
+						</select>
+					de <input type="number" id="year" style="width:90px;"></p>
 				</div>
 				<table>
 					<colgroup>
@@ -180,8 +195,8 @@
 						<td style="text-align: left;">Número de Boleta</td>
 					</tr>
 					<tr class="nb_cnt">
-						<td><input type="text" name="nombre" placeholder="Nombre completo" id="0"></td>
-						<td><input type="text" name="boleta" placeholder="# de boleta" id="1"></td>
+						<td><input type="text" name="nombre" placeholder="Nombre completo" id="0" value="{{ nombre }}"></td>
+						<td><input type="text" name="boleta" placeholder="# de boleta" id="1" value="{{ boleta }}"></td>
 					</tr>
 				</table>
 
@@ -198,8 +213,8 @@
 						<td style="padding-right:0px;"><input type="text" style="text-align:right;width:100%;" placeholder="usuario"/></td>
 						<td style="padding-left:0px;text-align: left;">@alumno.ipn.mx</td>
 						<td style="text-align: right;"><p>Personal:</p></td>
-						<td><input style="width:100%;" type="text" placeholder="usuario@ejemplo.com" id="3"></td>
-						<td><input type="text" style="width:100%;"placeholder=" tel" id="2"></td>
+						<td><input style="width:100%;" type="text" placeholder="usuario@ejemplo.com" id="3" value="{{ mail }}"></td>
+						<td><input type="text" style="width:100%;"placeholder=" tel" id="2" value="{{ telefono }}"></td>
 					</tr>
 				</table>
 
@@ -214,7 +229,7 @@
 						<td style="text-align: right;">Mes:</td>
 						<td><input type="text" placeholder=" "/></td>
 						<td style="text-align: right;">Año:</td>
-						<td><input type="text" placeholder=" "/></td>
+						<td><input type="text" placeholder=" " value="{{ ingreso_a }}"/></td>
 					</tr>
 				</table>
 
@@ -244,7 +259,7 @@
 				<table>
 					<tr class="sel_ma">
 						<td>Número de unidades de aprendizaje acreditadas</td>
-						<td style="border-left:2px solid #000;"><input type="text" placeholder="#" name="mat_acreditadas" oninput="calcCociente();"></td>
+						<td style="border-left:2px solid #000;"><input type="text" placeholder="#" name="mat_acreditadas" oninput="calcCociente();" value="{{ acreditadas }}"></td>
 					</tr>
 				</table>
 
@@ -258,7 +273,7 @@
 						<tr>
 							<td style="border-bottom:1px solid #000;">Número de unidades de aprendizaje acreditadas</td>
 							<td style="font-size:2em;" rowspan="2">=</td>
-							<td id="td_ua" style="border-bottom:1px solid #000;">0</td>
+							<td id="td_ua" style="border-bottom:1px solid #000;">{{ acreditadas }}</td>
 							<td style="font-size:2em;" rowspan="2">=</td>
 							<td style="border: 3px solid #000;" rowspan="2"><input type="text" name="cociente" value="?" class="cociente_inp"></td>
 							<td style="vertical-align: middle;"><button>calcular</button></td>
@@ -329,7 +344,7 @@
 				<table>
 					<tr>
 						<td style="text-align:left;">Total de créditos obtenidos hasta el momento:</td>
-						<td style="border-left: 2px solid #000;"><input type="text" placeholder=" " style="width:100%;"></td>
+						<td style="border-left: 2px solid #000;"><input type="text" placeholder=" " style="width:100%;" value="{{ total_creditos }}"></td>
 					</tr>
 				</table>
 
@@ -342,6 +357,16 @@
 		</main>
 	</body>
 	<script>
+		const fecha = new Date();
+		window.addEventListener('load', function () {
+			document.getElementById("dia").value = fecha.getDate();
+			document.getElementById("year").value = fecha.getFullYear();
+			document.getElementById("mes").value = fecha.getMonth();
+		})
+
+
+
+
 		function calcCociente(){
 			let a = document.getElementsByName("mat_acreditadas")[0].value;
 			let b = document.getElementsByName("num_periodos")[0].value;
