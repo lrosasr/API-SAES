@@ -1,50 +1,96 @@
-#TODO: Generar pdf a partir de datos pasados al modulo
-
-from reportlab.lib.pagesizes import letter
+from PyPDF2 import PdfWriter, PdfReader
+import io
 from reportlab.pdfgen import canvas
-from PIL import Image
-import json
-import os
+from reportlab.lib.pagesizes import letter
 
-class pdfGenerator:
-	def __init__(self):
-		self.generate()
-	
-	def generate(self, lista={}):
-		# Read JSON containing Lorem Ipsum text
-		with open('assets/lorem.json', 'r') as file:
-			data = json.load(file)
-			lorem_text = data['lorem']
+info = {
+    'Name': 'Nombre Completo',
+    'ID': '1517459847',
+    'school_email': 'qwdfrr3400',
+    'personal_email': 'email@gmail.com',
+    'phone': '5563262184',
+    'admission_month': '08',
+    'admission_year': '2022',
+    'number_semester': 2,
+    'aproved_num': 12,
+    'academic_program': 4,
+    'credit_total': 105.00,
+}
 
-		# Create PDF
-		c = canvas.Canvas('output.pdf', pagesize=letter)
-		width, height = letter
+semester_position = {
+    1: 308,
+    2: 327,
+    3: 346,
+    4: 365,
+    5: 382,
+    6: 401,
+    7: 420,
+    8: 439,
+    9: 458,
+    10: 483,
+    11: 507,
+    12: 532,
+}
 
-		# Add Lorem Ipsum text
-		c.drawString(100, height - 100, lorem_text)
+program_position = {
+    1: [72, 322],
+    2: [72, 275],
+    3: [72, 236],
+    4: [72, 202],
+    5: [327, 322],
+    6: [327, 275],
+    7: [327, 236],
+}
 
-		# Add images with different opacities and positions
-		images = ['assets/assets.jpg', 'assets/assets2.jpg', 'assets/assets3.jpg']
-		opacities = [1, 0.8, 0.2]
-		positions = [(100, height - 300), (300, height - 500), (500, height - 700)]
-		texts = ["Text over Image 0", "Text over Image 1", "Text over Image 2"]
+program_credits = {
+    1: 312,
+    2: 312,
+    3: 316,
+    4: 309,
+    5: 318,
+    6: 336,
+    7: 394,
+}
 
-		for i, image_path in enumerate(images):
-			img = Image.open(image_path).convert("RGBA")
-			background = Image.new('RGBA', img.size, (255, 255, 255, 255)) # White background
-			img_with_opacity = Image.blend(background, img, alpha=opacities[i])
-			img_path_with_opacity = f'temp_image{i}.png'
-			img_with_opacity.save(img_path_with_opacity)
-			x, y = positions[i]
-			c.drawImage(img_path_with_opacity, x, y, width=200, height=150)
-			c.drawString(x + 10, y + 75, texts[i]) # Write text over the image
+packet = io.BytesIO()
+can = canvas.Canvas(packet, pagesize=letter)
+can.setFont('Helvetica', 10)
+can.drawString(65, 605, info['Name'])
+can.drawString(395, 605, info['ID'])
+can.drawString(65, 561, info['school_email'])
+can.drawString(260, 561, info['personal_email'])
+can.drawString(450, 561, info['phone'])
+can.drawString(360, 525, info['admission_month'])
+can.drawString(475, 525, info['admission_year'])
+can.setFont('Helvetica', 20)
+can.drawString(semester_position[info['number_semester']], 480, 'X')
+can.setFont('Helvetica', 10)
+can.drawString(430, 435, str(info['aproved_num']))
+can.drawString(480, 395, str((info['aproved_num']/info['number_semester'])))
+can.setFont('Helvetica', 20)
+can.drawString(program_position[info['academic_program']][0], program_position[info['academic_program']][1], 'X')
+can.setFont('Helvetica', 10)
+can.drawString(420, 163, str(info['credit_total']))
+can.drawString(415, 73, str((program_credits[info['academic_program']]-info['credit_total'])/(12-info['number_semester']))) 
+can.showPage()  
+can.drawString(65, 605, info['Name'])
+can.save()
 
-		# Save PDF
-		c.save()
+#move to the beginning of the StringIO buffer
+packet.seek(0)
 
-if __name__ == '__main__':
-	pdfGenerator()
-	# removing temp files
-	for i in range(3):
-		img_path_with_opacity = f'temp_image{i}.png'
-		os.remove(img_path_with_opacity)
+
+# create a new PDF with Reportlab
+new_pdf = PdfReader(packet)
+# read your existing PDF
+existing_pdf = PdfReader(open("pdf_base.pdf", "rb"))
+output = PdfWriter()
+# add the "watermark" (which is the new pdf) on the existing page
+for i in range(len(existing_pdf.pages)): 
+    page = existing_pdf.pages[i]
+    page.merge_page(new_pdf.pages[i])
+    output.add_page(page)
+# finally, write "output" to a real file
+output_stream = open("destination.pdf", "wb")
+output.write(output_stream)
+output_stream.close()
