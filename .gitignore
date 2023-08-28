@@ -2,7 +2,7 @@
 # Dependiendo de cada aportacion se pueden
 # ignorar otros path o extensiones.
 
-*.lock
+API/*.lock
 
 # Flutter
 

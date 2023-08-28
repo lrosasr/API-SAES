@@ -2,8 +2,8 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<link rel="preload" as="image" href="http://raw.githubusercontent.com/cpesfm/API-SAES/main/static/assets/0.jpeg">
-		<link rel="preload" as="image" href="http://raw.githubusercontent.com/cpesfm/API-SAES/main/static/assets/1.jpeg">
+		<link rel="preload" as="image" href="/static/assets/1.jpeg">
+		<link rel="preload" as="image" href="/static/assets/0.jpeg">
 		<!-- 		
 			TODO: Remmplazar el color rojo  #fa2053 por alguna
 			gama de azul o naranja para las personas con daltonismo
@@ -433,9 +433,9 @@
 			Object.entries(document.getElementsByClassName("esp_chk")).forEach(function(element) {
 				element[1].style.border = "3px solid #000";
 				if(element[1].dataset.carrera == num){
-					element[1].style.backgroundImage = "url('http://raw.githubusercontent.com/cpesfm/API-SAES/main/static/assets/1.jpeg')";
+					element[1].style.backgroundImage = "url('/static/assets/1.jpeg')";
 				}else{
-					element[1].style.backgroundImage = "url('http://raw.githubusercontent.com/cpesfm/API-SAES/main/static/assets/0.jpeg')";
+					element[1].style.backgroundImage = "url('/static/assets/0.jpeg')";
 				};
 			});
 		};
