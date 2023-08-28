@@ -91,18 +91,16 @@ class main:
 		datos[3] = self.navegador.find_element(By.ID, "ctl00_mainCopy_TabContainer1_Tab_Direccion_Lbl_eMail").get_attribute('innerHTML') #email
 		self.navegador.get("https://www.saes.esfm.ipn.mx/Alumnos/boleta/kardex.aspx") #Ir al kardex
 		datos[4] = self.navegador.find_element(By.ID, "ctl00_mainCopy_Lbl_Carrera").get_attribute('innerHTML') #carrea (¿con especialidad?)
-		
-		s = bs(f, features="html.parser")
+		# ====== LEER KARDEX =====
+		s = bs(self.navegador.page_source, features="html.parser")
 		semestres = s.find(id="ctl00_mainCopy_Lbl_Kardex").find_all('table')
-		datos[5] = str(len(semestres)) #catidad de semestres
+		datos[5] = str(len(semestres)) #cantidad de semestres que al menos ha cursado
 		datos[6] = 0 #acreditadas
 		datos[7] = 0 #creditos totales
 		for semestre in semestres:
-		print("=============")
-		tr = semestre.find_all("tr")
-		for i in range(2, len(tr)):
-			td = tr[i].find_all("td")
-			if(int(td[-1].text) >5):
-				print(td[0].text)
-		#leer todas las tablas dentro del span id "ctl00_mainCopy_Lbl_Kardex" con bs4
+			tr = semestre.find_all("tr")
+			for i in range(2, len(tr)):
+				td = tr[i].find_all("td")
+				if(int(td[-1].text) >5):
+					print(td[0].text)
 		return datos

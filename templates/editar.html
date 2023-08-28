@@ -239,7 +239,7 @@
 					<col/>
 					<col span="12" style="border-left: 2px solid #000;width: 4%;"/>
 					</colgroup>
-					<tr onclick="selecPeriodo(this, event.target.dataset.periodo);" class="select_periodo">
+					<tr onclick="selecPeriodo(this, event.target.dataset.periodo);" class="select_periodo" id="tr_periodo">
 						<td><input type="hidden" name="num_periodos" value="0"/>Click en el numero de periodos escolares desde el ingreso al programa académico (no contar bajas temporales)</td>
 						<td data-periodo="1">1</td>
 						<td data-periodo="2">2</td>
@@ -358,14 +358,6 @@
 	</body>
 	<script>
 		const fecha = new Date();
-		window.addEventListener('load', function () {
-			document.getElementById("dia").value = fecha.getDate();
-			document.getElementById("year").value = fecha.getFullYear();
-			document.getElementById("mes").value = fecha.getMonth();
-		})
-
-
-
 
 		function calcCociente(){
 			let a = document.getElementsByName("mat_acreditadas")[0].value;
@@ -379,6 +371,9 @@
 
 		function selecPeriodo(e,num){
 			if(num===undefined){return;};
+			if(typeof(e) != "object"){
+				e = document.getElementById("tr_periodo")
+			}
 			document.getElementById("td_pe").innerHTML = num;
 			let elems = e.children;
 			document.getElementsByName("num_periodos")[0].value = num;
@@ -406,5 +401,13 @@
 				};
 			});
 		};
+
+		window.addEventListener('load', function () {
+			document.getElementById("dia").value = fecha.getDate();
+			document.getElementById("year").value = fecha.getFullYear();
+			document.getElementById("mes").value = fecha.getMonth();
+			selecPeriodo(undefined, "{{ num_periodos }}");
+		})
+
 	</script>
 </html>

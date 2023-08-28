@@ -115,7 +115,7 @@ def index_login():
 @app.route("/hoja")
 def hoja_en_blanco(): #enviar al navegador un editar.html en blanco
 	return render_template("editar.html", \
-	nombre="",boleta="",telefono="") 
+	nombre="",boleta="",telefono="",num_periodos=0) 
 
 @app.route('/')
 def pagina_principal():
