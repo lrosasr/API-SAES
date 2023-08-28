@@ -1,9 +1,9 @@
 #TODO: Aprender a programar bien
 from API.webscr import main as saes
 from API.webscr import db_json_materias as db
-from API.pdf import main as pdf
+from API.pdf import main as generar_pdf
 #===============================================================================
-from flask import Flask, render_template, request, Response, make_response, abort, jsonify
+from flask import Flask, render_template, request, Response, make_response, abort, jsonify, send_file
 from urllib.parse import quote
 from markupsafe import escape
 from random import randint
@@ -63,8 +63,17 @@ fila = _fila()
 nav = "" #TODO: Hacer esto mas seguro
 
 
-@app.route('/api', methods = ['POST']) #TODO: Escribir la API
-def api_():
+@app.route('/api/<req_type>', methods = ['GET','POST']) #TODO: Escribir la API
+def api_(req_type=""):
+	##sanitizar la info entrante
+	#if request = GET
+	#    return send_file(
+   #     buffer,
+   #     as_attachment=True,
+   #     download_name='NUMER0_DE_BOLETA.PDF',
+   #     mimetype='application/pdf'
+   # )
+	#pdf = generar_pdf().crear_pdf_carga_ac()
 	return None
 
 
@@ -122,7 +131,7 @@ def index_login():
 	return ""
 
 @app.route("/hoja/<cliente_id>", methods = ['GET'])
-def hoja_inscripcion(cliente_id):
+def hoja_inscripcion(cliente_id=""):
 	if cliente_id in fila.clientes:
 		render_template_temp = fila.clientes[cliente_id][2]
 		fila.eliminar(cliente_id)

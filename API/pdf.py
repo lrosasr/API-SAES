@@ -60,7 +60,7 @@ program_credits = {
 
 
 class main:
-    def crear_pdf_creditos(self, info):
+    def crear_pdf_carga_ac(self, info):
         self.can.drawString(65, 605, info['Name'])
         self.can.drawString(395, 605, info['ID'])
         self.can.drawString(65, 561, info['school_email'])
