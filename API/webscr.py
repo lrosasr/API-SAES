@@ -7,9 +7,11 @@ from selenium.webdriver.common.by import By
 #from selenium.webdriver import ActionChains
 #from selenium.common.exceptions import *
 from bs4 import BeautifulSoup as bs
+from pysondb import getDb
 
+db_json_materias = getDb("API/materias.json")
 
-class main:
+class saes:
 	def setError(self, msg, e):
 		self.error = e
 		self.errorMsg = msg
@@ -97,10 +99,16 @@ class main:
 		datos[5] = str(len(semestres)) #cantidad de semestres que al menos ha cursado
 		datos[6] = 0 #acreditadas
 		datos[7] = 0 #creditos totales
+		datos[8] = [] #lista de reprobadas
 		for semestre in semestres:
 			tr = semestre.find_all("tr")
 			for i in range(2, len(tr)):
 				td = tr[i].find_all("td")
+				materia = db_json_materias.getByQuery({"codigo":td[0].text})[0]
 				if(int(td[-1].text) >5):
-					print(td[0].text)
+					datos[7] += float(materia["creditos"])
+					datos[6] += 1
+				else:
+					datos[8].append(materia)
+					
 		return datos

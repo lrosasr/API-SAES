@@ -1,5 +1,6 @@
 #TODO: Aprender a programar bien
-from API.webscr import main as saes
+from API.webscr import saes
+from API.webscr import db_json_materias as db
 #from API.pdf import main as pdf
 
 from flask import Flask, render_template, request, Response, make_response, abort, jsonify
@@ -100,7 +101,8 @@ def index_login():
 					#TODO: escribir en API/webscr.py>main la rutina para extraer la info necesaria
 					d = nav.leer_datos()
 					r = quote(render_template('editar.html',\
-						nombre=d[0],boleta=d[1],telefono=d[2],mail=d[3],ingreso_a=d[1][0:4]))
+						nombre=d[0],boleta=d[1],telefono=d[2],mail=d[3],ingreso_a=d[1][0:4], total_creditos=d[7],\
+						acreditadas=d[6]))
 					return jsonify({"html":r}), 200
 				case _ :
 					print("default")
