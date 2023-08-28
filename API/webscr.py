@@ -11,7 +11,7 @@ from pysondb import getDb
 
 db_json_materias = getDb("API/materias.json")
 
-class saes:
+class main:
 	def setError(self, msg, e):
 		self.error = e
 		self.errorMsg = msg

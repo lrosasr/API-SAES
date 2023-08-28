@@ -1,8 +1,8 @@
 #TODO: Aprender a programar bien
-from API.webscr import saes
+from API.webscr import main as saes
 from API.webscr import db_json_materias as db
-#from API.pdf import main as pdf
-
+from API.pdf import main as pdf
+#===============================================================================
 from flask import Flask, render_template, request, Response, make_response, abort, jsonify
 from urllib.parse import quote
 from markupsafe import escape
