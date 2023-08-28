@@ -135,9 +135,11 @@
 				border:3px solid #fa2053;
 				aspect-ratio: 1/1;
 			}
-			.tbl_ind td{
-				
+			.tbl_ind{
+				font-size: 0.9em;
 			}
+
+
 
 			.hoja input[type=text]{
 				border:2px solid #fff;
@@ -353,20 +355,28 @@
 
 
 				<table class="tbl_ind">
-
-					<tr class>
-						<td colspan="4">Cálculo del indicador I, fórmula: </td>
+					<colgroup>
+					<col>
+					<col span="3">
+					<col style="width:1%;border: 2px solid #000;">
+					<col style="width: 1%;">
+					</colgroup>
+					<tr style="border: 2px solid #000;">
+						<td colspan="4" style="font-size:1.1em;">Cálculo del indicador I, fórmula: </td>
 						<td>Valor numérico de I</td>
-						<td colspan="2">La reinscripción continúa si:</td>
+						<td colspan="2" style="font-size:1.1em;">La reinscripción continúa si:</td>
 					</tr>
 					<tr>
-						<td rowspan="2">I =</td>
+						<td rowspan="3" style="white-space: nowrap;font-size:1.5em;">I=</td>
 						<td>Total de créditos del programa académico</td>
 						<td>-</td>
 						<td>Total de créditos obtenidos hasta el momento</td>
-						<td rowspan="2"></td>
-						<td rowspan="2">I ≤</td>
-						<td rowspan="2">Carga media de su programa académico</td>
+						<td rowspan="3"></td>
+						<td rowspan="3" style="white-space: nowrap;font-size:1.5em;">I ≤</td>
+						<td rowspan="3">Carga media de su programa académico</td>
+					</tr>
+					<tr>
+						<td colspan="3"><hr style="width: 90%;"></td>
 					</tr>
 					<tr>
 						<!--<td></td>-->
