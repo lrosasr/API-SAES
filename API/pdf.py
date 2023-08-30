@@ -61,7 +61,7 @@ program_credits = {
 
 class main:
     def crear_pdf_carga_ac(self, info):
-        self.can.drawString(65, 605, info['Name'])
+        self.can.drawString(65, 605, info['name'])
         self.can.drawString(395, 605, info['ID'])
         self.can.drawString(65, 561, info['school_email'])
         self.can.drawString(260, 561, info['personal_email'])
@@ -69,26 +69,27 @@ class main:
         self.can.drawString(360, 525, info['admission_month'])
         self.can.drawString(475, 525, info['admission_year'])
         self.can.setFont(font, 20)
-        self.can.drawString(semester_position[info['number_semester']], 480, 'X')
+        #self.can.drawString(semester_position[info['number_semester']], 480, 'X')
         self.can.setFont(font, 10)
         self.can.drawString(430, 435, str(info['aproved_num']))
-        self.can.drawString(480, 395, str((info['aproved_num']/info['number_semester'])))
+        #self.can.drawString(480, 395, str((info['aproved_num']/info['number_semester'])))
         self.can.setFont(font, 20)
-        self.can.drawString(program_position[info['academic_program']][0], program_position[info['academic_program']][1], 'X')
+        #self.can.drawString(program_position[info['academic_program']][0], program_position[info['academic_program']][1], 'X')
         self.can.setFont(font, 10)
         self.can.drawString(420, 163, str(info['credit_total']))
-        self.can.drawString(415, 73, str((program_credits[info['academic_program']]-info['credit_total'])/(12-info['number_semester']))) 
+        #descomentar al terminar las pruebas
+        #self.can.drawString(415, 73, str((program_credits[info['academic_program']]-info['credit_total'])/(12-info['number_semester']))) 
         self.can.showPage()  
-        self.can.drawString(65, 605, info['Name'])
+        self.can.drawString(65, 605, info['name'])
         self.can.save()
         #move to the beginning of the StringIO buffer
         self.packet.seek(0)
         # create a new PDF with Reportlab
         new_pdf = PdfReader(self.packet)
         # read your existing PDF
-        existing_pdf = PdfReader(open("pdf_base.pdf", "rb"))
+        existing_pdf = PdfReader(open("API/pdf_base.pdf", "rb"))
         output = PdfWriter()
-        bytes_PDF = StringIO()
+        bytes_PDF = io.BytesIO()
         # add the "watermark" (which is the new pdf) on the existing page
         for i in range(len(existing_pdf.pages)): 
             page = existing_pdf.pages[i]
@@ -99,7 +100,9 @@ class main:
         #output.write(output_stream)
         output.write(bytes_PDF) #guardar pdf en memoria
         #output_stream.close()
-        return bytes_PDF.getvalue()
+        #bytes_PDF.seek(0)
+        #return bytes_PDF.getvalue()
+        return bytes_PDF
     def __init__(self):
         self.packet = io.BytesIO()
         self.can = canvas.Canvas(self.packet, pagesize=letter)

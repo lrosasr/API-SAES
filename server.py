@@ -63,9 +63,32 @@ fila = _fila()
 nav = "" #TODO: Hacer esto mas seguro
 
 
-@app.route('/api/<req_type>', methods = ['GET','POST']) #TODO: Escribir la API
-def api_(req_type=""):
-	##sanitizar la info entrante
+@app.route('/api/<req_type>', methods = ['POST']) #TODO: Escribir la API
+def esta_es_la_api(req_type=""): #gen_pdf(datos) | autocomplete(string parcial)
+	match(req_type):
+		case("gen_pdf"):
+			#TODO:sanitizar la info entrante
+			#TODO:Validar informacion (lengths, datos numericos, etc)
+			req_data = {}
+			campos = ["name", "ID", "school_email", "personal_email", "phone","admission_month",\
+			"admission_year", "number_semester", "aproved_num", "academic_program", "credit_total"]
+			for campo in campos:
+				print(campo)
+				dato = request.form.get(campo)
+				if dato:
+					req_data[campo] = dato
+					continue
+				return app.send_static_file('peticion_invalida.html'), 500
+			#TODO:Poner esto dentro de un try except por si acaso
+			buffer = generar_pdf().crear_pdf_carga_ac(info=req_data) #objeto stringIO
+			resp = make_response(buffer.getvalue())
+			resp.headers["Content-Disposition"] = "attachment; filename=NUMERO_DE_BOLETA_Y_EPOCH.pdf"
+			#no usar el mime de pdf porque el navegador lo abre en su lector integrado
+			#resp.mimetype = "application/pdf"
+			resp.mimetype = "application/octet-stream" #triggerear la descarga del pdf
+			return resp
+		case("autocomplete"):
+			return None
 	#if request = GET
 	#    return send_file(
    #     buffer,
@@ -84,7 +107,7 @@ def index_login():
 		if(request.headers.get("Content-Type") == "application/json"):
 			data = request.json
 		else:
-			return jsonify({"err":1, "txt":"Request invalido"}), 520#WTF?
+			return jsonify({"err":1, "txt":"Request invalido"}), 520 #WTF?
 		if "id" in data:
 			if not (data.get("id") in fila.clientes):
 				return jsonify({"err":1, "txt":"Tiempo limite de espera alcanzado. Intentalo de nuevo."}), 530
@@ -117,7 +140,7 @@ def index_login():
 					fila.clientes[data.get("id")].append(\
 						render_template('editar.html',\
 							nombre=d[0],boleta=d[1],telefono=d[2],mail=d[3],ingreso_a=d[1][0:4], total_creditos=d[7],\
-							acreditadas=d[6]))
+							acreditadas=d[6],num_periodos=d[5]))
 					#return jsonify({"html":r}), 200
 					return jsonify({"html":"ok"}), 200
 				case _ :
@@ -130,15 +153,26 @@ def index_login():
 		return "???", 666
 	return ""
 
+
+
+#TODO: Aceptar peticion post para que los ids temporales no se queden el historial
+@app.route("/hoja", methods = ['GET'])
 @app.route("/hoja/<cliente_id>", methods = ['GET'])
 def hoja_inscripcion(cliente_id=""):
+	if cliente_id == "":
+		return render_template("editar.html", \
+		nombre="",boleta="",telefono="",num_periodos=0) 
 	if cliente_id in fila.clientes:
+		print(cliente_id)
 		render_template_temp = fila.clientes[cliente_id][2]
 		fila.eliminar(cliente_id)
 		return render_template_temp
-	else:
-		return render_template("editar.html", \
-		nombre="",boleta="",telefono="",num_periodos=0) 
+	return app.send_static_file('peticion_invalida.html'), 500
+
+@app.route("/test")
+def testing_api():
+	return app.send_static_file('editar_base.html'), 200
+
 
 @app.route('/')
 def pagina_principal():
@@ -151,6 +185,7 @@ def pagina_principal():
 def page_not_found(error):
 	return "Not found :(", 404
 	#return render_template("404.html"), 404
+
 
 
 if __name__ == '__main__':

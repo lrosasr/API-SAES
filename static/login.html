@@ -179,6 +179,23 @@
 	<script>
 		clientID = "";
 
+//	function postAndRedirect(url, data) {
+//   	var form = document.createElement('form');
+//   	document.body.appendChild(form);
+//   	form.target = '_blank';
+//   	form.method = 'post';
+//   	form.action = url;
+//   	for (var name in data) {
+//   		var input = document.createElement('input');
+//   		input.type = 'hidden';
+//   		input.name = name;
+//			input.value = data[name];
+//			form.appendChild(input);
+//		};
+//   	form.submit();
+//   	document.body.removeChild(form);
+//};
+
 		async function xhr(data){
 			let response = await fetch('/xhr', { 
     			method: 'POST', 
@@ -236,19 +253,19 @@
 					data["boleta"] = document.getElementById("saes_usr").value;
 					data["password"] = document.getElementById("saes_psw").value;
 					data["captcha"] = document.getElementById("captcha-input").value;
-					let resp = await xhr(data);
-					if(resp["status"] == 200){
-						let iframe = document.getElementById("editar");
+					//let resp = await xhr(data);
+					//if(resp["status"] == 200){
+					//	let iframe = document.getElementById("editar");
 						//iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(resp["response"].html);//renderizar respuesta (editar.html) en un iframe
 						//iframe.src = 'data:text/html;charset=utf-8,' + resp["response"].html;
-						document.getElementById("captcha-wall").style.visibility = "hidden";
+					//	document.getElementById("captcha-wall").style.visibility = "hidden";
 						//iframe.style.visibility = "visible";
-						window.location.href="/hoja/" + clientID;
-					}else{
-						mostrarError(resp["response"].error);
+					//	window.location.href="/hoja/" + clientID;
+					//}else{
+					//	mostrarError(resp["response"].error);
 						console.log(resp["status"]);
 						//mostrar el error y reiniciar proceseso
-					};
+					//};
 					break;
 				default:
 					//main llamado sin argumentos

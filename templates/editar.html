@@ -156,9 +156,22 @@
 	<body>
 		<div class="bar">2. Verifica tu informacion antes de guardar</div>
 		<div class="guardar" onclick="getPDF()"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-			<path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-			<path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-		 </svg><p>GUARDAR</p></div>
+			<path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg>
+			<p>GUARDAR</p>
+			<form id="datos" action="/api/gen_pdf" method="POST">
+				<input type="hidden" name="name" value="{{ nombre }}">
+				<input type="hidden" name="ID" value="{{ boleta }}">
+				<input type="hidden" name="phone" value="{{ telefono }}">
+				<input type="hidden" name="personal_email" value="{{ mail }}">
+				<input type="hidden" name="admission_year" value="{{ ingreso_a }}">
+				<input type="hidden" name="credit_total" value="{{ total_creditos }}">
+				<input type="hidden" name="aproved_num" value="{{ acreditadas }}">
+				<input type="hidden" name="number_semester" value="{{ num_periodos }}">
+				<input type="hidden" name="school_email" value="{{ mail_escuela }}">
+				<input type="hidden" name="admission_month" value="{{ ingreso_m }}">
+				<input type="hidden" name="academic_program" value="{{ carrera }}">
+			</form>
+		</div>
 		<main>
 			
 			<section class="hoja">
@@ -409,6 +422,7 @@
 
 		function selecPeriodo(e,num){
 			if(num===undefined){return;};
+			if(num == 0){return;}
 			if(typeof(e) != "object"){
 				e = document.getElementById("tr_periodo")
 			}
