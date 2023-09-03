@@ -2,22 +2,18 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<link rel="preload" href="/static/styles/login.css" as="style"/>
 	</head>
 	<body>
 		<header>
 			<h2 style="margin:0;">1. Ingresa tus datos de acceso del SAES</h2>
 		</header>
 		<main>
-			<iframe id="editar" title="Editar datos personales"></iframe>
-			<div id="captcha-wall">
 				<section id="captcha-cont">
 					<!--
 					<img src="/static/assets/0.jpeg" id="captcha-img"/>-->
 					<img id="captcha-img"/>
 					<input type="text" id="captcha-input" autocomplete="off" autocorrect="off" spellcheck="false" autocapitalize="on" maxlength="3"><button onclick="main('captcha')" class="boton" style="width:30%;height: 34px;float: right;">Verificar</button>
 				</section>
-			</div>
 			<section class="login-cont">
 				<table>
 					<tr>
@@ -123,9 +119,8 @@
 					data["password"] = document.getElementById("saes_psw").value;
 					data["captcha"] = document.getElementById("captcha-input").value;
 					let resp = await xhr(data);
-					
 					if(resp["status"] == 200){
-						//let iframe = document.getElementById("editar");
+					//	let iframe = document.getElementById("editar");
 						//iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(resp["response"].html);//renderizar respuesta (editar.html) en un iframe
 						//iframe.src = 'data:text/html;charset=utf-8,' + resp["response"].html;
 					//	document.getElementById("captcha-wall").style.visibility = "hidden";

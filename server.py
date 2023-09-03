@@ -1,18 +1,19 @@
 #TODO: Aprender a programar bien
-from API.webscr import main as saes
-from API.webscr import db_json_materias as db
-from API.pdf import main as generar_pdf
+from API.webscr  import main              as saes
+from API.webscr  import db_json_materias  as db
+from API.pdf     import main              as generar_pdf
+from API.validar import main              as validador
 #===============================================================================
-from flask import Flask, render_template, request, Response, make_response, abort, jsonify, send_file
+from flask        import Flask, render_template, request, Response, make_response, abort, jsonify, send_file
 from urllib.parse import quote
-from markupsafe import escape
-from random import randint
+from markupsafe   import escape
+from random       import randint
 import time
 
 
 app = Flask(__name__)
 config = {}
-
+vyc = validador()
 
 class _fila:
 	#TODO: Mover este class a su propio modulo en API/
@@ -64,11 +65,12 @@ nav = "" #TODO: Hacer esto mas seguro
 
 
 @app.route('/api/<req_type>', methods = ['POST']) #TODO: Escribir la API
-def esta_es_la_api(req_type=""): #gen_pdf(datos) | autocomplete(string parcial)
+def esta_es_la_api(req_type=""): # gen_pdf(datos) | autocomplete(string parcial) | leer_saes(fila_id)
 	match(req_type):
 		case("gen_pdf"):
 			#TODO:sanitizar la info entrante
 			#TODO:Validar informacion (lengths, datos numericos, etc)
+			#TODO:Tratar adecuadamente peticiones JSON
 			req_data = {}
 			campos = ["name", "ID", "school_email", "personal_email", "phone","admission_month",\
 			"admission_year", "number_semester", "aproved_num", "academic_program", "credit_total"]
@@ -89,6 +91,8 @@ def esta_es_la_api(req_type=""): #gen_pdf(datos) | autocomplete(string parcial)
 			return resp
 		case("autocomplete"):
 			return None
+		case("leer_saes"):
+		return None
 	#if request = GET
 	#    return send_file(
    #     buffer,
@@ -137,12 +141,12 @@ def index_login():
 					#r = quote(render_template('editar.html',\
 					#	nombre=d[0],boleta=d[1],telefono=d[2],mail=d[3],ingreso_a=d[1][0:4], total_creditos=d[7],\
 					#	acreditadas=d[6]))
-					fila.clientes[data.get("id")].append(\
-						render_template('editar.html',\
+					#fila.clientes[data.get("id")].append(\
+					r = quote(render_template('editar_base.html',\
 							nombre=d[0],boleta=d[1],telefono=d[2],mail=d[3],ingreso_a=d[1][0:4], total_creditos=d[7],\
 							acreditadas=d[6],num_periodos=d[5]))
-					#return jsonify({"html":r}), 200
-					return jsonify({"html":"ok"}), 200
+					return jsonify({"html":r}), 200
+					#return jsonify({"html":"ok"}), 200
 				case _ :
 					print("default")
 					return ""
@@ -156,18 +160,18 @@ def index_login():
 
 
 #TODO: Aceptar peticion post para que los ids temporales no se queden el historial
-@app.route("/hoja", methods = ['GET'])
-@app.route("/hoja/<cliente_id>", methods = ['GET'])
-def hoja_inscripcion(cliente_id=""):
-	if cliente_id == "":
-		return render_template("editar.html", \
-		nombre="",boleta="",telefono="",num_periodos=0) 
-	if cliente_id in fila.clientes:
-		print(cliente_id)
-		render_template_temp = fila.clientes[cliente_id][2]
-		fila.eliminar(cliente_id)
-		return render_template_temp
-	return app.send_static_file('peticion_invalida.html'), 500
+#@app.route("/hoja", methods = ['GET'])
+#@app.route("/hoja/<cliente_id>", methods = ['GET'])
+#def hoja_inscripcion(cliente_id=""):
+#	if cliente_id == "":
+#		return render_template("editar.html", \
+#		nombre="",boleta="",telefono="",num_periodos=0) 
+#	if cliente_id in fila.clientes:
+#		print(cliente_id)
+#		render_template_temp = fila.clientes[cliente_id][2]
+#		fila.eliminar(cliente_id)
+#		return render_template_temp
+#	return app.send_static_file('peticion_invalida.html'), 500
 
 @app.route("/test")
 def testing_api():

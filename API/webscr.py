@@ -1,17 +1,35 @@
-from selenium import webdriver
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait
+from selenium                           import webdriver
+from selenium.webdriver.support         import expected_conditions as EC
+from selenium.webdriver.support.ui      import WebDriverWait
 from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.by import By
-#from selenium.webdriver import ActionChains
-#from selenium.common.exceptions import *
-from bs4 import BeautifulSoup as bs
-from pysondb import getDb
+from selenium.webdriver.common.keys     import Keys
+from selenium.webdriver.common.by       import By
+#from selenium.webdriver                 import ActionChains
+#from selenium.common.exceptions         import *
+from bs4                                import BeautifulSoup       as bs
+from pysondb                            import getDb
 
-db_json_materias = getDb("API/materias.json")
+db_json_materias = getDb("API/assets/materias.json")
+
 
 class main:
+	def limpiarNavegador(self):
+		#TODO: Limpiar cookies e historial
+		self.navegador.delete_all_cookies()
+	def setNav(self, name, headless=True)
+		options = Options()
+		options.headless = headless
+		match(name):
+			case "firefox":
+				profl = webdriver.FirefoxProfile()
+				profl.set_preference("browser.cache.disk.enable", False)
+				profl.set_preference("browser.cache.memory.enable", False)
+				profl.set_preference("browser.cache.offline.enable", False)
+				profl.set_preference("network.http.use-cache", True)
+				#driver = webdriver.Firefox(profile)
+				self.navegador = webdriver.Firefox(profl, options)
+			case "chro":
+				return None
 	def setError(self, msg, e):
 		self.error = e
 		self.errorMsg = msg
@@ -22,7 +40,7 @@ class main:
 			if self.error : print(self.error)
 			self.navegador.close()
 			self.navegador.quit()
-	def __init__(self, headless=True):
+	def __init__(self, navegador="firefox", headless=True):
 		self.limpiarError()
 		try:
 			#TODO: Soporte para chromedriver
@@ -34,6 +52,12 @@ class main:
 		except Exception as e:
 			self.setError("El SAES no responde, (offline?)", e)
 			self.cerrar()
+
+
+
+
+
+
 	def get_captcha(self):
 		self.limpiarError()
 		try:

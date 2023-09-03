@@ -1,10 +1,14 @@
-from PyPDF2 import PdfWriter, PdfReader
-import io
-from reportlab.pdfgen import canvas
+#AUTOR: El Diegongo
+#Modificacion: Yo Mero
+
+from PyPDF2                  import PdfWriter, PdfReader
+from reportlab.pdfgen        import canvas
 from reportlab.lib.pagesizes import letter
+import io
 
 #=================
-font = "Helvetica" #TODO:Usar una fuente de licencia libre
+font     = "Helvetica" #TODO:Usar una fuente de licencia libre
+base_pdf = PdfReader(open("API/assets/pdf_base.pdf", "rb"))
 #======================
 
 
@@ -58,7 +62,6 @@ program_credits = {
 }
 
 
-
 class main:
     def crear_pdf_carga_ac(self, info):
         self.can.drawString(65, 605, info['name'])
@@ -69,7 +72,7 @@ class main:
         self.can.drawString(360, 525, info['admission_month'])
         self.can.drawString(475, 525, info['admission_year'])
         self.can.setFont(font, 20)
-        #self.can.drawString(semester_position[info['number_semester']], 480, 'X')
+        self.can.drawString(semester_position[info['number_semester']], 480, 'X')
         self.can.setFont(font, 10)
         self.can.drawString(430, 435, str(info['aproved_num']))
         #self.can.drawString(480, 395, str((info['aproved_num']/info['number_semester'])))
@@ -86,13 +89,11 @@ class main:
         self.packet.seek(0)
         # create a new PDF with Reportlab
         new_pdf = PdfReader(self.packet)
-        # read your existing PDF
-        existing_pdf = PdfReader(open("API/pdf_base.pdf", "rb"))
         output = PdfWriter()
         bytes_PDF = io.BytesIO()
         # add the "watermark" (which is the new pdf) on the existing page
-        for i in range(len(existing_pdf.pages)): 
-            page = existing_pdf.pages[i]
+        for i in range(len(base_pdf.pages)): 
+            page = base_pdf.pages[i]
             page.merge_page(new_pdf.pages[i])
             output.add_page(page)
         # finally, write "output" to a real file
