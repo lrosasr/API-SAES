@@ -1,0 +1,5429 @@
+{
+   "data": [
+      {
+         "codigo": "M311",
+         "semestre": "3",
+         "nombre": "ECONOMIA",
+         "creditos": "6.00",
+         "id": 259863506163913273
+      },
+      {
+         "codigo": "M312",
+         "semestre": "3",
+         "nombre": "CALCULO III",
+         "creditos": "9.00",
+         "id": 908257364740714661
+      },
+      {
+         "codigo": "M313",
+         "semestre": "3",
+         "nombre": "ALGEBRA III",
+         "creditos": "9.00",
+         "id": 831806765360228168
+      },
+      {
+         "codigo": "M314",
+         "semestre": "3",
+         "nombre": "ECS. DIFERENCIALES ORD. I",
+         "creditos": "9.00",
+         "id": 485644946132580448
+      },
+      {
+         "codigo": "M315",
+         "semestre": "3",
+         "nombre": "METODOS NUMERICOS I",
+         "creditos": "9.00",
+         "id": 750306485761772922
+      },
+      {
+         "codigo": "M416",
+         "semestre": "4",
+         "nombre": "INGENIERIA ECONOMICA",
+         "creditos": "6.00",
+         "id": 336781550930552678
+      },
+      {
+         "codigo": "M417",
+         "semestre": "4",
+         "nombre": "FISICA I",
+         "creditos": "9.00",
+         "id": 242157319938213919
+      },
+      {
+         "codigo": "M418",
+         "semestre": "4",
+         "nombre": "OPTIMIZACION LINEAL",
+         "creditos": "9.00",
+         "id": 446694236331506959
+      },
+      {
+         "codigo": "M419",
+         "semestre": "4",
+         "nombre": "ECS.DIF. ORD.II TEO. MET. NUM.",
+         "creditos": "9.00",
+         "id": 187251912792096598
+      },
+      {
+         "codigo": "M420",
+         "semestre": "4",
+         "nombre": "METODOS NUMERICOS II",
+         "creditos": "9.00",
+         "id": 110890737165999536
+      },
+      {
+         "codigo": "M206",
+         "semestre": "2",
+         "nombre": "INTRODUCCION A LA INGENIERIA",
+         "creditos": "6.00",
+         "id": 263064584011793801
+      },
+      {
+         "codigo": "M207",
+         "semestre": "2",
+         "nombre": "CALCULO II",
+         "creditos": "9.00",
+         "id": 923529670944760482
+      },
+      {
+         "codigo": "M208",
+         "semestre": "2",
+         "nombre": "ALGEBRA II",
+         "creditos": "9.00",
+         "id": 971332170085484755
+      },
+      {
+         "codigo": "M209",
+         "semestre": "2",
+         "nombre": "MATEMATICAS DISCRETAS",
+         "creditos": "9.00",
+         "id": 253335959651826875
+      },
+      {
+         "codigo": "M210",
+         "semestre": "2",
+         "nombre": "PROGRAMACION",
+         "creditos": "9.00",
+         "id": 325340691944317051
+      },
+      {
+         "codigo": "D840",
+         "semestre": "8",
+         "nombre": "ING. DE CALIDAD Y REINGENIERIA",
+         "creditos": "6.00",
+         "id": 473427516225240532
+      },
+      {
+         "codigo": "C841",
+         "semestre": "8",
+         "nombre": "INGENIERIA FINANCIERA",
+         "creditos": "6.00",
+         "id": 988291007036381760
+      },
+      {
+         "codigo": "M842",
+         "semestre": "8",
+         "nombre": "SEMINARIO PARA LA TITULACIÓN CURRICULAR",
+         "creditos": "9.00",
+         "id": 279180258013023725
+      },
+      {
+         "codigo": "D843",
+         "semestre": "8",
+         "nombre": "SEM. DE MODELACION INDUSTRIAL",
+         "creditos": "9.00",
+         "id": 182151102641609860
+      },
+      {
+         "codigo": "C844",
+         "semestre": "8",
+         "nombre": "SEMINARIO DE MODELACIÓN FINANCIERA",
+         "creditos": "9.00",
+         "id": 248433066131912542
+      },
+      {
+         "codigo": "M845",
+         "semestre": "8",
+         "nombre": "SIMULACION II",
+         "creditos": "9.00",
+         "id": 164170729515012264
+      },
+      {
+         "codigo": "M846",
+         "semestre": "8",
+         "nombre": "SISTEMAS DE CALIDAD",
+         "creditos": "9.00",
+         "id": 116139160658592799
+      },
+      {
+         "codigo": "D626",
+         "semestre": "6",
+         "nombre": "INGENIERIA INDUSTRIAL",
+         "creditos": "6.00",
+         "id": 241549140621605774
+      },
+      {
+         "codigo": "C627",
+         "semestre": "6",
+         "nombre": "FINANZAS",
+         "creditos": "6.00",
+         "id": 177122403098221679
+      },
+      {
+         "codigo": "M628",
+         "semestre": "6",
+         "nombre": "ANALISIS DE DECISIONES",
+         "creditos": "9.00",
+         "id": 225990216109554349
+      },
+      {
+         "codigo": "M629",
+         "semestre": "6",
+         "nombre": "OPTIMIZACION NO LINEAL",
+         "creditos": "9.00",
+         "id": 318370983055927008
+      },
+      {
+         "codigo": "C630",
+         "semestre": "6",
+         "nombre": "ECS. DIFS. PARCIALES II",
+         "creditos": "9.00",
+         "id": 104736238845852829
+      },
+      {
+         "codigo": "D631",
+         "semestre": "6",
+         "nombre": "FISICA III",
+         "creditos": "9.00",
+         "id": 159370354449473060
+      },
+      {
+         "codigo": "M632",
+         "semestre": "6",
+         "nombre": "ESTADISTICA",
+         "creditos": "9.00",
+         "id": 221923184349749502
+      },
+      {
+         "codigo": "D733",
+         "semestre": "7",
+         "nombre": "ADMON. DE LA PRODUCCION",
+         "creditos": "6.00",
+         "id": 317206421439685937
+      },
+      {
+         "codigo": "C734",
+         "semestre": "7",
+         "nombre": "SISTEMAS FINAN. Y COMERCIALES",
+         "creditos": "6.00",
+         "id": 334941323060851019
+      },
+      {
+         "codigo": "M735",
+         "semestre": "7",
+         "nombre": "ECONOMETRIA",
+         "creditos": "9.00",
+         "id": 234963592515551979
+      },
+      {
+         "codigo": "M736",
+         "semestre": "7",
+         "nombre": "INVESTIGACION DE OPERACIONES",
+         "creditos": "9.00",
+         "id": 317644424657122728
+      },
+      {
+         "codigo": "M737",
+         "semestre": "7",
+         "nombre": "SIMULACION I",
+         "creditos": "9.00",
+         "id": 246638034969645301
+      },
+      {
+         "codigo": "D738",
+         "semestre": "7",
+         "nombre": "ESTADISTICA AVANZADA",
+         "creditos": "9.00",
+         "id": 127219695546469416
+      },
+      {
+         "codigo": "C739",
+         "semestre": "7",
+         "nombre": "PROCESOS ESTOCASTICOS",
+         "creditos": "9.00",
+         "id": 148979690198375205
+      },
+      {
+         "codigo": "M101",
+         "semestre": "1",
+         "nombre": "SOCIEDAD Y CONOCIMIENTO",
+         "creditos": "6.00",
+         "id": 332863077223444179
+      },
+      {
+         "codigo": "M102",
+         "semestre": "1",
+         "nombre": "CALCULO I",
+         "creditos": "9.00",
+         "id": 316429678312803512
+      },
+      {
+         "codigo": "M103",
+         "semestre": "1",
+         "nombre": "ALGEBRA I",
+         "creditos": "9.00",
+         "id": 241855323122922278
+      },
+      {
+         "codigo": "M104",
+         "semestre": "1",
+         "nombre": "GEOMETRIA ANALITICA",
+         "creditos": "9.00",
+         "id": 384919597450975824
+      },
+      {
+         "codigo": "M105",
+         "semestre": "1",
+         "nombre": "INFORMATICA",
+         "creditos": "9.00",
+         "id": 291318549808650600
+      },
+      {
+         "codigo": "M521",
+         "semestre": "5",
+         "nombre": "FORM.Y EVALUACION DE PROYECTOS",
+         "creditos": "6.00",
+         "id": 121529937839275508
+      },
+      {
+         "codigo": "M522",
+         "semestre": "5",
+         "nombre": "FISICA II",
+         "creditos": "9.00",
+         "id": 432151492771546259
+      },
+      {
+         "codigo": "M523",
+         "semestre": "5",
+         "nombre": "ANALISIS MATEMATICO",
+         "creditos": "9.00",
+         "id": 318526248674918732
+      },
+      {
+         "codigo": "M524",
+         "semestre": "5",
+         "nombre": "ECS.DIFS.PARC.I TEOR.MET.NUM.",
+         "creditos": "9.00",
+         "id": 182850959287605573
+      },
+      {
+         "codigo": "M525",
+         "semestre": "5",
+         "nombre": "PROBABILIDAD",
+         "creditos": "9.00",
+         "id": 105516120671520184
+      },
+      {
+         "codigo": "F415",
+         "semestre": "4",
+         "nombre": "CALCULO IV",
+         "creditos": "9.00",
+         "id": 307775087063731992
+      },
+      {
+         "codigo": "E416",
+         "semestre": "4",
+         "nombre": "ALGEBRA IV",
+         "creditos": "9.00",
+         "id": 206991198592618150
+      },
+      {
+         "codigo": "T416",
+         "semestre": "4",
+         "nombre": "ALGEBRA IV",
+         "creditos": "9.00",
+         "id": 161873012334551685
+      },
+      {
+         "codigo": "E417",
+         "semestre": "4",
+         "nombre": "PROGRAMACION II",
+         "creditos": "9.00",
+         "id": 810038520659565575
+      },
+      {
+         "codigo": "N417",
+         "semestre": "4",
+         "nombre": "PROGRAMACION II",
+         "creditos": "9.00",
+         "id": 172786011934568705
+      },
+      {
+         "codigo": "T417",
+         "semestre": "4",
+         "nombre": "PROGRAMACION II",
+         "creditos": "9.00",
+         "id": 266557171303947073
+      },
+      {
+         "codigo": "F418",
+         "semestre": "4",
+         "nombre": "FISICA IV",
+         "creditos": "15.00",
+         "id": 332583076119162763
+      },
+      {
+         "codigo": "I419",
+         "semestre": "4",
+         "nombre": "INT. A MET. MATEMATICOS",
+         "creditos": "6.00",
+         "id": 108408111580696214
+      },
+      {
+         "codigo": "N419",
+         "semestre": "4",
+         "nombre": "INT. A MET. MATEMATICOS",
+         "creditos": "6.00",
+         "id": 268919432973873206
+      },
+      {
+         "codigo": "I420",
+         "semestre": "4",
+         "nombre": "CIRCUITOS ELECTRICOS",
+         "creditos": "10.00",
+         "id": 325007647234471283
+      },
+      {
+         "codigo": "I701",
+         "semestre": "7",
+         "nombre": "ANALISIS MATEMATICO I",
+         "creditos": "9.00",
+         "id": 171491382782814525
+      },
+      {
+         "codigo": "I702",
+         "semestre": "7",
+         "nombre": "ALGEBRA MODERNA I",
+         "creditos": "9.00",
+         "id": 211982236507725673
+      },
+      {
+         "codigo": "I703",
+         "semestre": "7",
+         "nombre": "GEOMETRIA DIFERENCIAL I",
+         "creditos": "9.00",
+         "id": 971922167842157667
+      },
+      {
+         "codigo": "I704",
+         "semestre": "7",
+         "nombre": "LENGUAJE ENSAMBLADOR",
+         "creditos": "9.00",
+         "id": 236241312172479091
+      },
+      {
+         "codigo": "I705",
+         "semestre": "7",
+         "nombre": "PROBABILIDAD I",
+         "creditos": "9.00",
+         "id": 181915937609786175
+      },
+      {
+         "codigo": "I706",
+         "semestre": "7",
+         "nombre": "METODOS NUMERICOS",
+         "creditos": "9.00",
+         "id": 145548194177612171
+      },
+      {
+         "codigo": "I708",
+         "semestre": "7",
+         "nombre": "MICROSCOPIA ELECTRONICA DE BARRIDO",
+         "creditos": "9.00",
+         "id": 138170314461933069
+      },
+      {
+         "codigo": "I709",
+         "semestre": "7",
+         "nombre": "ANALISIS MATEMATICO II",
+         "creditos": "9.00",
+         "id": 244053047176388821
+      },
+      {
+         "codigo": "I710",
+         "semestre": "7",
+         "nombre": "INT. A FUNCIONES DE VAR. COMP.",
+         "creditos": "9.00",
+         "id": 909436955389313428
+      },
+      {
+         "codigo": "I711",
+         "semestre": "7",
+         "nombre": "ALGEBRA MODERNA II",
+         "creditos": "9.00",
+         "id": 967609830780810910
+      },
+      {
+         "codigo": "I712",
+         "semestre": "7",
+         "nombre": "GEOMETRIA DIFERENCIAL II",
+         "creditos": "9.00",
+         "id": 108551989371553371
+      },
+      {
+         "codigo": "I713",
+         "semestre": "7",
+         "nombre": "INTRODUCCION A SISTEMAS",
+         "creditos": "9.00",
+         "id": 266819855295150350
+      },
+      {
+         "codigo": "I714",
+         "semestre": "7",
+         "nombre": "PROGRAMACION LINEAL",
+         "creditos": "9.00",
+         "id": 211796961300239833
+      },
+      {
+         "codigo": "I715",
+         "semestre": "7",
+         "nombre": "PROBABILIDAD II",
+         "creditos": "9.00",
+         "id": 460026368118650328
+      },
+      {
+         "codigo": "I716",
+         "semestre": "7",
+         "nombre": "ANALISIS NUMERICO I",
+         "creditos": "9.00",
+         "id": 164152512682974245
+      },
+      {
+         "codigo": "I717",
+         "semestre": "7",
+         "nombre": "DIDACTICA DE LAS CIENCIAS",
+         "creditos": "9.00",
+         "id": 315046622707090005
+      },
+      {
+         "codigo": "T717",
+         "semestre": "7",
+         "nombre": "DIDACTICA DE LAS CIENCIAS",
+         "creditos": "9.00",
+         "id": 657951999136347289
+      },
+      {
+         "codigo": "I718",
+         "semestre": "7",
+         "nombre": "EVALUACION DEL APRENDIZAJE",
+         "creditos": "6.00",
+         "id": 556522884476758609
+      },
+      {
+         "codigo": "T718",
+         "semestre": "7",
+         "nombre": "EVALUACION DEL APRENDIZAJE",
+         "creditos": "6.00",
+         "id": 115880854575741607
+      },
+      {
+         "codigo": "I719",
+         "semestre": "7",
+         "nombre": "ANALISIS MATEMATICO III",
+         "creditos": "9.00",
+         "id": 153860376317117131
+      },
+      {
+         "codigo": "T719",
+         "semestre": "7",
+         "nombre": "ANALISIS MATEMATICO III",
+         "creditos": "9.00",
+         "id": 200273877876138202
+      },
+      {
+         "codigo": "E720",
+         "semestre": "7",
+         "nombre": "FUNCIONES DE VAR. COMPLEJA I",
+         "creditos": "9.00",
+         "id": 126937895977281546
+      },
+      {
+         "codigo": "I720",
+         "semestre": "7",
+         "nombre": "FUNCIONES DE VAR. COMPLEJA I",
+         "creditos": "9.00",
+         "id": 274010962917302552
+      },
+      {
+         "codigo": "T720",
+         "semestre": "7",
+         "nombre": "FUNCIONES DE VAR. COMPLEJA I",
+         "creditos": "9.00",
+         "id": 332477835567951063
+      },
+      {
+         "codigo": "I721",
+         "semestre": "7",
+         "nombre": "TEORIA DE ECS. DIFERENCIALES I",
+         "creditos": "9.00",
+         "id": 299018795490837276
+      },
+      {
+         "codigo": "T721",
+         "semestre": "7",
+         "nombre": "TEORIA DE ECS. DIFERENCIALES I",
+         "creditos": "9.00",
+         "id": 271749216041910545
+      },
+      {
+         "codigo": "I722",
+         "semestre": "7",
+         "nombre": "ALGEBRA MODERNA III",
+         "creditos": "9.00",
+         "id": 169175228657997941
+      },
+      {
+         "codigo": "T722",
+         "semestre": "7",
+         "nombre": "ALGEBRA MODERNA III",
+         "creditos": "9.00",
+         "id": 266288644684361014
+      },
+      {
+         "codigo": "I723",
+         "semestre": "7",
+         "nombre": "GEOMETRIA DIFERENCIAL III",
+         "creditos": "9.00",
+         "id": 923161397961366810
+      },
+      {
+         "codigo": "T723",
+         "semestre": "7",
+         "nombre": "GEOMETRIA DIFERENCIAL III",
+         "creditos": "9.00",
+         "id": 326410523126925338
+      },
+      {
+         "codigo": "I724",
+         "semestre": "7",
+         "nombre": "TOPOLOGIA I",
+         "creditos": "9.00",
+         "id": 314977654423500858
+      },
+      {
+         "codigo": "T724",
+         "semestre": "7",
+         "nombre": "TOPOLOGIA I",
+         "creditos": "9.00",
+         "id": 533207219712391264
+      },
+      {
+         "codigo": "I725",
+         "semestre": "7",
+         "nombre": "FUNDAMENTOS DE COMPUTACION",
+         "creditos": "9.00",
+         "id": 216798995912825444
+      },
+      {
+         "codigo": "T725",
+         "semestre": "7",
+         "nombre": "FUNDAMENTOS DE COMPUTACION",
+         "creditos": "9.00",
+         "id": 132694104744471208
+      },
+      {
+         "codigo": "I726",
+         "semestre": "7",
+         "nombre": "INVESTIGACION DE OPERACIONES I",
+         "creditos": "9.00",
+         "id": 393923971826701816
+      },
+      {
+         "codigo": "T726",
+         "semestre": "7",
+         "nombre": "INVESTIGACION DE OPERACIONES I",
+         "creditos": "9.00",
+         "id": 690388777971549556
+      },
+      {
+         "codigo": "I727",
+         "semestre": "7",
+         "nombre": "ESTADISTICA I",
+         "creditos": "9.00",
+         "id": 213191102114744313
+      },
+      {
+         "codigo": "T727",
+         "semestre": "7",
+         "nombre": "ESTADISTICA I",
+         "creditos": "9.00",
+         "id": 488328259633246214
+      },
+      {
+         "codigo": "I728",
+         "semestre": "7",
+         "nombre": "ANALISIS NUMERICO II",
+         "creditos": "9.00",
+         "id": 249308811634143552
+      },
+      {
+         "codigo": "T728",
+         "semestre": "7",
+         "nombre": "ANALISIS NUMERICO II",
+         "creditos": "9.00",
+         "id": 107363640416323276
+      },
+      {
+         "codigo": "I729",
+         "semestre": "7",
+         "nombre": "INT. A LA RELATIVIDAD GENERAL",
+         "creditos": "6.00",
+         "id": 199514324439445784
+      },
+      {
+         "codigo": "T729",
+         "semestre": "7",
+         "nombre": "INT. A LA RELATIVIDAD GENERAL",
+         "creditos": "9.00",
+         "id": 448936455112766410
+      },
+      {
+         "codigo": "I730",
+         "semestre": "7",
+         "nombre": "ECUAC. DIFERENCIALES PARCIALES",
+         "creditos": "9.00",
+         "id": 657639606821430112
+      },
+      {
+         "codigo": "T730",
+         "semestre": "7",
+         "nombre": "ECUAC. DIFERENCIALES PARCIALES",
+         "creditos": "9.00",
+         "id": 245573337687166947
+      },
+      {
+         "codigo": "I731",
+         "semestre": "7",
+         "nombre": "ANALISIS MATEMATICO IV",
+         "creditos": "9.00",
+         "id": 523411631937804281
+      },
+      {
+         "codigo": "I732",
+         "semestre": "7",
+         "nombre": "FUNCIONES DE VAR. COMPLEJA II",
+         "creditos": "9.00",
+         "id": 250993109690575249
+      },
+      {
+         "codigo": "I733",
+         "semestre": "7",
+         "nombre": "TEORIA DE ECS. DIFERENCIALES II",
+         "creditos": "9.00",
+         "id": 179071828437090576
+      },
+      {
+         "codigo": "I734",
+         "semestre": "7",
+         "nombre": "ALGEBRA MODERNA IV",
+         "creditos": "9.00",
+         "id": 253317190660429593
+      },
+      {
+         "codigo": "I735",
+         "semestre": "7",
+         "nombre": "TOPOLOGIA II",
+         "creditos": "9.00",
+         "id": 200329515874027159
+      },
+      {
+         "codigo": "I736",
+         "semestre": "7",
+         "nombre": "ARQ. DE UNA COMPUTADORA",
+         "creditos": "9.00",
+         "id": 474769032549535401
+      },
+      {
+         "codigo": "I737",
+         "semestre": "7",
+         "nombre": "INVESTIGACION DE OPERACIONES II",
+         "creditos": "9.00",
+         "id": 184052135385775180
+      },
+      {
+         "codigo": "I738",
+         "semestre": "7",
+         "nombre": "ESTADISTICA II",
+         "creditos": "9.00",
+         "id": 392563932553286234
+      },
+      {
+         "codigo": "I739",
+         "semestre": "7",
+         "nombre": "ANALISIS NUMERICO III",
+         "creditos": "9.00",
+         "id": 140083313990603236
+      },
+      {
+         "codigo": "I740",
+         "semestre": "7",
+         "nombre": "INT. A LA ALGEBRA COMPUTACIONAL",
+         "creditos": "9.00",
+         "id": 235652980577230511
+      },
+      {
+         "codigo": "T740",
+         "semestre": "7",
+         "nombre": "INT. A LA ALGEBRA COMPUTACIONAL",
+         "creditos": "9.00",
+         "id": 298182126507878461
+      },
+      {
+         "codigo": "I741",
+         "semestre": "7",
+         "nombre": "FIABILIDAD",
+         "creditos": "9.00",
+         "id": 108186791107787725
+      },
+      {
+         "codigo": "T741",
+         "semestre": "7",
+         "nombre": "FIABILIDAD",
+         "creditos": "9.00",
+         "id": 241581449317101581
+      },
+      {
+         "codigo": "T742",
+         "semestre": "7",
+         "nombre": "FISICA TEORICA I",
+         "creditos": "12.00",
+         "id": 297073513476271372
+      },
+      {
+         "codigo": "T743",
+         "semestre": "7",
+         "nombre": "INT. A FISICA MODERNA",
+         "creditos": "12.00",
+         "id": 814060133615553299
+      },
+      {
+         "codigo": "E744",
+         "semestre": "7",
+         "nombre": "METODOS MATEMATICOS I",
+         "creditos": "6.00",
+         "id": 218108238720281280
+      },
+      {
+         "codigo": "T744",
+         "semestre": "7",
+         "nombre": "METODOS MATEMATICOS I",
+         "creditos": "6.00",
+         "id": 118104981434567255
+      },
+      {
+         "codigo": "I745",
+         "semestre": "7",
+         "nombre": "LABORATORIO I",
+         "creditos": "12.00",
+         "id": 186881900705921584
+      },
+      {
+         "codigo": "T745",
+         "semestre": "7",
+         "nombre": "LABORATORIO I",
+         "creditos": "12.00",
+         "id": 664704329520700985
+      },
+      {
+         "codigo": "I746",
+         "semestre": "7",
+         "nombre": "FISICA NUMERICA",
+         "creditos": "9.00",
+         "id": 248665282225745012
+      },
+      {
+         "codigo": "T746",
+         "semestre": "7",
+         "nombre": "FISICA NUMERICA",
+         "creditos": "6.00",
+         "id": 166985693785066111
+      },
+      {
+         "codigo": "I747",
+         "semestre": "7",
+         "nombre": "INT. A LA RELATIVIDAD ESPECIAL",
+         "creditos": "6.00",
+         "id": 183661573090638783
+      },
+      {
+         "codigo": "T747",
+         "semestre": "7",
+         "nombre": "INT. A LA RELATIVIDAD ESPECIAL",
+         "creditos": "6.00",
+         "id": 230392412129883103
+      },
+      {
+         "codigo": "T748",
+         "semestre": "7",
+         "nombre": "FISICA TEORICA II",
+         "creditos": "12.00",
+         "id": 299431108127362134
+      },
+      {
+         "codigo": "T749",
+         "semestre": "7",
+         "nombre": "MECANICA CUANTICA I",
+         "creditos": "12.00",
+         "id": 150407601655381513
+      },
+      {
+         "codigo": "I750",
+         "semestre": "7",
+         "nombre": "METODOS MATEMATICOS II",
+         "creditos": "6.00",
+         "id": 325169273172590591
+      },
+      {
+         "codigo": "T750",
+         "semestre": "7",
+         "nombre": "METODOS MATEMATICOS II",
+         "creditos": "6.00",
+         "id": 252318894488773339
+      },
+      {
+         "codigo": "T751",
+         "semestre": "7",
+         "nombre": "ELECTRONICA FUNCIONAL I",
+         "creditos": "10.00",
+         "id": 335085961752484170
+      },
+      {
+         "codigo": "I752",
+         "semestre": "7",
+         "nombre": "LABORATORIO II",
+         "creditos": "12.00",
+         "id": 341258636120484179
+      },
+      {
+         "codigo": "T752",
+         "semestre": "7",
+         "nombre": "LABORATORIO II",
+         "creditos": "12.00",
+         "id": 409223870432774224
+      },
+      {
+         "codigo": "I753",
+         "semestre": "7",
+         "nombre": "LOGICA MATEMATICA",
+         "creditos": "6.00",
+         "id": 535739399853951198
+      },
+      {
+         "codigo": "T753",
+         "semestre": "7",
+         "nombre": "LOGICA MATEMATICA",
+         "creditos": "6.00",
+         "id": 222242619750583483
+      },
+      {
+         "codigo": "I754",
+         "semestre": "7",
+         "nombre": "COMPUTACION EN FIS. DISCRETA",
+         "creditos": "6.00",
+         "id": 176054743182512017
+      },
+      {
+         "codigo": "T754",
+         "semestre": "7",
+         "nombre": "COMPUTACION EN FIS. DISCRETA",
+         "creditos": "6.00",
+         "id": 152046704889246431
+      },
+      {
+         "codigo": "I755",
+         "semestre": "7",
+         "nombre": "FISICA TEORICA III",
+         "creditos": "12.00",
+         "id": 137989632416534645
+      },
+      {
+         "codigo": "N755",
+         "semestre": "7",
+         "nombre": "FISICA TEORICA III",
+         "creditos": "12.00",
+         "id": 455664817363015473
+      },
+      {
+         "codigo": "T755",
+         "semestre": "7",
+         "nombre": "FISICA TEORICA III",
+         "creditos": "12.00",
+         "id": 242381425825574902
+      },
+      {
+         "codigo": "I756",
+         "semestre": "7",
+         "nombre": "MECANICA CUANTICA II",
+         "creditos": "12.00",
+         "id": 216816441267484389
+      },
+      {
+         "codigo": "N756",
+         "semestre": "7",
+         "nombre": "MECANICA CUANTICA II",
+         "creditos": "12.00",
+         "id": 187129177814082622
+      },
+      {
+         "codigo": "T756",
+         "semestre": "7",
+         "nombre": "MECANICA CUANTICA II",
+         "creditos": "12.00",
+         "id": 564136793658299255
+      },
+      {
+         "codigo": "I757",
+         "semestre": "7",
+         "nombre": "INT. A FISICA DEL ESTADO SOLIDO",
+         "creditos": "6.00",
+         "id": 770114168575599202
+      },
+      {
+         "codigo": "T757",
+         "semestre": "7",
+         "nombre": "INT. A FISICA DEL ESTADO SOLIDO",
+         "creditos": "6.00",
+         "id": 172014246148800721
+      },
+      {
+         "codigo": "I758",
+         "semestre": "7",
+         "nombre": "ELECTRONICA FUNCIONAL II",
+         "creditos": "10.00",
+         "id": 674572112658783466
+      },
+      {
+         "codigo": "T758",
+         "semestre": "7",
+         "nombre": "ELECTRONICA FUNCIONAL II",
+         "creditos": "10.00",
+         "id": 327972819106971811
+      },
+      {
+         "codigo": "I759",
+         "semestre": "7",
+         "nombre": "LABORATORIO III",
+         "creditos": "12.00",
+         "id": 449598265371640911
+      },
+      {
+         "codigo": "T759",
+         "semestre": "7",
+         "nombre": "LABORATORIO III",
+         "creditos": "12.00",
+         "id": 228754869897546035
+      },
+      {
+         "codigo": "I760",
+         "semestre": "7",
+         "nombre": "TEORIA DEL CONTROL I",
+         "creditos": "6.00",
+         "id": 183479326317071775
+      },
+      {
+         "codigo": "T760",
+         "semestre": "7",
+         "nombre": "TEORIA DEL CONTROL I",
+         "creditos": "6.00",
+         "id": 291332206676324434
+      },
+      {
+         "codigo": "I761",
+         "semestre": "7",
+         "nombre": "METODOS MATEMATICOS III",
+         "creditos": "6.00",
+         "id": 254224308973948956
+      },
+      {
+         "codigo": "T761",
+         "semestre": "7",
+         "nombre": "METODOS MATEMATICOS III",
+         "creditos": "6.00",
+         "id": 299138401496782734
+      },
+      {
+         "codigo": "I762",
+         "semestre": "7",
+         "nombre": "CURSO. ESP. DE ELECTRONICA",
+         "creditos": "6.00",
+         "id": 221048841262229859
+      },
+      {
+         "codigo": "T762",
+         "semestre": "7",
+         "nombre": "CURSO. ESP. DE ELECTRONICA",
+         "creditos": "6.00",
+         "id": 378037426962719549
+      },
+      {
+         "codigo": "T763",
+         "semestre": "7",
+         "nombre": "FISICA TEORICA IV",
+         "creditos": "12.00",
+         "id": 262679032396015606
+      },
+      {
+         "codigo": "E763",
+         "semestre": "7",
+         "nombre": "HISTORIA DE LA FISICA",
+         "creditos": "9.00",
+         "id": 292495972265798091
+      },
+      {
+         "codigo": "T764",
+         "semestre": "7",
+         "nombre": "FISICA ESTADISTICA",
+         "creditos": "12.00",
+         "id": 263495529869377493
+      },
+      {
+         "codigo": "T765",
+         "semestre": "7",
+         "nombre": "RADIACION Y PROPAGACION",
+         "creditos": "6.00",
+         "id": 300331718051063983
+      },
+      {
+         "codigo": "T766",
+         "semestre": "7",
+         "nombre": "INT. A FISICA ATOMICA Y MOLECULAR",
+         "creditos": "12.00",
+         "id": 185948397909671589
+      },
+      {
+         "codigo": "T767",
+         "semestre": "7",
+         "nombre": "INT. A FISICA NUCLEAR Y PART. ELEM.",
+         "creditos": "12.00",
+         "id": 176192820767583186
+      },
+      {
+         "codigo": "I768",
+         "semestre": "7",
+         "nombre": "LABORATORIO IV",
+         "creditos": "12.00",
+         "id": 317404594645807240
+      },
+      {
+         "codigo": "T768",
+         "semestre": "7",
+         "nombre": "LABORATORIO IV",
+         "creditos": "12.00",
+         "id": 234837365611569377
+      },
+      {
+         "codigo": "T769",
+         "semestre": "7",
+         "nombre": "TEORIA DEL CONTROL II",
+         "creditos": "6.00",
+         "id": 100217870253213858
+      },
+      {
+         "codigo": "I770",
+         "semestre": "7",
+         "nombre": "ASTROFISICA GENERAL I",
+         "creditos": "6.00",
+         "id": 584056888366882424
+      },
+      {
+         "codigo": "T770",
+         "semestre": "7",
+         "nombre": "ASTROFISICA GENERAL I",
+         "creditos": "6.00",
+         "id": 171693046058266741
+      },
+      {
+         "codigo": "I771",
+         "semestre": "7",
+         "nombre": "CURSO ESPECIAL",
+         "creditos": "9.00",
+         "id": 107884854690875634
+      },
+      {
+         "codigo": "I772",
+         "semestre": "7",
+         "nombre": "FÍSICA COMPUTACIONAL",
+         "creditos": "6.00",
+         "id": 285153908287732288
+      },
+      {
+         "codigo": "I774",
+         "semestre": "7",
+         "nombre": "ALGEBRA DE CAMPOS NUMERICOS",
+         "creditos": "6.00",
+         "id": 128813259827052123
+      },
+      {
+         "codigo": "T774",
+         "semestre": "7",
+         "nombre": "ALGEBRA DE CAMPOS NUMERICOS",
+         "creditos": "6.00",
+         "id": 847590204852676004
+      },
+      {
+         "codigo": "I775",
+         "semestre": "7",
+         "nombre": "HISTORIA DE LA CIENCIA",
+         "creditos": "6.00",
+         "id": 127541287683898713
+      },
+      {
+         "codigo": "T775",
+         "semestre": "7",
+         "nombre": "HISTORIA DE LA CIENCIA",
+         "creditos": "6.00",
+         "id": 808427361078549940
+      },
+      {
+         "codigo": "I776",
+         "semestre": "7",
+         "nombre": "HISTORIA DE LA FISICA",
+         "creditos": "9.00",
+         "id": 705239541907028623
+      },
+      {
+         "codigo": "T776",
+         "semestre": "7",
+         "nombre": "HISTORIA DE LA FISICA",
+         "creditos": "9.00",
+         "id": 327117716938345173
+      },
+      {
+         "codigo": "I777",
+         "semestre": "7",
+         "nombre": "ASTROFISICA GENERAL II",
+         "creditos": "6.00",
+         "id": 142990875697436414
+      },
+      {
+         "codigo": "T777",
+         "semestre": "7",
+         "nombre": "ASTROFISICA GENERAL II",
+         "creditos": "6.00",
+         "id": 171660155782350456
+      },
+      {
+         "codigo": "I779",
+         "semestre": "7",
+         "nombre": "PERCEPCION SATELITARIA",
+         "creditos": "6.00",
+         "id": 109481649881105866
+      },
+      {
+         "codigo": "T779",
+         "semestre": "7",
+         "nombre": "PERCEPCION SATELITARIA",
+         "creditos": "6.00",
+         "id": 149495988794204096
+      },
+      {
+         "codigo": "E780",
+         "semestre": "7",
+         "nombre": "TOPICOS EN ECS.DIFERENCIALES II",
+         "creditos": "9.00",
+         "id": 170135283228955551
+      },
+      {
+         "codigo": "E781",
+         "semestre": "7",
+         "nombre": "GEOMETRIA II",
+         "creditos": "9.00",
+         "id": 224340028086052444
+      },
+      {
+         "codigo": "I781",
+         "semestre": "7",
+         "nombre": "INT. A LA ALG. COMPUTACIONAL",
+         "creditos": "9.00",
+         "id": 321514378416137168
+      },
+      {
+         "codigo": "T781",
+         "semestre": "7",
+         "nombre": "INT. A LA ALG. COMPUTACIONAL",
+         "creditos": "9.00",
+         "id": 270367711932991302
+      },
+      {
+         "codigo": "E782",
+         "semestre": "7",
+         "nombre": "PROBABILIDAD Y ESTADISTICA II",
+         "creditos": "9.00",
+         "id": 191801486517051951
+      },
+      {
+         "codigo": "I783",
+         "semestre": "7",
+         "nombre": "INT. A LA COSMOLOGIA",
+         "creditos": "9.00",
+         "id": 256460736764311877
+      },
+      {
+         "codigo": "T783",
+         "semestre": "7",
+         "nombre": "INT. A LA COSMOLOGIA",
+         "creditos": "9.00",
+         "id": 462052532948952866
+      },
+      {
+         "codigo": "E783",
+         "semestre": "7",
+         "nombre": "TALLER PEDAGOGICO II",
+         "creditos": "9.00",
+         "id": 697257758004403297
+      },
+      {
+         "codigo": "I784",
+         "semestre": "7",
+         "nombre": "MODELACION MATEMATICA",
+         "creditos": "9.00",
+         "id": 336361803898932443
+      },
+      {
+         "codigo": "T784",
+         "semestre": "7",
+         "nombre": "MODELACION MATEMATICA",
+         "creditos": "9.00",
+         "id": 213838485432414426
+      },
+      {
+         "codigo": "E784",
+         "semestre": "7",
+         "nombre": "SEM.DE LA PROB.EDUC.NACIONAL",
+         "creditos": "9.00",
+         "id": 284065346039912126
+      },
+      {
+         "codigo": "I785",
+         "semestre": "7",
+         "nombre": "ECONOMETRIA",
+         "creditos": "9.00",
+         "id": 134013043125085184
+      },
+      {
+         "codigo": "T785",
+         "semestre": "7",
+         "nombre": "ECONOMETRIA",
+         "creditos": "9.00",
+         "id": 776852117426069867
+      },
+      {
+         "codigo": "E785",
+         "semestre": "7",
+         "nombre": "FILOSOFIA DE LA CIENCIA I",
+         "creditos": "9.00",
+         "id": 301747957541850614
+      },
+      {
+         "codigo": "I789",
+         "semestre": "7",
+         "nombre": "PROB. DE LA ENSEÑANZA MAT.",
+         "creditos": "9.00",
+         "id": 194070767390974327
+      },
+      {
+         "codigo": "T789",
+         "semestre": "7",
+         "nombre": "PROB. DE LA ENSEÑANZA MAT.",
+         "creditos": "9.00",
+         "id": 287001375747208132
+      },
+      {
+         "codigo": "I790",
+         "semestre": "7",
+         "nombre": "GRAFICACION",
+         "creditos": "6.00",
+         "id": 303619315449508356
+      },
+      {
+         "codigo": "T790",
+         "semestre": "7",
+         "nombre": "GRAFICACION",
+         "creditos": "6.00",
+         "id": 297378513063699222
+      },
+      {
+         "codigo": "I791",
+         "semestre": "7",
+         "nombre": "MATEMATICAS FINANCIERAS",
+         "creditos": "9.00",
+         "id": 216151257210529253
+      },
+      {
+         "codigo": "T791",
+         "semestre": "7",
+         "nombre": "MATEMATICAS FINANCIERAS",
+         "creditos": "9.00",
+         "id": 238716421521101265
+      },
+      {
+         "codigo": "I792",
+         "semestre": "7",
+         "nombre": "VISUAL BASIC",
+         "creditos": "6.00",
+         "id": 251116902920185601
+      },
+      {
+         "codigo": "T792",
+         "semestre": "7",
+         "nombre": "VISUAL BASIC",
+         "creditos": "6.00",
+         "id": 818598052712804000
+      },
+      {
+         "codigo": "N793",
+         "semestre": "7",
+         "nombre": "INGENIERIA NUCLEAR I",
+         "creditos": "6.00",
+         "id": 191232649299212954
+      },
+      {
+         "codigo": "I793",
+         "semestre": "7",
+         "nombre": "TEMAS SELECTOS EN COMPUTACION",
+         "creditos": "6.00",
+         "id": 219670038079869046
+      },
+      {
+         "codigo": "T793",
+         "semestre": "7",
+         "nombre": "TEMAS SELECTOS EN COMPUTACION",
+         "creditos": "6.00",
+         "id": 557595089721768580
+      },
+      {
+         "codigo": "N794",
+         "semestre": "7",
+         "nombre": "TEORIA DE REACTORES NUCLEARES I",
+         "creditos": "6.00",
+         "id": 266943621367042022
+      },
+      {
+         "codigo": "I798",
+         "semestre": "7",
+         "nombre": "INT. A CIENCIA DE LOS MATERIALES",
+         "creditos": "6.00",
+         "id": 201604395691232035
+      },
+      {
+         "codigo": "T798",
+         "semestre": "7",
+         "nombre": "INT. A CIENCIA DE LOS MATERIALES",
+         "creditos": "6.00",
+         "id": 213462264922585912
+      },
+      {
+         "codigo": "I799",
+         "semestre": "7",
+         "nombre": "ASTROFISICA GENERAL",
+         "creditos": "6.00",
+         "id": 281113464454349120
+      },
+      {
+         "codigo": "T799",
+         "semestre": "7",
+         "nombre": "ASTROFISICA GENERAL",
+         "creditos": "6.00",
+         "id": 309347313661721382
+      },
+      {
+         "codigo": "E801",
+         "semestre": "8",
+         "nombre": "ANALISIS MATEMATICO I",
+         "creditos": "9.00",
+         "id": 209828145167478229
+      },
+      {
+         "codigo": "I801",
+         "semestre": "8",
+         "nombre": "ANALISIS MATEMATICO I",
+         "creditos": "9.00",
+         "id": 670802128448989295
+      },
+      {
+         "codigo": "E802",
+         "semestre": "8",
+         "nombre": "ALGEBRA MODERNA I",
+         "creditos": "9.00",
+         "id": 333486405007877604
+      },
+      {
+         "codigo": "I802",
+         "semestre": "8",
+         "nombre": "ALGEBRA MODERNA I",
+         "creditos": "9.00",
+         "id": 340356987098672712
+      },
+      {
+         "codigo": "E803",
+         "semestre": "8",
+         "nombre": "GEOMETRIA DIFERENCIAL I",
+         "creditos": "9.00",
+         "id": 203176457796704950
+      },
+      {
+         "codigo": "I803",
+         "semestre": "8",
+         "nombre": "GEOMETRIA DIFERENCIAL I",
+         "creditos": "9.00",
+         "id": 119859527926618832
+      },
+      {
+         "codigo": "E804",
+         "semestre": "8",
+         "nombre": "LENGUAJE ENSAMBLADOR",
+         "creditos": "9.00",
+         "id": 134693210616210904
+      },
+      {
+         "codigo": "I804",
+         "semestre": "8",
+         "nombre": "LENGUAJE ENSAMBLADOR",
+         "creditos": "9.00",
+         "id": 689815636234938031
+      },
+      {
+         "codigo": "E805",
+         "semestre": "8",
+         "nombre": "PROBABILIDAD I",
+         "creditos": "9.00",
+         "id": 335072645673751394
+      },
+      {
+         "codigo": "I805",
+         "semestre": "8",
+         "nombre": "PROBABILIDAD I",
+         "creditos": "9.00",
+         "id": 320901127165315819
+      },
+      {
+         "codigo": "E806",
+         "semestre": "8",
+         "nombre": "METODOS NUMERICOS",
+         "creditos": "9.00",
+         "id": 108820348001780284
+      },
+      {
+         "codigo": "I806",
+         "semestre": "8",
+         "nombre": "METODOS NUMERICOS",
+         "creditos": "9.00",
+         "id": 135777441103738747
+      },
+      {
+         "codigo": "E807",
+         "semestre": "8",
+         "nombre": "CURSO ESPECIAL",
+         "creditos": "9.00",
+         "id": 155088214615260087
+      },
+      {
+         "codigo": "I807",
+         "semestre": "8",
+         "nombre": "MICROSCOPIA ELECTRONICA DE BARRIDO",
+         "creditos": "9.00",
+         "id": 225098973427303107
+      },
+      {
+         "codigo": "E808",
+         "semestre": "8",
+         "nombre": "MICROSCOPIA ELECTRONICA DE BARRIDO",
+         "creditos": "9.00",
+         "id": 273234428667947090
+      },
+      {
+         "codigo": "I808",
+         "semestre": "8",
+         "nombre": "MICROSCOPIA ELECTRONICA DE BARRIDO",
+         "creditos": "9.00",
+         "id": 162257496779915346
+      },
+      {
+         "codigo": "E809",
+         "semestre": "8",
+         "nombre": "ANALISIS MATEMATICO II",
+         "creditos": "9.00",
+         "id": 315780138001640083
+      },
+      {
+         "codigo": "I809",
+         "semestre": "8",
+         "nombre": "ANALISIS MATEMATICO II",
+         "creditos": "9.00",
+         "id": 124423874583434316
+      },
+      {
+         "codigo": "E810",
+         "semestre": "8",
+         "nombre": "INT. A FUNCIONES DE VAR. COMP.",
+         "creditos": "9.00",
+         "id": 242793142500878586
+      },
+      {
+         "codigo": "I810",
+         "semestre": "8",
+         "nombre": "INT. A FUNCIONES DE VAR. COMP.",
+         "creditos": "9.00",
+         "id": 263226888271110168
+      },
+      {
+         "codigo": "E811",
+         "semestre": "8",
+         "nombre": "ALGEBRA MODERNA II",
+         "creditos": "9.00",
+         "id": 209104946272437554
+      },
+      {
+         "codigo": "I811",
+         "semestre": "8",
+         "nombre": "ALGEBRA MODERNA II",
+         "creditos": "9.00",
+         "id": 336285062666401520
+      },
+      {
+         "codigo": "E812",
+         "semestre": "8",
+         "nombre": "GEOMETRIA DIFERENCIAL II",
+         "creditos": "9.00",
+         "id": 173217011207955467
+      },
+      {
+         "codigo": "I812",
+         "semestre": "8",
+         "nombre": "GEOMETRIA DIFERENCIAL II",
+         "creditos": "9.00",
+         "id": 688562133979246433
+      },
+      {
+         "codigo": "E813",
+         "semestre": "8",
+         "nombre": "INTRODUCCION A SISTEMAS",
+         "creditos": "9.00",
+         "id": 208811184725822475
+      },
+      {
+         "codigo": "I813",
+         "semestre": "8",
+         "nombre": "INTRODUCCION A SISTEMAS",
+         "creditos": "9.00",
+         "id": 103657342281008252
+      },
+      {
+         "codigo": "E814",
+         "semestre": "8",
+         "nombre": "PROGRAMACION LINEAL",
+         "creditos": "9.00",
+         "id": 169548409075443036
+      },
+      {
+         "codigo": "I814",
+         "semestre": "8",
+         "nombre": "PROGRAMACION LINEAL",
+         "creditos": "9.00",
+         "id": 263073908974093692
+      },
+      {
+         "codigo": "E815",
+         "semestre": "8",
+         "nombre": "PROBABILIDAD II",
+         "creditos": "9.00",
+         "id": 170937076949835885
+      },
+      {
+         "codigo": "I815",
+         "semestre": "8",
+         "nombre": "PROBABILIDAD II",
+         "creditos": "9.00",
+         "id": 335069831777151672
+      },
+      {
+         "codigo": "E816",
+         "semestre": "8",
+         "nombre": "ANALISIS NUMERICO I",
+         "creditos": "9.00",
+         "id": 130936271920762656
+      },
+      {
+         "codigo": "I816",
+         "semestre": "8",
+         "nombre": "ANALISIS NUMERICO I",
+         "creditos": "9.00",
+         "id": 320951818936905926
+      },
+      {
+         "codigo": "E817",
+         "semestre": "8",
+         "nombre": "DIDACTICA DE LAS CIENCIAS",
+         "creditos": "9.00",
+         "id": 405314178167528317
+      },
+      {
+         "codigo": "I817",
+         "semestre": "8",
+         "nombre": "DIDACTICA DE LAS CIENCIAS",
+         "creditos": "9.00",
+         "id": 294859394109370034
+      },
+      {
+         "codigo": "T817",
+         "semestre": "8",
+         "nombre": "DIDACTICA DE LAS CIENCIAS",
+         "creditos": "9.00",
+         "id": 264722363622241747
+      },
+      {
+         "codigo": "E818",
+         "semestre": "8",
+         "nombre": "EVALUACION DEL APRENDIZAJE",
+         "creditos": "9.00",
+         "id": 122232982899328481
+      },
+      {
+         "codigo": "I818",
+         "semestre": "8",
+         "nombre": "EVALUACION DEL APRENDIZAJE",
+         "creditos": "6.00",
+         "id": 795444475996688339
+      },
+      {
+         "codigo": "T818",
+         "semestre": "8",
+         "nombre": "EVALUACION DEL APRENDIZAJE",
+         "creditos": "6.00",
+         "id": 121490908184618422
+      },
+      {
+         "codigo": "E819",
+         "semestre": "8",
+         "nombre": "ANALISIS MATEMATICO III",
+         "creditos": "9.00",
+         "id": 243194076209385616
+      },
+      {
+         "codigo": "I819",
+         "semestre": "8",
+         "nombre": "ANALISIS MATEMATICO III",
+         "creditos": "9.00",
+         "id": 502820476667142994
+      },
+      {
+         "codigo": "E820",
+         "semestre": "8",
+         "nombre": "FUNCIONES DE VAR. COMPLEJA I",
+         "creditos": "9.00",
+         "id": 964766117982441590
+      },
+      {
+         "codigo": "I820",
+         "semestre": "8",
+         "nombre": "FUNCIONES DE VAR. COMPLEJA I",
+         "creditos": "9.00",
+         "id": 231072624025500884
+      },
+      {
+         "codigo": "E821",
+         "semestre": "8",
+         "nombre": "TEORIA DE ECS. DIFERENCIALES I",
+         "creditos": "9.00",
+         "id": 322433415019564907
+      },
+      {
+         "codigo": "I821",
+         "semestre": "8",
+         "nombre": "TEORIA DE ECS. DIFERENCIALES I",
+         "creditos": "9.00",
+         "id": 551892771748273877
+      },
+      {
+         "codigo": "E822",
+         "semestre": "8",
+         "nombre": "ALGEBRA MODERNA III",
+         "creditos": "9.00",
+         "id": 258384100534952752
+      },
+      {
+         "codigo": "I822",
+         "semestre": "8",
+         "nombre": "ALGEBRA MODERNA III",
+         "creditos": "9.00",
+         "id": 290508877654927194
+      },
+      {
+         "codigo": "E823",
+         "semestre": "8",
+         "nombre": "GEOMETRIA DIFERENCIAL III",
+         "creditos": "9.00",
+         "id": 334178716307200130
+      },
+      {
+         "codigo": "I823",
+         "semestre": "8",
+         "nombre": "GEOMETRIA DIFERENCIAL III",
+         "creditos": "9.00",
+         "id": 198802650177455959
+      },
+      {
+         "codigo": "E824",
+         "semestre": "8",
+         "nombre": "TOPOLOGIA I",
+         "creditos": "9.00",
+         "id": 233791469150184969
+      },
+      {
+         "codigo": "I824",
+         "semestre": "8",
+         "nombre": "TOPOLOGIA I",
+         "creditos": "9.00",
+         "id": 331257850501101313
+      },
+      {
+         "codigo": "E825",
+         "semestre": "8",
+         "nombre": "FUNDAMENTOS DE COMPUTACION",
+         "creditos": "9.00",
+         "id": 833571012306832530
+      },
+      {
+         "codigo": "I825",
+         "semestre": "8",
+         "nombre": "FUNDAMENTOS DE COMPUTACION",
+         "creditos": "9.00",
+         "id": 930336929612465894
+      },
+      {
+         "codigo": "E826",
+         "semestre": "8",
+         "nombre": "INVESTIGACION DE OPERACIONES I",
+         "creditos": "9.00",
+         "id": 329414655993785417
+      },
+      {
+         "codigo": "I826",
+         "semestre": "8",
+         "nombre": "INVESTIGACION DE OPERACIONES I",
+         "creditos": "9.00",
+         "id": 911711516478642261
+      },
+      {
+         "codigo": "E827",
+         "semestre": "8",
+         "nombre": "ESTADISTICA I",
+         "creditos": "9.00",
+         "id": 305736582863168602
+      },
+      {
+         "codigo": "I827",
+         "semestre": "8",
+         "nombre": "ESTADISTICA I",
+         "creditos": "9.00",
+         "id": 444397642115297480
+      },
+      {
+         "codigo": "E828",
+         "semestre": "8",
+         "nombre": "ANALISIS NUMERICO II",
+         "creditos": "9.00",
+         "id": 315860404732870280
+      },
+      {
+         "codigo": "I828",
+         "semestre": "8",
+         "nombre": "ANALISIS NUMERICO II",
+         "creditos": "9.00",
+         "id": 235307772390809567
+      },
+      {
+         "codigo": "E829",
+         "semestre": "8",
+         "nombre": "INT. A LA RELATIVIDAD GENERAL",
+         "creditos": "9.00",
+         "id": 155584581570494686
+      },
+      {
+         "codigo": "I829",
+         "semestre": "8",
+         "nombre": "INT. A LA RELATIVIDAD GENERAL",
+         "creditos": "9.00",
+         "id": 270121119882608925
+      },
+      {
+         "codigo": "T829",
+         "semestre": "8",
+         "nombre": "INT. A LA RELATIVIDAD GENERAL",
+         "creditos": "9.00",
+         "id": 180766510625277339
+      },
+      {
+         "codigo": "E830",
+         "semestre": "8",
+         "nombre": "ECUAC. DIFERENCIALES PARCIALES",
+         "creditos": "9.00",
+         "id": 119612841132811837
+      },
+      {
+         "codigo": "I830",
+         "semestre": "8",
+         "nombre": "ECUAC. DIFERENCIALES PARCIALES",
+         "creditos": "9.00",
+         "id": 163593480732535090
+      },
+      {
+         "codigo": "T830",
+         "semestre": "8",
+         "nombre": "ECUAC. DIFERENCIALES PARCIALES",
+         "creditos": "9.00",
+         "id": 487710717145305307
+      },
+      {
+         "codigo": "E831",
+         "semestre": "8",
+         "nombre": "ANALISIS MATEMATICO IV",
+         "creditos": "9.00",
+         "id": 313618812342124151
+      },
+      {
+         "codigo": "I831",
+         "semestre": "8",
+         "nombre": "ANALISIS MATEMATICO IV",
+         "creditos": "9.00",
+         "id": 249214343794956923
+      },
+      {
+         "codigo": "T831",
+         "semestre": "8",
+         "nombre": "ANALISIS MATEMATICO IV",
+         "creditos": "9.00",
+         "id": 307900316431716478
+      },
+      {
+         "codigo": "E832",
+         "semestre": "8",
+         "nombre": "FUNCIONES DE VAR. COMPLEJA II",
+         "creditos": "9.00",
+         "id": 310305777499117228
+      },
+      {
+         "codigo": "I832",
+         "semestre": "8",
+         "nombre": "FUNCIONES DE VAR. COMPLEJA II",
+         "creditos": "9.00",
+         "id": 250855657034358996
+      },
+      {
+         "codigo": "T832",
+         "semestre": "8",
+         "nombre": "FUNCIONES DE VAR. COMPLEJA II",
+         "creditos": "9.00",
+         "id": 153756819962687309
+      },
+      {
+         "codigo": "I833",
+         "semestre": "8",
+         "nombre": "TEORIA DE ECS. DIFERENCIALES II",
+         "creditos": "9.00",
+         "id": 155544434301256209
+      },
+      {
+         "codigo": "T833",
+         "semestre": "8",
+         "nombre": "TEORIA DE ECS. DIFERENCIALES II",
+         "creditos": "9.00",
+         "id": 106803439993402595
+      },
+      {
+         "codigo": "E833",
+         "semestre": "8",
+         "nombre": "TEORIA DE ECS.DIFERENCIALES II",
+         "creditos": "9.00",
+         "id": 326193261712513890
+      },
+      {
+         "codigo": "E834",
+         "semestre": "8",
+         "nombre": "ALGEBRA MODERNA IV",
+         "creditos": "9.00",
+         "id": 400532981313779543
+      },
+      {
+         "codigo": "I834",
+         "semestre": "8",
+         "nombre": "ALGEBRA MODERNA IV",
+         "creditos": "9.00",
+         "id": 354842747804980128
+      },
+      {
+         "codigo": "T834",
+         "semestre": "8",
+         "nombre": "ALGEBRA MODERNA IV",
+         "creditos": "9.00",
+         "id": 321307977278911461
+      },
+      {
+         "codigo": "E835",
+         "semestre": "8",
+         "nombre": "TOPOLOGIA II",
+         "creditos": "9.00",
+         "id": 110099021130110169
+      },
+      {
+         "codigo": "I835",
+         "semestre": "8",
+         "nombre": "TOPOLOGIA II",
+         "creditos": "9.00",
+         "id": 226972017827479604
+      },
+      {
+         "codigo": "T835",
+         "semestre": "8",
+         "nombre": "TOPOLOGIA II",
+         "creditos": "9.00",
+         "id": 129161145255419256
+      },
+      {
+         "codigo": "E836",
+         "semestre": "8",
+         "nombre": "ARQ. DE UNA COMPUTADORA",
+         "creditos": "9.00",
+         "id": 264039072373709580
+      },
+      {
+         "codigo": "I836",
+         "semestre": "8",
+         "nombre": "ARQ. DE UNA COMPUTADORA",
+         "creditos": "9.00",
+         "id": 141838270778762847
+      },
+      {
+         "codigo": "T836",
+         "semestre": "8",
+         "nombre": "ARQ. DE UNA COMPUTADORA",
+         "creditos": "9.00",
+         "id": 208804034877848287
+      },
+      {
+         "codigo": "T837",
+         "semestre": "8",
+         "nombre": "INV. DE OPERACIONES II",
+         "creditos": "9.00",
+         "id": 125597697257335260
+      },
+      {
+         "codigo": "E837",
+         "semestre": "8",
+         "nombre": "INVESTIGACION DE OPERACIONES II",
+         "creditos": "9.00",
+         "id": 313515128073285590
+      },
+      {
+         "codigo": "I837",
+         "semestre": "8",
+         "nombre": "INVESTIGACION DE OPERACIONES II",
+         "creditos": "9.00",
+         "id": 137518547727738253
+      },
+      {
+         "codigo": "E838",
+         "semestre": "8",
+         "nombre": "ESTADISTICA II",
+         "creditos": "9.00",
+         "id": 468021652722989306
+      },
+      {
+         "codigo": "I838",
+         "semestre": "8",
+         "nombre": "ESTADISTICA II",
+         "creditos": "9.00",
+         "id": 284514955634248609
+      },
+      {
+         "codigo": "T838",
+         "semestre": "8",
+         "nombre": "ESTADISTICA II",
+         "creditos": "9.00",
+         "id": 201538998923493422
+      },
+      {
+         "codigo": "E839",
+         "semestre": "8",
+         "nombre": "ANALISIS NUMERICO III",
+         "creditos": "9.00",
+         "id": 301926280421892525
+      },
+      {
+         "codigo": "I839",
+         "semestre": "8",
+         "nombre": "ANALISIS NUMERICO III",
+         "creditos": "9.00",
+         "id": 109871554837284192
+      },
+      {
+         "codigo": "T839",
+         "semestre": "8",
+         "nombre": "ANALISIS NUMERICO III",
+         "creditos": "9.00",
+         "id": 145220392789901830
+      },
+      {
+         "codigo": "E840",
+         "semestre": "8",
+         "nombre": "INT. A LA ALGEBRA COMPUTACIONAL",
+         "creditos": "9.00",
+         "id": 169083611572517283
+      },
+      {
+         "codigo": "I840",
+         "semestre": "8",
+         "nombre": "INT. A LA ALGEBRA COMPUTACIONAL",
+         "creditos": "9.00",
+         "id": 101912636460221793
+      },
+      {
+         "codigo": "T840",
+         "semestre": "8",
+         "nombre": "INT. A LA ALGEBRA COMPUTACIONAL",
+         "creditos": "9.00",
+         "id": 221201473584335498
+      },
+      {
+         "codigo": "E841",
+         "semestre": "8",
+         "nombre": "FIABILIDAD",
+         "creditos": "9.00",
+         "id": 135151455547903678
+      },
+      {
+         "codigo": "I841",
+         "semestre": "8",
+         "nombre": "FIABILIDAD",
+         "creditos": "9.00",
+         "id": 183141364984018792
+      },
+      {
+         "codigo": "T841",
+         "semestre": "8",
+         "nombre": "FIABILIDAD",
+         "creditos": "9.00",
+         "id": 310544206823350594
+      },
+      {
+         "codigo": "T842",
+         "semestre": "8",
+         "nombre": "FISICA TEORICA I",
+         "creditos": "12.00",
+         "id": 332811970389837956
+      },
+      {
+         "codigo": "T843",
+         "semestre": "8",
+         "nombre": "INT. A FISICA MODERNA",
+         "creditos": "12.00",
+         "id": 195592691192556753
+      },
+      {
+         "codigo": "T844",
+         "semestre": "8",
+         "nombre": "METODOS MATEMATICOS I",
+         "creditos": "6.00",
+         "id": 267838513357942605
+      },
+      {
+         "codigo": "T845",
+         "semestre": "8",
+         "nombre": "LABORATORIO I",
+         "creditos": "12.00",
+         "id": 208268684277092218
+      },
+      {
+         "codigo": "E846",
+         "semestre": "8",
+         "nombre": "FISICA NUMERICA",
+         "creditos": "9.00",
+         "id": 206861590009285796
+      },
+      {
+         "codigo": "I846",
+         "semestre": "8",
+         "nombre": "FISICA NUMERICA",
+         "creditos": "9.00",
+         "id": 305863719122029173
+      },
+      {
+         "codigo": "T846",
+         "semestre": "8",
+         "nombre": "FISICA NUMERICA",
+         "creditos": "6.00",
+         "id": 134747930983277149
+      },
+      {
+         "codigo": "E847",
+         "semestre": "8",
+         "nombre": "INT. A LA RELATIVIDAD ESPECIAL",
+         "creditos": "9.00",
+         "id": 890055231642853750
+      },
+      {
+         "codigo": "I847",
+         "semestre": "8",
+         "nombre": "INT. A LA RELATIVIDAD ESPECIAL",
+         "creditos": "6.00",
+         "id": 317896214728975659
+      },
+      {
+         "codigo": "T847",
+         "semestre": "8",
+         "nombre": "INT. A LA RELATIVIDAD ESPECIAL",
+         "creditos": "6.00",
+         "id": 204666581915319372
+      },
+      {
+         "codigo": "T848",
+         "semestre": "8",
+         "nombre": "FISICA TEORICA II",
+         "creditos": "12.00",
+         "id": 126081704059172978
+      },
+      {
+         "codigo": "T849",
+         "semestre": "8",
+         "nombre": "MECANICA CUANTICA I",
+         "creditos": "12.00",
+         "id": 282663742926580351
+      },
+      {
+         "codigo": "E850",
+         "semestre": "8",
+         "nombre": "METODOS MATEMATICOS II",
+         "creditos": "9.00",
+         "id": 724284656736735867
+      },
+      {
+         "codigo": "T850",
+         "semestre": "8",
+         "nombre": "METODOS MATEMATICOS II",
+         "creditos": "6.00",
+         "id": 215879906599199559
+      },
+      {
+         "codigo": "T851",
+         "semestre": "8",
+         "nombre": "ELECTRONICA FUNCIONAL I",
+         "creditos": "10.00",
+         "id": 105859811347095382
+      },
+      {
+         "codigo": "I852",
+         "semestre": "8",
+         "nombre": "LABORATORIO II",
+         "creditos": "12.00",
+         "id": 266582114663139624
+      },
+      {
+         "codigo": "T852",
+         "semestre": "8",
+         "nombre": "LABORATORIO II",
+         "creditos": "12.00",
+         "id": 254547520369805852
+      },
+      {
+         "codigo": "E853",
+         "semestre": "8",
+         "nombre": "LOGICA MATEMATICA",
+         "creditos": "9.00",
+         "id": 116189975909966079
+      },
+      {
+         "codigo": "I853",
+         "semestre": "8",
+         "nombre": "LOGICA MATEMATICA",
+         "creditos": "6.00",
+         "id": 304525722447762249
+      },
+      {
+         "codigo": "T853",
+         "semestre": "8",
+         "nombre": "LOGICA MATEMATICA",
+         "creditos": "6.00",
+         "id": 242927202520645889
+      },
+      {
+         "codigo": "E854",
+         "semestre": "8",
+         "nombre": "COMPUTACION EN FIS. DISCRETA",
+         "creditos": "9.00",
+         "id": 257372425085106099
+      },
+      {
+         "codigo": "I854",
+         "semestre": "8",
+         "nombre": "COMPUTACION EN FIS. DISCRETA",
+         "creditos": "6.00",
+         "id": 123126919513117973
+      },
+      {
+         "codigo": "T854",
+         "semestre": "8",
+         "nombre": "COMPUTACION EN FIS. DISCRETA",
+         "creditos": "6.00",
+         "id": 426156010898447472
+      },
+      {
+         "codigo": "T855",
+         "semestre": "8",
+         "nombre": "FISICA TEORICA III",
+         "creditos": "12.00",
+         "id": 270579886469307308
+      },
+      {
+         "codigo": "T856",
+         "semestre": "8",
+         "nombre": "MECANICA CUANTICA II",
+         "creditos": "12.00",
+         "id": 481832923447444053
+      },
+      {
+         "codigo": "T857",
+         "semestre": "8",
+         "nombre": "INT. A FISICA DEL ESTADO SOLIDO",
+         "creditos": "6.00",
+         "id": 324283290071966354
+      },
+      {
+         "codigo": "T858",
+         "semestre": "8",
+         "nombre": "ELECTRONICA FUNCIONAL II",
+         "creditos": "10.00",
+         "id": 105792744761870649
+      },
+      {
+         "codigo": "I859",
+         "semestre": "8",
+         "nombre": "LABORATORIO III",
+         "creditos": "12.00",
+         "id": 360949142466105405
+      },
+      {
+         "codigo": "N859",
+         "semestre": "8",
+         "nombre": "LABORATORIO III",
+         "creditos": "12.00",
+         "id": 172031715596298334
+      },
+      {
+         "codigo": "T859",
+         "semestre": "8",
+         "nombre": "LABORATORIO III",
+         "creditos": "12.00",
+         "id": 888987313741896666
+      },
+      {
+         "codigo": "T860",
+         "semestre": "8",
+         "nombre": "TEORIA DEL CONTROL I",
+         "creditos": "6.00",
+         "id": 230990220761150135
+      },
+      {
+         "codigo": "E861",
+         "semestre": "8",
+         "nombre": "METODOS MATEMATICOS III",
+         "creditos": "9.00",
+         "id": 150253613761587850
+      },
+      {
+         "codigo": "I861",
+         "semestre": "8",
+         "nombre": "METODOS MATEMATICOS III",
+         "creditos": "6.00",
+         "id": 280496535000190446
+      },
+      {
+         "codigo": "T861",
+         "semestre": "8",
+         "nombre": "METODOS MATEMATICOS III",
+         "creditos": "6.00",
+         "id": 432652965729223304
+      },
+      {
+         "codigo": "E862",
+         "semestre": "8",
+         "nombre": "CURSO. ESP. DE ELECTRONICA",
+         "creditos": "9.00",
+         "id": 258586503210079790
+      },
+      {
+         "codigo": "I862",
+         "semestre": "8",
+         "nombre": "CURSO. ESP. DE ELECTRONICA",
+         "creditos": "6.00",
+         "id": 334680995574517202
+      },
+      {
+         "codigo": "T862",
+         "semestre": "8",
+         "nombre": "CURSO. ESP. DE ELECTRONICA",
+         "creditos": "6.00",
+         "id": 140977254384492182
+      },
+      {
+         "codigo": "I863",
+         "semestre": "8",
+         "nombre": "FISICA TEORICA IV",
+         "creditos": "12.00",
+         "id": 295233983597146617
+      },
+      {
+         "codigo": "T863",
+         "semestre": "8",
+         "nombre": "FISICA TEORICA IV",
+         "creditos": "12.00",
+         "id": 149720408114059806
+      },
+      {
+         "codigo": "I864",
+         "semestre": "8",
+         "nombre": "FISICA ESTADISTICA",
+         "creditos": "12.00",
+         "id": 173890879130898693
+      },
+      {
+         "codigo": "T864",
+         "semestre": "8",
+         "nombre": "FISICA ESTADISTICA",
+         "creditos": "12.00",
+         "id": 310693587031011226
+      },
+      {
+         "codigo": "I865",
+         "semestre": "8",
+         "nombre": "RADIACION Y PROPAGACION",
+         "creditos": "6.00",
+         "id": 235806405400614959
+      },
+      {
+         "codigo": "T865",
+         "semestre": "8",
+         "nombre": "RADIACION Y PROPAGACION",
+         "creditos": "6.00",
+         "id": 225952693645501211
+      },
+      {
+         "codigo": "I866",
+         "semestre": "8",
+         "nombre": "INT. A FISICA ATOMICA Y MOLECULAR",
+         "creditos": "12.00",
+         "id": 128568147048969405
+      },
+      {
+         "codigo": "T866",
+         "semestre": "8",
+         "nombre": "INT. A FISICA ATOMICA Y MOLECULAR",
+         "creditos": "12.00",
+         "id": 308954208044432738
+      },
+      {
+         "codigo": "I867",
+         "semestre": "8",
+         "nombre": "INT. A FISICA NUCLEAR Y PART. ELEM.",
+         "creditos": "12.00",
+         "id": 222094308142449902
+      },
+      {
+         "codigo": "T867",
+         "semestre": "8",
+         "nombre": "INT. A FISICA NUCLEAR Y PART. ELEM.",
+         "creditos": "12.00",
+         "id": 373237766211271181
+      },
+      {
+         "codigo": "I868",
+         "semestre": "8",
+         "nombre": "LABORATORIO IV",
+         "creditos": "12.00",
+         "id": 121602608705193740
+      },
+      {
+         "codigo": "T868",
+         "semestre": "8",
+         "nombre": "LABORATORIO IV",
+         "creditos": "12.00",
+         "id": 603833683805554224
+      },
+      {
+         "codigo": "E869",
+         "semestre": "8",
+         "nombre": "TEORIA DEL CONTROL II",
+         "creditos": "9.00",
+         "id": 198833329115677968
+      },
+      {
+         "codigo": "I869",
+         "semestre": "8",
+         "nombre": "TEORIA DEL CONTROL II",
+         "creditos": "6.00",
+         "id": 286929495373992539
+      },
+      {
+         "codigo": "T869",
+         "semestre": "8",
+         "nombre": "TEORIA DEL CONTROL II",
+         "creditos": "6.00",
+         "id": 173537737518437056
+      },
+      {
+         "codigo": "E870",
+         "semestre": "8",
+         "nombre": "ASTROFISICA GENERAL I",
+         "creditos": "9.00",
+         "id": 238833381083050369
+      },
+      {
+         "codigo": "I870",
+         "semestre": "8",
+         "nombre": "ASTROFISICA GENERAL I",
+         "creditos": "6.00",
+         "id": 165800691838347732
+      },
+      {
+         "codigo": "T870",
+         "semestre": "8",
+         "nombre": "ASTROFISICA GENERAL I",
+         "creditos": "6.00",
+         "id": 973409803878080159
+      },
+      {
+         "codigo": "T871",
+         "semestre": "8",
+         "nombre": "MICROSCOPIA ELECTRONICA DE BARRIDO",
+         "creditos": "6.00",
+         "id": 220597294239745426
+      },
+      {
+         "codigo": "I872",
+         "semestre": "8",
+         "nombre": "FÍSICA COMPUTACIONAL",
+         "creditos": "6.00",
+         "id": 506277392061175705
+      },
+      {
+         "codigo": "E874",
+         "semestre": "8",
+         "nombre": "ALGEBRA DE CAMPOS NUMERICOS",
+         "creditos": "9.00",
+         "id": 259684713852960129
+      },
+      {
+         "codigo": "T874",
+         "semestre": "8",
+         "nombre": "ALGEBRA DE CAMPOS NUMERICOS",
+         "creditos": "6.00",
+         "id": 230794130816807305
+      },
+      {
+         "codigo": "E875",
+         "semestre": "8",
+         "nombre": "HISTORIA DE LA CIENCIA",
+         "creditos": "9.00",
+         "id": 313449556163989274
+      },
+      {
+         "codigo": "I875",
+         "semestre": "8",
+         "nombre": "HISTORIA DE LA CIENCIA",
+         "creditos": "6.00",
+         "id": 171351664131002473
+      },
+      {
+         "codigo": "T875",
+         "semestre": "8",
+         "nombre": "HISTORIA DE LA CIENCIA",
+         "creditos": "6.00",
+         "id": 209861065894959952
+      },
+      {
+         "codigo": "E876",
+         "semestre": "8",
+         "nombre": "HISTORIA DE LA FISICA",
+         "creditos": "9.00",
+         "id": 260611026292666753
+      },
+      {
+         "codigo": "I876",
+         "semestre": "8",
+         "nombre": "HISTORIA DE LA FISICA",
+         "creditos": "9.00",
+         "id": 151235946589243322
+      },
+      {
+         "codigo": "T876",
+         "semestre": "8",
+         "nombre": "HISTORIA DE LA FISICA",
+         "creditos": "9.00",
+         "id": 127958298140864021
+      },
+      {
+         "codigo": "E877",
+         "semestre": "8",
+         "nombre": "ASTROFISICA GENERAL II",
+         "creditos": "9.00",
+         "id": 475201778384517121
+      },
+      {
+         "codigo": "I877",
+         "semestre": "8",
+         "nombre": "ASTROFISICA GENERAL II",
+         "creditos": "6.00",
+         "id": 116726988494607063
+      },
+      {
+         "codigo": "T877",
+         "semestre": "8",
+         "nombre": "ASTROFISICA GENERAL II",
+         "creditos": "6.00",
+         "id": 113966388487738983
+      },
+      {
+         "codigo": "E879",
+         "semestre": "8",
+         "nombre": "PERCEPCION SATELITARIA",
+         "creditos": "9.00",
+         "id": 468320144278718433
+      },
+      {
+         "codigo": "I879",
+         "semestre": "8",
+         "nombre": "PERCEPCION SATELITARIA",
+         "creditos": "9.00",
+         "id": 125111301604615298
+      },
+      {
+         "codigo": "T879",
+         "semestre": "8",
+         "nombre": "PERCEPCION SATELITARIA",
+         "creditos": "6.00",
+         "id": 863549682407033971
+      },
+      {
+         "codigo": "E881",
+         "semestre": "8",
+         "nombre": "INT. A LA ALG. COMPUTACIONAL",
+         "creditos": "9.00",
+         "id": 269281319744714070
+      },
+      {
+         "codigo": "I881",
+         "semestre": "8",
+         "nombre": "INT. A LA ALG. COMPUTACIONAL",
+         "creditos": "9.00",
+         "id": 200167931757464715
+      },
+      {
+         "codigo": "T881",
+         "semestre": "8",
+         "nombre": "INT. A LA ALG. COMPUTACIONAL",
+         "creditos": "9.00",
+         "id": 619218290732735154
+      },
+      {
+         "codigo": "E883",
+         "semestre": "8",
+         "nombre": "INT. A LA COSMOLOGIA",
+         "creditos": "9.00",
+         "id": 120670233926539758
+      },
+      {
+         "codigo": "I883",
+         "semestre": "8",
+         "nombre": "INT. A LA COSMOLOGIA",
+         "creditos": "9.00",
+         "id": 215192203285193859
+      },
+      {
+         "codigo": "T883",
+         "semestre": "8",
+         "nombre": "INT. A LA COSMOLOGIA",
+         "creditos": "9.00",
+         "id": 171446774530256376
+      },
+      {
+         "codigo": "E884",
+         "semestre": "8",
+         "nombre": "MODELACION MATEMATICA",
+         "creditos": "9.00",
+         "id": 247266109948638712
+      },
+      {
+         "codigo": "I884",
+         "semestre": "8",
+         "nombre": "MODELACION MATEMATICA",
+         "creditos": "9.00",
+         "id": 255633193163294394
+      },
+      {
+         "codigo": "T884",
+         "semestre": "8",
+         "nombre": "MODELACION MATEMATICA",
+         "creditos": "9.00",
+         "id": 310503938056802497
+      },
+      {
+         "codigo": "E885",
+         "semestre": "8",
+         "nombre": "ECONOMETRIA",
+         "creditos": "9.00",
+         "id": 199978012102038886
+      },
+      {
+         "codigo": "I885",
+         "semestre": "8",
+         "nombre": "ECONOMETRIA",
+         "creditos": "9.00",
+         "id": 235859898672217921
+      },
+      {
+         "codigo": "T885",
+         "semestre": "8",
+         "nombre": "ECONOMETRIA",
+         "creditos": "9.00",
+         "id": 187797350436752164
+      },
+      {
+         "codigo": "E886",
+         "semestre": "8",
+         "nombre": "VARIABLE COMPLEJA",
+         "creditos": "9.00",
+         "id": 326251969248021850
+      },
+      {
+         "codigo": "E887",
+         "semestre": "8",
+         "nombre": "FILOSOFIA DE LA CIENCIA II",
+         "creditos": "9.00",
+         "id": 242989953854681428
+      },
+      {
+         "codigo": "E888",
+         "semestre": "8",
+         "nombre": "TEMAS APLICATIVOS DE LAS MAT.",
+         "creditos": "9.00",
+         "id": 209479245397128666
+      },
+      {
+         "codigo": "E889",
+         "semestre": "8",
+         "nombre": "PROB. DE LA ENSEÑANZA MAT.",
+         "creditos": "9.00",
+         "id": 288025871705371909
+      },
+      {
+         "codigo": "I889",
+         "semestre": "8",
+         "nombre": "PROB. DE LA ENSEÑANZA MAT.",
+         "creditos": "9.00",
+         "id": 814076670968039851
+      },
+      {
+         "codigo": "T889",
+         "semestre": "8",
+         "nombre": "PROB. DE LA ENSEÑANZA MAT.",
+         "creditos": "9.00",
+         "id": 183838934808808429
+      },
+      {
+         "codigo": "E890",
+         "semestre": "8",
+         "nombre": "GRAFICACION",
+         "creditos": "6.00",
+         "id": 172561105847170423
+      },
+      {
+         "codigo": "I890",
+         "semestre": "8",
+         "nombre": "GRAFICACION",
+         "creditos": "6.00",
+         "id": 271033990340930494
+      },
+      {
+         "codigo": "T890",
+         "semestre": "8",
+         "nombre": "GRAFICACION",
+         "creditos": "6.00",
+         "id": 398105981515967794
+      },
+      {
+         "codigo": "E891",
+         "semestre": "8",
+         "nombre": "MATEMATICAS FINANCIERAS",
+         "creditos": "9.00",
+         "id": 820245648047943507
+      },
+      {
+         "codigo": "I891",
+         "semestre": "8",
+         "nombre": "MATEMATICAS FINANCIERAS",
+         "creditos": "9.00",
+         "id": 253194933724424946
+      },
+      {
+         "codigo": "T891",
+         "semestre": "8",
+         "nombre": "MATEMATICAS FINANCIERAS",
+         "creditos": "9.00",
+         "id": 106275137684345550
+      },
+      {
+         "codigo": "E892",
+         "semestre": "8",
+         "nombre": "VISUAL BASIC",
+         "creditos": "6.00",
+         "id": 194706637035304598
+      },
+      {
+         "codigo": "I892",
+         "semestre": "8",
+         "nombre": "VISUAL BASIC",
+         "creditos": "6.00",
+         "id": 269700723558295082
+      },
+      {
+         "codigo": "T892",
+         "semestre": "8",
+         "nombre": "VISUAL BASIC",
+         "creditos": "6.00",
+         "id": 139789682273351845
+      },
+      {
+         "codigo": "I893",
+         "semestre": "8",
+         "nombre": "TEMAS SELECTOS EN COMPUTACION",
+         "creditos": "6.00",
+         "id": 588260420544308883
+      },
+      {
+         "codigo": "T893",
+         "semestre": "8",
+         "nombre": "TEMAS SELECTOS EN COMPUTACION",
+         "creditos": "6.00",
+         "id": 265922943948561168
+      },
+      {
+         "codigo": "T894",
+         "semestre": "8",
+         "nombre": "INTRODUCCION A LAS BASES DE GR",
+         "creditos": "9.00",
+         "id": 121565007835395762
+      },
+      {
+         "codigo": "N895",
+         "semestre": "8",
+         "nombre": "INGENIERIA NUCLEAR II",
+         "creditos": "6.00",
+         "id": 103935693067795491
+      },
+      {
+         "codigo": "N896",
+         "semestre": "8",
+         "nombre": "TEORIA DE REACTORES NUCLEARES II",
+         "creditos": "6.00",
+         "id": 194052380240808789
+      },
+      {
+         "codigo": "N897",
+         "semestre": "8",
+         "nombre": "PROTECCION RADIOLOGICA",
+         "creditos": "6.00",
+         "id": 248332582931397948
+      },
+      {
+         "codigo": "E898",
+         "semestre": "8",
+         "nombre": "INT. A CIENCIA DE LOS MATERIALES",
+         "creditos": "6.00",
+         "id": 331837968019900242
+      },
+      {
+         "codigo": "I898",
+         "semestre": "8",
+         "nombre": "INT. A CIENCIA DE LOS MATERIALES",
+         "creditos": "6.00",
+         "id": 272041916317747991
+      },
+      {
+         "codigo": "T898",
+         "semestre": "8",
+         "nombre": "INT. A CIENCIA DE LOS MATERIALES",
+         "creditos": "6.00",
+         "id": 736388739283809211
+      },
+      {
+         "codigo": "E899",
+         "semestre": "8",
+         "nombre": "ASTROFISICA GENERAL",
+         "creditos": "9.00",
+         "id": 795381090155380665
+      },
+      {
+         "codigo": "I899",
+         "semestre": "8",
+         "nombre": "ASTROFISICA GENERAL",
+         "creditos": "6.00",
+         "id": 238191788469529520
+      },
+      {
+         "codigo": "T899",
+         "semestre": "8",
+         "nombre": "ASTROFISICA GENERAL",
+         "creditos": "6.00",
+         "id": 179595442395030016
+      },
+      {
+         "codigo": "I601",
+         "semestre": "6",
+         "nombre": "ANALISIS MATEMATICO I",
+         "creditos": "9.00",
+         "id": 324208713864544599
+      },
+      {
+         "codigo": "T601",
+         "semestre": "6",
+         "nombre": "ANALISIS MATEMATICO II",
+         "creditos": "9.00",
+         "id": 232017903997811527
+      },
+      {
+         "codigo": "I602",
+         "semestre": "6",
+         "nombre": "ALGEBRA MODERNA I",
+         "creditos": "9.00",
+         "id": 690104548628245185
+      },
+      {
+         "codigo": "T602",
+         "semestre": "6",
+         "nombre": "INT. A FUNCIONES DE VAR. COMP.",
+         "creditos": "9.00",
+         "id": 254980644813149898
+      },
+      {
+         "codigo": "T603",
+         "semestre": "6",
+         "nombre": "ALGEBRA MODERNA II",
+         "creditos": "9.00",
+         "id": 263420036053198402
+      },
+      {
+         "codigo": "I603",
+         "semestre": "6",
+         "nombre": "GEOMETRIA DIFERENCIAL I",
+         "creditos": "9.00",
+         "id": 296020800428607200
+      },
+      {
+         "codigo": "T604",
+         "semestre": "6",
+         "nombre": "GEOMETRIA DIFERENCIAL II",
+         "creditos": "9.00",
+         "id": 583997067152435050
+      },
+      {
+         "codigo": "I604",
+         "semestre": "6",
+         "nombre": "LENGUAJE ENSAMBLADOR",
+         "creditos": "9.00",
+         "id": 208897170947648299
+      },
+      {
+         "codigo": "T605",
+         "semestre": "6",
+         "nombre": "INTRODUCCION A SISTEMAS",
+         "creditos": "9.00",
+         "id": 136546229238827256
+      },
+      {
+         "codigo": "I605",
+         "semestre": "6",
+         "nombre": "PROBABILIDAD I",
+         "creditos": "9.00",
+         "id": 184902362678048519
+      },
+      {
+         "codigo": "N605",
+         "semestre": "6",
+         "nombre": "PROBABILIDAD I",
+         "creditos": "9.00",
+         "id": 315485446240935959
+      },
+      {
+         "codigo": "I606",
+         "semestre": "6",
+         "nombre": "METODOS NUMERICOS",
+         "creditos": "9.00",
+         "id": 244151400977272631
+      },
+      {
+         "codigo": "T606",
+         "semestre": "6",
+         "nombre": "PROGRAMACION LINEAL",
+         "creditos": "9.00",
+         "id": 335408765941459191
+      },
+      {
+         "codigo": "T607",
+         "semestre": "6",
+         "nombre": "PROBABILIDAD II",
+         "creditos": "9.00",
+         "id": 410140042059634277
+      },
+      {
+         "codigo": "T608",
+         "semestre": "6",
+         "nombre": "ANALISIS NUMERICO I",
+         "creditos": "9.00",
+         "id": 159004253505410390
+      },
+      {
+         "codigo": "I608",
+         "semestre": "6",
+         "nombre": "MICROSCOPIA ELECTRONICA DE BARRIDO",
+         "creditos": "9.00",
+         "id": 116296340845971381
+      },
+      {
+         "codigo": "T694",
+         "semestre": "6",
+         "nombre": "MICROSCOPIA ELECTRONICA DE BARRIDO",
+         "creditos": "9.00",
+         "id": 214185449271299861
+      },
+      {
+         "codigo": "I609",
+         "semestre": "6",
+         "nombre": "ANALISIS MATEMATICO II",
+         "creditos": "9.00",
+         "id": 191277170698842176
+      },
+      {
+         "codigo": "I610",
+         "semestre": "6",
+         "nombre": "INT. A FUNCIONES DE VAR. COMP.",
+         "creditos": "9.00",
+         "id": 242111753544457792
+      },
+      {
+         "codigo": "I611",
+         "semestre": "6",
+         "nombre": "ALGEBRA MODERNA II",
+         "creditos": "9.00",
+         "id": 308225387771159917
+      },
+      {
+         "codigo": "I612",
+         "semestre": "6",
+         "nombre": "GEOMETRIA DIFERENCIAL II",
+         "creditos": "9.00",
+         "id": 782602069868838144
+      },
+      {
+         "codigo": "I613",
+         "semestre": "6",
+         "nombre": "INTRODUCCION A SISTEMAS",
+         "creditos": "9.00",
+         "id": 180573889548091767
+      },
+      {
+         "codigo": "I614",
+         "semestre": "6",
+         "nombre": "PROGRAMACION LINEAL",
+         "creditos": "9.00",
+         "id": 208098966136271709
+      },
+      {
+         "codigo": "I615",
+         "semestre": "6",
+         "nombre": "PROBABILIDAD II",
+         "creditos": "9.00",
+         "id": 205688875845931493
+      },
+      {
+         "codigo": "I616",
+         "semestre": "6",
+         "nombre": "ANALISIS NUMERICO I",
+         "creditos": "9.00",
+         "id": 283183712884896326
+      },
+      {
+         "codigo": "I617",
+         "semestre": "6",
+         "nombre": "DIDACTICA DE LAS CIENCIAS",
+         "creditos": "9.00",
+         "id": 601594792971156111
+      },
+      {
+         "codigo": "T617",
+         "semestre": "6",
+         "nombre": "DIDACTICA DE LAS CIENCIAS",
+         "creditos": "9.00",
+         "id": 169486232503027616
+      },
+      {
+         "codigo": "I618",
+         "semestre": "6",
+         "nombre": "EVALUACION DEL APRENDIZAJE",
+         "creditos": "6.00",
+         "id": 123136346112999167
+      },
+      {
+         "codigo": "T618",
+         "semestre": "6",
+         "nombre": "EVALUACION DEL APRENDIZAJE",
+         "creditos": "6.00",
+         "id": 692504572349718615
+      },
+      {
+         "codigo": "I619",
+         "semestre": "6",
+         "nombre": "ANALISIS MATEMATICO III",
+         "creditos": "9.00",
+         "id": 334737244298687493
+      },
+      {
+         "codigo": "I620",
+         "semestre": "6",
+         "nombre": "FUNCIONES DE VAR. COMPLEJA I",
+         "creditos": "9.00",
+         "id": 283043074957299237
+      },
+      {
+         "codigo": "I621",
+         "semestre": "6",
+         "nombre": "TEORIA DE ECS. DIFERENCIALES I",
+         "creditos": "9.00",
+         "id": 851260078345383523
+      },
+      {
+         "codigo": "I622",
+         "semestre": "6",
+         "nombre": "ALGEBRA MODERNA III",
+         "creditos": "9.00",
+         "id": 884107831225675394
+      },
+      {
+         "codigo": "I623",
+         "semestre": "6",
+         "nombre": "GEOMETRIA DIFERENCIAL III",
+         "creditos": "9.00",
+         "id": 182360977364194536
+      },
+      {
+         "codigo": "I624",
+         "semestre": "6",
+         "nombre": "TOPOLOGIA I",
+         "creditos": "9.00",
+         "id": 970601276322278414
+      },
+      {
+         "codigo": "I625",
+         "semestre": "6",
+         "nombre": "FUNDAMENTOS DE COMPUTACION",
+         "creditos": "9.00",
+         "id": 124216031444067942
+      },
+      {
+         "codigo": "I626",
+         "semestre": "6",
+         "nombre": "INVESTIGACION DE OPERACIONES I",
+         "creditos": "9.00",
+         "id": 179977251470019795
+      },
+      {
+         "codigo": "I627",
+         "semestre": "6",
+         "nombre": "ESTADISTICA I",
+         "creditos": "9.00",
+         "id": 150311496439415910
+      },
+      {
+         "codigo": "I628",
+         "semestre": "6",
+         "nombre": "ANALISIS NUMERICO II",
+         "creditos": "9.00",
+         "id": 284591568414681675
+      },
+      {
+         "codigo": "I629",
+         "semestre": "6",
+         "nombre": "INT. A LA RELATIVIDAD GENERAL",
+         "creditos": "6.00",
+         "id": 834477125832458243
+      },
+      {
+         "codigo": "T629",
+         "semestre": "6",
+         "nombre": "INT. A LA RELATIVIDAD GENERAL",
+         "creditos": "9.00",
+         "id": 982381141905945830
+      },
+      {
+         "codigo": "I630",
+         "semestre": "6",
+         "nombre": "ECUAC. DIFERENCIALES PARCIALES",
+         "creditos": "9.00",
+         "id": 313808740778496840
+      },
+      {
+         "codigo": "T630",
+         "semestre": "6",
+         "nombre": "ECUAC. DIFERENCIALES PARCIALES",
+         "creditos": "9.00",
+         "id": 137061563710797498
+      },
+      {
+         "codigo": "I631",
+         "semestre": "6",
+         "nombre": "ANALISIS MATEMATICO IV",
+         "creditos": "9.00",
+         "id": 313172821617500671
+      },
+      {
+         "codigo": "I632",
+         "semestre": "6",
+         "nombre": "FUNCIONES DE VAR. COMPLEJA II",
+         "creditos": "9.00",
+         "id": 215307677337109968
+      },
+      {
+         "codigo": "I633",
+         "semestre": "6",
+         "nombre": "TEORIA DE ECS. DIFERENCIALES II",
+         "creditos": "9.00",
+         "id": 300162419893567505
+      },
+      {
+         "codigo": "I634",
+         "semestre": "6",
+         "nombre": "ALGEBRA MODERNA IV",
+         "creditos": "9.00",
+         "id": 834510387235388202
+      },
+      {
+         "codigo": "I635",
+         "semestre": "6",
+         "nombre": "TOPOLOGIA II",
+         "creditos": "9.00",
+         "id": 414528109952820405
+      },
+      {
+         "codigo": "I636",
+         "semestre": "6",
+         "nombre": "ARQ. DE UNA COMPUTADORA",
+         "creditos": "9.00",
+         "id": 458066704906907892
+      },
+      {
+         "codigo": "I637",
+         "semestre": "6",
+         "nombre": "INVESTIGACION DE OPERACIONES II",
+         "creditos": "9.00",
+         "id": 212016982352643693
+      },
+      {
+         "codigo": "I638",
+         "semestre": "6",
+         "nombre": "ESTADISTICA II",
+         "creditos": "9.00",
+         "id": 311716801362413024
+      },
+      {
+         "codigo": "I639",
+         "semestre": "6",
+         "nombre": "ANALISIS NUMERICO III",
+         "creditos": "9.00",
+         "id": 115997970231564375
+      },
+      {
+         "codigo": "I640",
+         "semestre": "6",
+         "nombre": "INT. A LA ALGEBRA COMPUTACIONAL",
+         "creditos": "9.00",
+         "id": 287417532744196441
+      },
+      {
+         "codigo": "T640",
+         "semestre": "6",
+         "nombre": "INT. A LA ALGEBRA COMPUTACIONAL",
+         "creditos": "9.00",
+         "id": 242206692037986557
+      },
+      {
+         "codigo": "I641",
+         "semestre": "6",
+         "nombre": "FIABILIDAD",
+         "creditos": "9.00",
+         "id": 125537718734364450
+      },
+      {
+         "codigo": "T641",
+         "semestre": "6",
+         "nombre": "FIABILIDAD",
+         "creditos": "9.00",
+         "id": 472232095361110106
+      },
+      {
+         "codigo": "T642",
+         "semestre": "6",
+         "nombre": "FISICA TEORICA I",
+         "creditos": "12.00",
+         "id": 183622660750046527
+      },
+      {
+         "codigo": "T643",
+         "semestre": "6",
+         "nombre": "INT. A FISICA MODERNA",
+         "creditos": "12.00",
+         "id": 260503273552169912
+      },
+      {
+         "codigo": "I644",
+         "semestre": "6",
+         "nombre": "METODOS MATEMATICOS I",
+         "creditos": "6.00",
+         "id": 309824483331452607
+      },
+      {
+         "codigo": "T644",
+         "semestre": "6",
+         "nombre": "METODOS MATEMATICOS I",
+         "creditos": "6.00",
+         "id": 122982456727052208
+      },
+      {
+         "codigo": "I645",
+         "semestre": "6",
+         "nombre": "LABORATORIO I",
+         "creditos": "12.00",
+         "id": 250254611771908384
+      },
+      {
+         "codigo": "T645",
+         "semestre": "6",
+         "nombre": "LABORATORIO I",
+         "creditos": "12.00",
+         "id": 131968341396934410
+      },
+      {
+         "codigo": "I646",
+         "semestre": "6",
+         "nombre": "FISICA NUMERICA",
+         "creditos": "9.00",
+         "id": 573261776335049214
+      },
+      {
+         "codigo": "T646",
+         "semestre": "6",
+         "nombre": "FISICA NUMERICA",
+         "creditos": "6.00",
+         "id": 322959573202230371
+      },
+      {
+         "codigo": "I647",
+         "semestre": "6",
+         "nombre": "INT. A LA RELATIVIDAD ESPECIAL",
+         "creditos": "6.00",
+         "id": 532139709724295349
+      },
+      {
+         "codigo": "T647",
+         "semestre": "6",
+         "nombre": "INT. A LA RELATIVIDAD ESPECIAL",
+         "creditos": "6.00",
+         "id": 199542285319626065
+      },
+      {
+         "codigo": "I648",
+         "semestre": "6",
+         "nombre": "FISICA TEORICA II",
+         "creditos": "12.00",
+         "id": 283862494943345517
+      },
+      {
+         "codigo": "T648",
+         "semestre": "6",
+         "nombre": "FISICA TEORICA II",
+         "creditos": "12.00",
+         "id": 217040018628037089
+      },
+      {
+         "codigo": "I649",
+         "semestre": "6",
+         "nombre": "MECANICA CUANTICA I",
+         "creditos": "12.00",
+         "id": 254188122161023523
+      },
+      {
+         "codigo": "N649",
+         "semestre": "6",
+         "nombre": "MECANICA CUANTICA I",
+         "creditos": "12.00",
+         "id": 299889643944991292
+      },
+      {
+         "codigo": "T649",
+         "semestre": "6",
+         "nombre": "MECANICA CUANTICA I",
+         "creditos": "12.00",
+         "id": 117876736795071557
+      },
+      {
+         "codigo": "I650",
+         "semestre": "6",
+         "nombre": "METODOS MATEMATICOS II",
+         "creditos": "6.00",
+         "id": 306205107672718705
+      },
+      {
+         "codigo": "T650",
+         "semestre": "6",
+         "nombre": "METODOS MATEMATICOS II",
+         "creditos": "6.00",
+         "id": 938498262920065907
+      },
+      {
+         "codigo": "I651",
+         "semestre": "6",
+         "nombre": "ELECTRONICA FUNCIONAL I",
+         "creditos": "10.00",
+         "id": 270973497711521275
+      },
+      {
+         "codigo": "T651",
+         "semestre": "6",
+         "nombre": "ELECTRONICA FUNCIONAL I",
+         "creditos": "10.00",
+         "id": 171976690467586104
+      },
+      {
+         "codigo": "I652",
+         "semestre": "6",
+         "nombre": "LABORATORIO II",
+         "creditos": "12.00",
+         "id": 160790225375118970
+      },
+      {
+         "codigo": "T652",
+         "semestre": "6",
+         "nombre": "LABORATORIO II",
+         "creditos": "12.00",
+         "id": 304945072128012100
+      },
+      {
+         "codigo": "I653",
+         "semestre": "6",
+         "nombre": "LOGICA MATEMATICA",
+         "creditos": "6.00",
+         "id": 153649937097344139
+      },
+      {
+         "codigo": "T653",
+         "semestre": "6",
+         "nombre": "LOGICA MATEMATICA",
+         "creditos": "6.00",
+         "id": 493666545831373595
+      },
+      {
+         "codigo": "I654",
+         "semestre": "6",
+         "nombre": "COMPUTACION EN FIS. DISCRETA",
+         "creditos": "6.00",
+         "id": 739327980332841905
+      },
+      {
+         "codigo": "T654",
+         "semestre": "6",
+         "nombre": "COMPUTACION EN FIS. DISCRETA",
+         "creditos": "6.00",
+         "id": 255008663742978838
+      },
+      {
+         "codigo": "T655",
+         "semestre": "6",
+         "nombre": "FISICA TEORICA III",
+         "creditos": "12.00",
+         "id": 268568260842027051
+      },
+      {
+         "codigo": "T656",
+         "semestre": "6",
+         "nombre": "MECANICA CUANTICA II",
+         "creditos": "12.00",
+         "id": 704361653708030892
+      },
+      {
+         "codigo": "T657",
+         "semestre": "6",
+         "nombre": "INT. A FISICA DEL ESTADO SOLIDO",
+         "creditos": "6.00",
+         "id": 103791058246961148
+      },
+      {
+         "codigo": "T658",
+         "semestre": "6",
+         "nombre": "ELECTRONICA FUNCIONAL II",
+         "creditos": "10.00",
+         "id": 286589024485899879
+      },
+      {
+         "codigo": "I659",
+         "semestre": "6",
+         "nombre": "LABORATORIO III",
+         "creditos": "12.00",
+         "id": 189013013518838188
+      },
+      {
+         "codigo": "T659",
+         "semestre": "6",
+         "nombre": "LABORATORIO III",
+         "creditos": "12.00",
+         "id": 336736846461514334
+      },
+      {
+         "codigo": "T660",
+         "semestre": "6",
+         "nombre": "TEORIA DEL CONTROL I",
+         "creditos": "6.00",
+         "id": 148834019853857237
+      },
+      {
+         "codigo": "I661",
+         "semestre": "6",
+         "nombre": "METODOS MATEMATICOS III",
+         "creditos": "6.00",
+         "id": 182693752948342300
+      },
+      {
+         "codigo": "T661",
+         "semestre": "6",
+         "nombre": "METODOS MATEMATICOS III",
+         "creditos": "6.00",
+         "id": 175740732067855602
+      },
+      {
+         "codigo": "I662",
+         "semestre": "6",
+         "nombre": "CURSO. ESP. DE ELECTRONICA",
+         "creditos": "6.00",
+         "id": 174094113466897113
+      },
+      {
+         "codigo": "T662",
+         "semestre": "6",
+         "nombre": "CURSO. ESP. DE ELECTRONICA",
+         "creditos": "6.00",
+         "id": 193522607734647808
+      },
+      {
+         "codigo": "T663",
+         "semestre": "6",
+         "nombre": "FISICA TEORICA IV",
+         "creditos": "12.00",
+         "id": 303180704898888489
+      },
+      {
+         "codigo": "T664",
+         "semestre": "6",
+         "nombre": "FISICA ESTADISTICA",
+         "creditos": "12.00",
+         "id": 130772280434750525
+      },
+      {
+         "codigo": "T665",
+         "semestre": "6",
+         "nombre": "RADIACION Y PROPAGACION",
+         "creditos": "6.00",
+         "id": 102281190198176401
+      },
+      {
+         "codigo": "T666",
+         "semestre": "6",
+         "nombre": "INT. A FISICA ATOMICA Y MOLECULAR",
+         "creditos": "12.00",
+         "id": 310401788644759143
+      },
+      {
+         "codigo": "T667",
+         "semestre": "6",
+         "nombre": "INT. A FISICA NUCLEAR Y PART. ELEM.",
+         "creditos": "12.00",
+         "id": 176814975646320763
+      },
+      {
+         "codigo": "I668",
+         "semestre": "6",
+         "nombre": "LABORATORIO IV",
+         "creditos": "12.00",
+         "id": 900035126167244687
+      },
+      {
+         "codigo": "T668",
+         "semestre": "6",
+         "nombre": "LABORATORIO IV",
+         "creditos": "12.00",
+         "id": 737786473462384079
+      },
+      {
+         "codigo": "T669",
+         "semestre": "6",
+         "nombre": "TEORIA DEL CONTROL II",
+         "creditos": "6.00",
+         "id": 260248954670157824
+      },
+      {
+         "codigo": "I670",
+         "semestre": "6",
+         "nombre": "ASTROFISICA GENERAL I",
+         "creditos": "6.00",
+         "id": 308309472233494714
+      },
+      {
+         "codigo": "T670",
+         "semestre": "6",
+         "nombre": "ASTROFISICA GENERAL I",
+         "creditos": "6.00",
+         "id": 602018039209640236
+      },
+      {
+         "codigo": "I672",
+         "semestre": "6",
+         "nombre": "FÍSICA COMPUTACIONAL",
+         "creditos": "6.00",
+         "id": 261015869175242839
+      },
+      {
+         "codigo": "I674",
+         "semestre": "6",
+         "nombre": "ALGEBRA DE CAMPOS NUMERICOS",
+         "creditos": "6.00",
+         "id": 253735927761129988
+      },
+      {
+         "codigo": "T674",
+         "semestre": "6",
+         "nombre": "ALGEBRA DE CAMPOS NUMERICOS",
+         "creditos": "6.00",
+         "id": 200379348380178147
+      },
+      {
+         "codigo": "I675",
+         "semestre": "6",
+         "nombre": "HISTORIA DE LA CIENCIA",
+         "creditos": "6.00",
+         "id": 219045904383992537
+      },
+      {
+         "codigo": "T675",
+         "semestre": "6",
+         "nombre": "HISTORIA DE LA CIENCIA",
+         "creditos": "6.00",
+         "id": 726173063094616091
+      },
+      {
+         "codigo": "I676",
+         "semestre": "6",
+         "nombre": "HISTORIA DE LA FISICA",
+         "creditos": "9.00",
+         "id": 812560426678114852
+      },
+      {
+         "codigo": "T676",
+         "semestre": "6",
+         "nombre": "HISTORIA DE LA FISICA",
+         "creditos": "9.00",
+         "id": 102341415023225460
+      },
+      {
+         "codigo": "E676",
+         "semestre": "6",
+         "nombre": "TOPICOS EN ECS.DIFERENCIALES I",
+         "creditos": "9.00",
+         "id": 162556645744366131
+      },
+      {
+         "codigo": "I677",
+         "semestre": "6",
+         "nombre": "ASTROFISICA GENERAL II",
+         "creditos": "6.00",
+         "id": 577733396051248381
+      },
+      {
+         "codigo": "T677",
+         "semestre": "6",
+         "nombre": "ASTROFISICA GENERAL II",
+         "creditos": "6.00",
+         "id": 760837736263647478
+      },
+      {
+         "codigo": "E677",
+         "semestre": "6",
+         "nombre": "GEOMETRIA I",
+         "creditos": "9.00",
+         "id": 885793432073846237
+      },
+      {
+         "codigo": "E678",
+         "semestre": "6",
+         "nombre": "PROBABILIDAD Y ESTADISTICA I",
+         "creditos": "9.00",
+         "id": 285121401527358668
+      },
+      {
+         "codigo": "I679",
+         "semestre": "6",
+         "nombre": "PERCEPCION SATELITARIA",
+         "creditos": "6.00",
+         "id": 152881215863352176
+      },
+      {
+         "codigo": "T679",
+         "semestre": "6",
+         "nombre": "PERCEPCION SATELITARIA",
+         "creditos": "6.00",
+         "id": 322362841079935402
+      },
+      {
+         "codigo": "E679",
+         "semestre": "6",
+         "nombre": "TALLER PEDAGOGICO I",
+         "creditos": "9.00",
+         "id": 302974971722972087
+      },
+      {
+         "codigo": "I681",
+         "semestre": "6",
+         "nombre": "INT. A LA ALG. COMPUTACIONAL",
+         "creditos": "9.00",
+         "id": 191864552825436441
+      },
+      {
+         "codigo": "T681",
+         "semestre": "6",
+         "nombre": "INT. A LA ALG. COMPUTACIONAL",
+         "creditos": "9.00",
+         "id": 198671031803357022
+      },
+      {
+         "codigo": "I683",
+         "semestre": "6",
+         "nombre": "INT. A LA COSMOLOGIA",
+         "creditos": "9.00",
+         "id": 323961560760452859
+      },
+      {
+         "codigo": "T683",
+         "semestre": "6",
+         "nombre": "INT. A LA COSMOLOGIA",
+         "creditos": "9.00",
+         "id": 332351607015126285
+      },
+      {
+         "codigo": "I684",
+         "semestre": "6",
+         "nombre": "MODELACION MATEMATICA",
+         "creditos": "9.00",
+         "id": 250104499255357967
+      },
+      {
+         "codigo": "T684",
+         "semestre": "6",
+         "nombre": "MODELACION MATEMATICA",
+         "creditos": "9.00",
+         "id": 320599324508297299
+      },
+      {
+         "codigo": "I685",
+         "semestre": "6",
+         "nombre": "ECONOMETRIA",
+         "creditos": "9.00",
+         "id": 183930493519909349
+      },
+      {
+         "codigo": "T685",
+         "semestre": "6",
+         "nombre": "ECONOMETRIA",
+         "creditos": "9.00",
+         "id": 744829228958912975
+      },
+      {
+         "codigo": "I689",
+         "semestre": "6",
+         "nombre": "PROB. DE LA ENSEÑANZA MAT.",
+         "creditos": "9.00",
+         "id": 117002501862454987
+      },
+      {
+         "codigo": "T689",
+         "semestre": "6",
+         "nombre": "PROB. DE LA ENSEÑANZA MAT.",
+         "creditos": "9.00",
+         "id": 144019775154465769
+      },
+      {
+         "codigo": "I690",
+         "semestre": "6",
+         "nombre": "GRAFICACION",
+         "creditos": "6.00",
+         "id": 787658599576129237
+      },
+      {
+         "codigo": "T690",
+         "semestre": "6",
+         "nombre": "GRAFICACION",
+         "creditos": "6.00",
+         "id": 138282922391474040
+      },
+      {
+         "codigo": "I691",
+         "semestre": "6",
+         "nombre": "MATEMATICAS FINANCIERAS",
+         "creditos": "9.00",
+         "id": 153675292153185238
+      },
+      {
+         "codigo": "T691",
+         "semestre": "6",
+         "nombre": "MATEMATICAS FINANCIERAS",
+         "creditos": "9.00",
+         "id": 843550937627676939
+      },
+      {
+         "codigo": "N691",
+         "semestre": "6",
+         "nombre": "TERMOD. DE CICLOS DE POTENCIA",
+         "creditos": "6.00",
+         "id": 301459707416791693
+      },
+      {
+         "codigo": "N692",
+         "semestre": "6",
+         "nombre": "TRANSFERENCIA DE CALOR",
+         "creditos": "6.00",
+         "id": 819334248499308870
+      },
+      {
+         "codigo": "I692",
+         "semestre": "6",
+         "nombre": "VISUAL BASIC",
+         "creditos": "6.00",
+         "id": 109420304166575201
+      },
+      {
+         "codigo": "T692",
+         "semestre": "6",
+         "nombre": "VISUAL BASIC",
+         "creditos": "6.00",
+         "id": 223904506292224244
+      },
+      {
+         "codigo": "I693",
+         "semestre": "6",
+         "nombre": "TEMAS SELECTOS EN COMPUTACION",
+         "creditos": "6.00",
+         "id": 247962701312938983
+      },
+      {
+         "codigo": "T693",
+         "semestre": "6",
+         "nombre": "TEMAS SELECTOS EN COMPUTACION",
+         "creditos": "6.00",
+         "id": 304670278207078691
+      },
+      {
+         "codigo": "I698",
+         "semestre": "6",
+         "nombre": "INT. A CIENCIA DE LOS MATERIALES",
+         "creditos": "6.00",
+         "id": 109335760159495384
+      },
+      {
+         "codigo": "T698",
+         "semestre": "6",
+         "nombre": "INT. A CIENCIA DE LOS MATERIALES",
+         "creditos": "6.00",
+         "id": 245717236130572961
+      },
+      {
+         "codigo": "I699",
+         "semestre": "6",
+         "nombre": "ASTROFISICA GENERAL",
+         "creditos": "6.00",
+         "id": 243792304373536731
+      },
+      {
+         "codigo": "T699",
+         "semestre": "6",
+         "nombre": "ASTROFISICA GENERAL",
+         "creditos": "6.00",
+         "id": 783642608000822857
+      },
+      {
+         "codigo": "F205",
+         "semestre": "2",
+         "nombre": "CALCULO II",
+         "creditos": "9.00",
+         "id": 291906505892131472
+      },
+      {
+         "codigo": "F206",
+         "semestre": "2",
+         "nombre": "ECUACIONES DIFERENCIALES",
+         "creditos": "9.00",
+         "id": 478903379593519906
+      },
+      {
+         "codigo": "F207",
+         "semestre": "2",
+         "nombre": "ALGEBRA II",
+         "creditos": "9.00",
+         "id": 114803712544015297
+      },
+      {
+         "codigo": "F208",
+         "semestre": "2",
+         "nombre": "FISICA II",
+         "creditos": "15.00",
+         "id": 164381262714235265
+      },
+      {
+         "codigo": "F209",
+         "semestre": "2",
+         "nombre": "ANALISIS VECTORIAL",
+         "creditos": "6.00",
+         "id": 150874402234465734
+      },
+      {
+         "codigo": "I501",
+         "semestre": "5",
+         "nombre": "ANALISIS MATEMATICO I",
+         "creditos": "9.00",
+         "id": 266820606872723858
+      },
+      {
+         "codigo": "T501",
+         "semestre": "5",
+         "nombre": "ANALISIS MATEMATICO I",
+         "creditos": "9.00",
+         "id": 226955279117748747
+      },
+      {
+         "codigo": "I502",
+         "semestre": "5",
+         "nombre": "ALGEBRA MODERNA I",
+         "creditos": "9.00",
+         "id": 238905259257216557
+      },
+      {
+         "codigo": "T502",
+         "semestre": "5",
+         "nombre": "ALGEBRA MODERNA I",
+         "creditos": "9.00",
+         "id": 171804940534261959
+      },
+      {
+         "codigo": "I503",
+         "semestre": "5",
+         "nombre": "GEOMETRIA DIFERENCIAL I",
+         "creditos": "9.00",
+         "id": 164580049796135683
+      },
+      {
+         "codigo": "T503",
+         "semestre": "5",
+         "nombre": "GEOMETRIA DIFERENCIAL I",
+         "creditos": "9.00",
+         "id": 293309402045508822
+      },
+      {
+         "codigo": "I504",
+         "semestre": "5",
+         "nombre": "LENGUAJE ENSAMBLADOR",
+         "creditos": "9.00",
+         "id": 231843154479777149
+      },
+      {
+         "codigo": "T504",
+         "semestre": "5",
+         "nombre": "LENGUAJE ENSAMBLADOR",
+         "creditos": "9.00",
+         "id": 313658357472920962
+      },
+      {
+         "codigo": "I505",
+         "semestre": "5",
+         "nombre": "PROBABILIDAD I",
+         "creditos": "9.00",
+         "id": 206344950320158202
+      },
+      {
+         "codigo": "T505",
+         "semestre": "5",
+         "nombre": "PROBABILIDAD I",
+         "creditos": "9.00",
+         "id": 476864166495205512
+      },
+      {
+         "codigo": "I506",
+         "semestre": "5",
+         "nombre": "METODOS NUMERICOS",
+         "creditos": "9.00",
+         "id": 330276538347734127
+      },
+      {
+         "codigo": "N506",
+         "semestre": "5",
+         "nombre": "METODOS NUMERICOS",
+         "creditos": "9.00",
+         "id": 279588202811603439
+      },
+      {
+         "codigo": "T506",
+         "semestre": "5",
+         "nombre": "METODOS NUMERICOS",
+         "creditos": "9.00",
+         "id": 106364154486491940
+      },
+      {
+         "codigo": "T507",
+         "semestre": "5",
+         "nombre": "CURSO ESPECIAL",
+         "creditos": "9.00",
+         "id": 113256756555769147
+      },
+      {
+         "codigo": "I508",
+         "semestre": "5",
+         "nombre": "MICROSCOPIA ELECTRONICA DE BARRIDO",
+         "creditos": "9.00",
+         "id": 175439685041681438
+      },
+      {
+         "codigo": "T508",
+         "semestre": "5",
+         "nombre": "MICROSCOPIA ELECTRONICA DE BARRIDO",
+         "creditos": "9.00",
+         "id": 502963031125625787
+      },
+      {
+         "codigo": "I509",
+         "semestre": "5",
+         "nombre": "ANALISIS MATEMATICO II",
+         "creditos": "9.00",
+         "id": 308377607578604515
+      },
+      {
+         "codigo": "I510",
+         "semestre": "5",
+         "nombre": "INT. A FUNCIONES DE VAR. COMP.",
+         "creditos": "9.00",
+         "id": 305199360624283602
+      },
+      {
+         "codigo": "I511",
+         "semestre": "5",
+         "nombre": "ALGEBRA MODERNA II",
+         "creditos": "9.00",
+         "id": 118177719429689378
+      },
+      {
+         "codigo": "I512",
+         "semestre": "5",
+         "nombre": "GEOMETRIA DIFERENCIAL II",
+         "creditos": "9.00",
+         "id": 170040946825905492
+      },
+      {
+         "codigo": "I513",
+         "semestre": "5",
+         "nombre": "INTRODUCCION A SISTEMAS",
+         "creditos": "9.00",
+         "id": 268475805487672324
+      },
+      {
+         "codigo": "I514",
+         "semestre": "5",
+         "nombre": "PROGRAMACION LINEAL",
+         "creditos": "9.00",
+         "id": 243064470911998267
+      },
+      {
+         "codigo": "I515",
+         "semestre": "5",
+         "nombre": "PROBABILIDAD II",
+         "creditos": "9.00",
+         "id": 190822451101711954
+      },
+      {
+         "codigo": "I516",
+         "semestre": "5",
+         "nombre": "ANALISIS NUMERICO I",
+         "creditos": "9.00",
+         "id": 382210706887215435
+      },
+      {
+         "codigo": "I517",
+         "semestre": "5",
+         "nombre": "DIDACTICA DE LAS CIENCIAS",
+         "creditos": "9.00",
+         "id": 200818494844384844
+      },
+      {
+         "codigo": "T517",
+         "semestre": "5",
+         "nombre": "DIDACTICA DE LAS CIENCIAS",
+         "creditos": "9.00",
+         "id": 227643196352830266
+      },
+      {
+         "codigo": "I518",
+         "semestre": "5",
+         "nombre": "EVALUACION DEL APRENDIZAJE",
+         "creditos": "6.00",
+         "id": 338185144155526374
+      },
+      {
+         "codigo": "T518",
+         "semestre": "5",
+         "nombre": "EVALUACION DEL APRENDIZAJE",
+         "creditos": "6.00",
+         "id": 282988873796689729
+      },
+      {
+         "codigo": "I519",
+         "semestre": "5",
+         "nombre": "ANALISIS MATEMATICO III",
+         "creditos": "9.00",
+         "id": 200972214955160350
+      },
+      {
+         "codigo": "I520",
+         "semestre": "5",
+         "nombre": "FUNCIONES DE VAR. COMPLEJA I",
+         "creditos": "9.00",
+         "id": 293135418522028007
+      },
+      {
+         "codigo": "I521",
+         "semestre": "5",
+         "nombre": "TEORIA DE ECS. DIFERENCIALES I",
+         "creditos": "9.00",
+         "id": 191502144387406011
+      },
+      {
+         "codigo": "I522",
+         "semestre": "5",
+         "nombre": "ALGEBRA MODERNA III",
+         "creditos": "9.00",
+         "id": 182263929191555894
+      },
+      {
+         "codigo": "I523",
+         "semestre": "5",
+         "nombre": "GEOMETRIA DIFERENCIAL III",
+         "creditos": "9.00",
+         "id": 559407098471748398
+      },
+      {
+         "codigo": "I524",
+         "semestre": "5",
+         "nombre": "TOPOLOGIA I",
+         "creditos": "9.00",
+         "id": 132382791177314201
+      },
+      {
+         "codigo": "I525",
+         "semestre": "5",
+         "nombre": "FUNDAMENTOS DE COMPUTACION",
+         "creditos": "9.00",
+         "id": 928206263642140795
+      },
+      {
+         "codigo": "I526",
+         "semestre": "5",
+         "nombre": "INVESTIGACION DE OPERACIONES I",
+         "creditos": "9.00",
+         "id": 147181419384029121
+      },
+      {
+         "codigo": "I527",
+         "semestre": "5",
+         "nombre": "ESTADISTICA I",
+         "creditos": "9.00",
+         "id": 110242538105821915
+      },
+      {
+         "codigo": "I528",
+         "semestre": "5",
+         "nombre": "ANALISIS NUMERICO II",
+         "creditos": "9.00",
+         "id": 528591823596461252
+      },
+      {
+         "codigo": "I529",
+         "semestre": "5",
+         "nombre": "INT. A LA RELATIVIDAD GENERAL",
+         "creditos": "9.00",
+         "id": 106718886872049640
+      },
+      {
+         "codigo": "T529",
+         "semestre": "5",
+         "nombre": "INT. A LA RELATIVIDAD GENERAL",
+         "creditos": "6.00",
+         "id": 122869571073514245
+      },
+      {
+         "codigo": "I530",
+         "semestre": "5",
+         "nombre": "ECUAC. DIFERENCIALES PARCIALES",
+         "creditos": "9.00",
+         "id": 317465208823025774
+      },
+      {
+         "codigo": "T530",
+         "semestre": "5",
+         "nombre": "ECUAC. DIFERENCIALES PARCIALES",
+         "creditos": "9.00",
+         "id": 673501877119141610
+      },
+      {
+         "codigo": "I531",
+         "semestre": "5",
+         "nombre": "ANALISIS MATEMATICO IV",
+         "creditos": "9.00",
+         "id": 245417108676254627
+      },
+      {
+         "codigo": "I532",
+         "semestre": "5",
+         "nombre": "FUNCIONES DE VAR. COMPLEJA II",
+         "creditos": "9.00",
+         "id": 220230560832257155
+      },
+      {
+         "codigo": "I533",
+         "semestre": "5",
+         "nombre": "TEORIA DE ECS. DIFERENCIALES II",
+         "creditos": "9.00",
+         "id": 229248312904660575
+      },
+      {
+         "codigo": "I534",
+         "semestre": "5",
+         "nombre": "ALGEBRA MODERNA IV",
+         "creditos": "9.00",
+         "id": 145939484482977694
+      },
+      {
+         "codigo": "I535",
+         "semestre": "5",
+         "nombre": "TOPOLOGIA II",
+         "creditos": "9.00",
+         "id": 171726346729372844
+      },
+      {
+         "codigo": "I536",
+         "semestre": "5",
+         "nombre": "ARQ. DE UNA COMPUTADORA",
+         "creditos": "9.00",
+         "id": 297529060776466158
+      },
+      {
+         "codigo": "I537",
+         "semestre": "5",
+         "nombre": "INVESTIGACION DE OPERACIONES II",
+         "creditos": "9.00",
+         "id": 147542332842295040
+      },
+      {
+         "codigo": "I538",
+         "semestre": "5",
+         "nombre": "ESTADISTICA II",
+         "creditos": "9.00",
+         "id": 146756127466243235
+      },
+      {
+         "codigo": "I539",
+         "semestre": "5",
+         "nombre": "ANALISIS NUMERICO III",
+         "creditos": "9.00",
+         "id": 295286988403776075
+      },
+      {
+         "codigo": "I540",
+         "semestre": "5",
+         "nombre": "INT. A LA ALGEBRA COMPUTACIONAL",
+         "creditos": "9.00",
+         "id": 703572337984920869
+      },
+      {
+         "codigo": "T540",
+         "semestre": "5",
+         "nombre": "INT. A LA ALGEBRA COMPUTACIONAL",
+         "creditos": "9.00",
+         "id": 108082725668345700
+      },
+      {
+         "codigo": "I541",
+         "semestre": "5",
+         "nombre": "FIABILIDAD",
+         "creditos": "9.00",
+         "id": 844774211321552491
+      },
+      {
+         "codigo": "T541",
+         "semestre": "5",
+         "nombre": "FIABILIDAD",
+         "creditos": "9.00",
+         "id": 323211686619880902
+      },
+      {
+         "codigo": "I542",
+         "semestre": "5",
+         "nombre": "FISICA TEORICA I",
+         "creditos": "12.00",
+         "id": 703786986868733744
+      },
+      {
+         "codigo": "N542",
+         "semestre": "5",
+         "nombre": "FISICA TEORICA I",
+         "creditos": "12.00",
+         "id": 307986023684281498
+      },
+      {
+         "codigo": "T542",
+         "semestre": "5",
+         "nombre": "FISICA TEORICA I",
+         "creditos": "12.00",
+         "id": 392155469528763320
+      },
+      {
+         "codigo": "I543",
+         "semestre": "5",
+         "nombre": "INT. A FISICA MODERNA",
+         "creditos": "12.00",
+         "id": 592318256358037739
+      },
+      {
+         "codigo": "N543",
+         "semestre": "5",
+         "nombre": "INT. A FISICA MODERNA",
+         "creditos": "12.00",
+         "id": 189836996739580464
+      },
+      {
+         "codigo": "T543",
+         "semestre": "5",
+         "nombre": "INT. A FISICA MODERNA",
+         "creditos": "12.00",
+         "id": 279210847047917665
+      },
+      {
+         "codigo": "I544",
+         "semestre": "5",
+         "nombre": "METODOS MATEMATICOS I",
+         "creditos": "6.00",
+         "id": 255032806377341301
+      },
+      {
+         "codigo": "T544",
+         "semestre": "5",
+         "nombre": "METODOS MATEMATICOS I",
+         "creditos": "6.00",
+         "id": 290856402791274150
+      },
+      {
+         "codigo": "I545",
+         "semestre": "5",
+         "nombre": "LABORATORIO I",
+         "creditos": "12.00",
+         "id": 500861485498452346
+      },
+      {
+         "codigo": "T545",
+         "semestre": "5",
+         "nombre": "LABORATORIO I",
+         "creditos": "12.00",
+         "id": 724054670660016065
+      },
+      {
+         "codigo": "I546",
+         "semestre": "5",
+         "nombre": "FISICA NUMERICA",
+         "creditos": "6.00",
+         "id": 130825831216022264
+      },
+      {
+         "codigo": "T546",
+         "semestre": "5",
+         "nombre": "FISICA NUMERICA",
+         "creditos": "6.00",
+         "id": 590406321432968594
+      },
+      {
+         "codigo": "I547",
+         "semestre": "5",
+         "nombre": "INT. A LA RELATIVIDAD ESPECIAL",
+         "creditos": "6.00",
+         "id": 135679112681177002
+      },
+      {
+         "codigo": "T547",
+         "semestre": "5",
+         "nombre": "INT. A LA RELATIVIDAD ESPECIAL",
+         "creditos": "6.00",
+         "id": 270033380296446467
+      },
+      {
+         "codigo": "T548",
+         "semestre": "5",
+         "nombre": "FISICA TEORICA II",
+         "creditos": "12.00",
+         "id": 199541036953412754
+      },
+      {
+         "codigo": "T549",
+         "semestre": "5",
+         "nombre": "MECANICA CUANTICA I",
+         "creditos": "12.00",
+         "id": 162480343034632383
+      },
+      {
+         "codigo": "T550",
+         "semestre": "5",
+         "nombre": "METODOS MATEMATICOS II",
+         "creditos": "6.00",
+         "id": 856810465274835328
+      },
+      {
+         "codigo": "T551",
+         "semestre": "5",
+         "nombre": "ELECTRONICA FUNCIONAL I",
+         "creditos": "10.00",
+         "id": 176259142693558544
+      },
+      {
+         "codigo": "T552",
+         "semestre": "5",
+         "nombre": "LABORATORIO II",
+         "creditos": "12.00",
+         "id": 998441472714772554
+      },
+      {
+         "codigo": "I553",
+         "semestre": "5",
+         "nombre": "LOGICA MATEMATICA",
+         "creditos": "6.00",
+         "id": 302159217306324983
+      },
+      {
+         "codigo": "T553",
+         "semestre": "5",
+         "nombre": "LOGICA MATEMATICA",
+         "creditos": "6.00",
+         "id": 106628161624400994
+      },
+      {
+         "codigo": "I554",
+         "semestre": "5",
+         "nombre": "COMPUTACION EN FIS. DISCRETA",
+         "creditos": "6.00",
+         "id": 463986238884101845
+      },
+      {
+         "codigo": "T554",
+         "semestre": "5",
+         "nombre": "COMPUTACION EN FIS. DISCRETA",
+         "creditos": "6.00",
+         "id": 320752799336152875
+      },
+      {
+         "codigo": "T555",
+         "semestre": "5",
+         "nombre": "FISICA TEORICA III",
+         "creditos": "12.00",
+         "id": 161152905283179273
+      },
+      {
+         "codigo": "T556",
+         "semestre": "5",
+         "nombre": "MECANICA CUANTICA II",
+         "creditos": "12.00",
+         "id": 330562553191181503
+      },
+      {
+         "codigo": "T557",
+         "semestre": "5",
+         "nombre": "INT. A FISICA DEL ESTADO SOLIDO",
+         "creditos": "6.00",
+         "id": 151210693554991804
+      },
+      {
+         "codigo": "T558",
+         "semestre": "5",
+         "nombre": "ELECTRONICA FUNCIONAL II",
+         "creditos": "10.00",
+         "id": 269725298086091661
+      },
+      {
+         "codigo": "T559",
+         "semestre": "5",
+         "nombre": "LABORATORIO III",
+         "creditos": "12.00",
+         "id": 205965200539298695
+      },
+      {
+         "codigo": "T560",
+         "semestre": "5",
+         "nombre": "TEORIA DEL CONTROL I",
+         "creditos": "6.00",
+         "id": 220503702394613938
+      },
+      {
+         "codigo": "I561",
+         "semestre": "5",
+         "nombre": "METODOS MATEMATICOS III",
+         "creditos": "6.00",
+         "id": 212592158946215677
+      },
+      {
+         "codigo": "T561",
+         "semestre": "5",
+         "nombre": "METODOS MATEMATICOS III",
+         "creditos": "6.00",
+         "id": 322469478742946796
+      },
+      {
+         "codigo": "I562",
+         "semestre": "5",
+         "nombre": "CURSO. ESP. DE ELECTRONICA",
+         "creditos": "6.00",
+         "id": 976567192651988611
+      },
+      {
+         "codigo": "T562",
+         "semestre": "5",
+         "nombre": "CURSO. ESP. DE ELECTRONICA",
+         "creditos": "6.00",
+         "id": 183289387941394531
+      },
+      {
+         "codigo": "T563",
+         "semestre": "5",
+         "nombre": "FISICA TEORICA IV",
+         "creditos": "12.00",
+         "id": 299764858281557515
+      },
+      {
+         "codigo": "T564",
+         "semestre": "5",
+         "nombre": "FISICA ESTADISTICA",
+         "creditos": "12.00",
+         "id": 145114875430516931
+      },
+      {
+         "codigo": "T565",
+         "semestre": "5",
+         "nombre": "RADIACION Y PROPAGACION",
+         "creditos": "6.00",
+         "id": 182614958262541022
+      },
+      {
+         "codigo": "T566",
+         "semestre": "5",
+         "nombre": "INT. A FISICA ATOMICA Y MOLECULAR",
+         "creditos": "12.00",
+         "id": 150895127776736539
+      },
+      {
+         "codigo": "T567",
+         "semestre": "5",
+         "nombre": "INT. A FISICA NUCLEAR Y PART. ELEM.",
+         "creditos": "12.00",
+         "id": 279072073187204630
+      },
+      {
+         "codigo": "T568",
+         "semestre": "5",
+         "nombre": "LABORATORIO IV",
+         "creditos": "12.00",
+         "id": 287668149379113856
+      },
+      {
+         "codigo": "T569",
+         "semestre": "5",
+         "nombre": "TEORIA DEL CONTROL II",
+         "creditos": "6.00",
+         "id": 270727893695883957
+      },
+      {
+         "codigo": "I570",
+         "semestre": "5",
+         "nombre": "ASTROFISICA GENERAL I",
+         "creditos": "6.00",
+         "id": 252862321641991530
+      },
+      {
+         "codigo": "T570",
+         "semestre": "5",
+         "nombre": "ASTROFISICA GENERAL I",
+         "creditos": "6.00",
+         "id": 215045923210277018
+      },
+      {
+         "codigo": "T571",
+         "semestre": "5",
+         "nombre": "CURSO ESPECIAL",
+         "creditos": "6.00",
+         "id": 170957147535265520
+      },
+      {
+         "codigo": "E572",
+         "semestre": "5",
+         "nombre": "ANALISIS",
+         "creditos": "9.00",
+         "id": 332697195872723744
+      },
+      {
+         "codigo": "I572",
+         "semestre": "5",
+         "nombre": "FÍSICA COMPUTACIONAL",
+         "creditos": "6.00",
+         "id": 188410766897723092
+      },
+      {
+         "codigo": "E573",
+         "semestre": "5",
+         "nombre": "ALGEBRA Y GEOMETRIA",
+         "creditos": "9.00",
+         "id": 360634454828496667
+      },
+      {
+         "codigo": "I574",
+         "semestre": "5",
+         "nombre": "ALGEBRA DE CAMPOS NUMERICOS",
+         "creditos": "6.00",
+         "id": 287981823722897389
+      },
+      {
+         "codigo": "T574",
+         "semestre": "5",
+         "nombre": "ALGEBRA DE CAMPOS NUMERICOS",
+         "creditos": "6.00",
+         "id": 135140397040382614
+      },
+      {
+         "codigo": "E574",
+         "semestre": "5",
+         "nombre": "DIDACTICA GENERAL",
+         "creditos": "9.00",
+         "id": 109723363626297408
+      },
+      {
+         "codigo": "I575",
+         "semestre": "5",
+         "nombre": "HISTORIA DE LA CIENCIA",
+         "creditos": "6.00",
+         "id": 339454573228555363
+      },
+      {
+         "codigo": "T575",
+         "semestre": "5",
+         "nombre": "HISTORIA DE LA CIENCIA",
+         "creditos": "6.00",
+         "id": 248440545135130371
+      },
+      {
+         "codigo": "E575",
+         "semestre": "5",
+         "nombre": "HISTORIA DE LAS MATEMATICAS",
+         "creditos": "9.00",
+         "id": 146729174135973355
+      },
+      {
+         "codigo": "I576",
+         "semestre": "5",
+         "nombre": "HISTORIA DE LA FISICA",
+         "creditos": "9.00",
+         "id": 887963960318166193
+      },
+      {
+         "codigo": "T576",
+         "semestre": "5",
+         "nombre": "HISTORIA DE LA FISICA",
+         "creditos": "9.00",
+         "id": 142124702524087187
+      },
+      {
+         "codigo": "I577",
+         "semestre": "5",
+         "nombre": "ASTROFISICA GENERAL II",
+         "creditos": "6.00",
+         "id": 192021004411597986
+      },
+      {
+         "codigo": "T577",
+         "semestre": "5",
+         "nombre": "ASTROFISICA GENERAL II",
+         "creditos": "6.00",
+         "id": 331343605217073317
+      },
+      {
+         "codigo": "I579",
+         "semestre": "5",
+         "nombre": "PERCEPCION SATELITARIA",
+         "creditos": "6.00",
+         "id": 513302939891272439
+      },
+      {
+         "codigo": "T579",
+         "semestre": "5",
+         "nombre": "PERCEPCION SATELITARIA",
+         "creditos": "6.00",
+         "id": 332170638736841804
+      },
+      {
+         "codigo": "I581",
+         "semestre": "5",
+         "nombre": "INT. A LA ALG. COMPUTACIONAL",
+         "creditos": "9.00",
+         "id": 178235988150863308
+      },
+      {
+         "codigo": "T581",
+         "semestre": "5",
+         "nombre": "INT. A LA ALG. COMPUTACIONAL",
+         "creditos": "9.00",
+         "id": 313674583263256624
+      },
+      {
+         "codigo": "I583",
+         "semestre": "5",
+         "nombre": "INT. A LA COSMOLOGIA",
+         "creditos": "9.00",
+         "id": 281075084606709803
+      },
+      {
+         "codigo": "T583",
+         "semestre": "5",
+         "nombre": "INT. A LA COSMOLOGIA",
+         "creditos": "9.00",
+         "id": 375661547387394048
+      },
+      {
+         "codigo": "I584",
+         "semestre": "5",
+         "nombre": "MODELACION MATEMATICA",
+         "creditos": "9.00",
+         "id": 206056120440200228
+      },
+      {
+         "codigo": "T584",
+         "semestre": "5",
+         "nombre": "MODELACION MATEMATICA",
+         "creditos": "9.00",
+         "id": 183939999615922280
+      },
+      {
+         "codigo": "I585",
+         "semestre": "5",
+         "nombre": "ECONOMETRIA",
+         "creditos": "9.00",
+         "id": 123959595927832490
+      },
+      {
+         "codigo": "T585",
+         "semestre": "5",
+         "nombre": "ECONOMETRIA",
+         "creditos": "9.00",
+         "id": 336058477053136781
+      },
+      {
+         "codigo": "I589",
+         "semestre": "5",
+         "nombre": "PROB. DE LA ENSEÑANZA MAT.",
+         "creditos": "9.00",
+         "id": 270308190325258005
+      },
+      {
+         "codigo": "T589",
+         "semestre": "5",
+         "nombre": "PROB. DE LA ENSEÑANZA MAT.",
+         "creditos": "9.00",
+         "id": 189777045011617481
+      },
+      {
+         "codigo": "I590",
+         "semestre": "5",
+         "nombre": "GRAFICACION",
+         "creditos": "6.00",
+         "id": 679334876121361018
+      },
+      {
+         "codigo": "T590",
+         "semestre": "5",
+         "nombre": "GRAFICACION",
+         "creditos": "6.00",
+         "id": 223909317890614707
+      },
+      {
+         "codigo": "N590",
+         "semestre": "5",
+         "nombre": "INT. A LA INGENIERIA NUCLEAR",
+         "creditos": "6.00",
+         "id": 238044024119251678
+      },
+      {
+         "codigo": "I591",
+         "semestre": "5",
+         "nombre": "MATEMATICAS FINANCIERAS",
+         "creditos": "9.00",
+         "id": 115460543050389309
+      },
+      {
+         "codigo": "T591",
+         "semestre": "5",
+         "nombre": "MATEMATICAS FINANCIERAS",
+         "creditos": "9.00",
+         "id": 113982323186031010
+      },
+      {
+         "codigo": "I592",
+         "semestre": "5",
+         "nombre": "VISUAL BASIC",
+         "creditos": "6.00",
+         "id": 332563215384316337
+      },
+      {
+         "codigo": "T592",
+         "semestre": "5",
+         "nombre": "VISUAL BASIC",
+         "creditos": "6.00",
+         "id": 213944063568239585
+      },
+      {
+         "codigo": "I593",
+         "semestre": "5",
+         "nombre": "TEMAS SELECTOS EN COMPUTACION",
+         "creditos": "6.00",
+         "id": 173547779837264312
+      },
+      {
+         "codigo": "T593",
+         "semestre": "5",
+         "nombre": "TEMAS SELECTOS EN COMPUTACION",
+         "creditos": "6.00",
+         "id": 209980187519354543
+      },
+      {
+         "codigo": "I598",
+         "semestre": "5",
+         "nombre": "INT. A CIENCIA DE LOS MATERIALES",
+         "creditos": "6.00",
+         "id": 264031652677850084
+      },
+      {
+         "codigo": "T598",
+         "semestre": "5",
+         "nombre": "INT. A CIENCIA DE LOS MATERIALES",
+         "creditos": "6.00",
+         "id": 247069468639773971
+      },
+      {
+         "codigo": "I599",
+         "semestre": "5",
+         "nombre": "ASTROFISICA GENERAL",
+         "creditos": "6.00",
+         "id": 223221112068442496
+      },
+      {
+         "codigo": "T599",
+         "semestre": "5",
+         "nombre": "ASTROFISICA GENERAL",
+         "creditos": "6.00",
+         "id": 199755739225101423
+      },
+      {
+         "codigo": "F310",
+         "semestre": "3",
+         "nombre": "CALCULO III",
+         "creditos": "9.00",
+         "id": 142119254005036298
+      },
+      {
+         "codigo": "F311",
+         "semestre": "3",
+         "nombre": "ALGEBRA III",
+         "creditos": "9.00",
+         "id": 276078509124153944
+      },
+      {
+         "codigo": "F312",
+         "semestre": "3",
+         "nombre": "GEOMETRIA PROYECTIVA",
+         "creditos": "9.00",
+         "id": 201790827849471371
+      },
+      {
+         "codigo": "F313",
+         "semestre": "3",
+         "nombre": "PROGRAMACION I",
+         "creditos": "9.00",
+         "id": 148030899536892304
+      },
+      {
+         "codigo": "F314",
+         "semestre": "3",
+         "nombre": "FISICA III",
+         "creditos": "15.00",
+         "id": 328023979916695583
+      },
+      {
+         "codigo": "F101",
+         "semestre": "1",
+         "nombre": "CALCULO I",
+         "creditos": "9.00",
+         "id": 128923478293333182
+      },
+      {
+         "codigo": "F102",
+         "semestre": "1",
+         "nombre": "ALGEBRA I",
+         "creditos": "9.00",
+         "id": 855186372399297908
+      },
+      {
+         "codigo": "F103",
+         "semestre": "1",
+         "nombre": "GEOMETRIA ANALITICA",
+         "creditos": "9.00",
+         "id": 781881800421023631
+      },
+      {
+         "codigo": "F104",
+         "semestre": "1",
+         "nombre": "FISICA I",
+         "creditos": "15.00",
+         "id": 192243982253290545
+      },
+      {
+         "codigo": "A301",
+         "semestre": "3",
+         "nombre": "CÁLCULO MULTIVARIABLE",
+         "creditos": "10.50",
+         "id": 140774998781861943
+      },
+      {
+         "codigo": "A302",
+         "semestre": "3",
+         "nombre": "ÁLGEBRA LINEAL AVANZADA",
+         "creditos": "10.50",
+         "id": 276061753566964020
+      },
+      {
+         "codigo": "A303",
+         "semestre": "3",
+         "nombre": "ANÁLISIS DE ALGORITMOS",
+         "creditos": "7.50",
+         "id": 290912613214907568
+      },
+      {
+         "codigo": "A304",
+         "semestre": "3",
+         "nombre": "TEORÍA DE GRÁFICAS",
+         "creditos": "10.50",
+         "id": 189440383053266639
+      },
+      {
+         "codigo": "A305",
+         "semestre": "3",
+         "nombre": "ESTADÍSTICA",
+         "creditos": "7.50",
+         "id": 329179593523175887
+      },
+      {
+         "codigo": "A306",
+         "semestre": "3",
+         "nombre": "TOMA DE DECISIONES BASADAS EN DATOS",
+         "creditos": "7.50",
+         "id": 311101264859175237
+      },
+      {
+         "codigo": "A801",
+         "semestre": "8",
+         "nombre": "MODELADO DE PRECIOS EN TIEMPO CONTINUO",
+         "creditos": "10.50",
+         "id": 503489677675011827
+      },
+      {
+         "codigo": "A802",
+         "semestre": "8",
+         "nombre": "TRABAJO TERMINAL II",
+         "creditos": "12.00",
+         "id": 195195263795844291
+      },
+      {
+         "codigo": "A803",
+         "semestre": "8",
+         "nombre": "PRÁCTICA PROFESIONAL",
+         "creditos": "3.00",
+         "id": 197973201944088419
+      },
+      {
+         "codigo": "A804",
+         "semestre": "8",
+         "nombre": "EMPRENDIMIENTO",
+         "creditos": "7.50",
+         "id": 132166105796573916
+      },
+      {
+         "codigo": "A601",
+         "semestre": "6",
+         "nombre": "NEGOCIACIÓN DE ACTIVOS FINANCIEROS",
+         "creditos": "9.00",
+         "id": 266876551972019830
+      },
+      {
+         "codigo": "A602",
+         "semestre": "6",
+         "nombre": "TEORÍA DE CONTROL DISCRETO",
+         "creditos": "10.50",
+         "id": 137608084537317723
+      },
+      {
+         "codigo": "A603",
+         "semestre": "6",
+         "nombre": "TEORÍA COMPUTACIONAL",
+         "creditos": "10.50",
+         "id": 264048269208817372
+      },
+      {
+         "codigo": "A650",
+         "semestre": "6",
+         "nombre": "TOPOLOGÍA ALGORÍTMICA",
+         "creditos": "10.50",
+         "id": 280863362549659322
+      },
+      {
+         "codigo": "A651",
+         "semestre": "6",
+         "nombre": "CRIPTOLOGÍA",
+         "creditos": "10.50",
+         "id": 268810657981367849
+      },
+      {
+         "codigo": "A652",
+         "semestre": "6",
+         "nombre": "APRENDIZAJE DE MÁQUINA ESTADÍSTICO",
+         "creditos": "10.50",
+         "id": 916560425575991784
+      },
+      {
+         "codigo": "A653",
+         "semestre": "6",
+         "nombre": "TEORÍA DEL RIESGO",
+         "creditos": "10.50",
+         "id": 170634999040246333
+      },
+      {
+         "codigo": "A654",
+         "semestre": "6",
+         "nombre": "TEORÍA DE LA INFORMACIÓN",
+         "creditos": "10.50",
+         "id": 298549235659353570
+      },
+      {
+         "codigo": "A655",
+         "semestre": "6",
+         "nombre": "ANÁLISIS COMPLEJO",
+         "creditos": "10.50",
+         "id": 170461278173217712
+      },
+      {
+         "codigo": "A656",
+         "semestre": "6",
+         "nombre": "CÓMPUTO DE ALTO DESEMPEÑO",
+         "creditos": "9.00",
+         "id": 335161313201508899
+      },
+      {
+         "codigo": "A657",
+         "semestre": "6",
+         "nombre": "GEOMETRÍA ALGORÍTMICA",
+         "creditos": "9.00",
+         "id": 305993780454445970
+      },
+      {
+         "codigo": "A658",
+         "semestre": "6",
+         "nombre": "APRENDIZAJE PROFUNDO",
+         "creditos": "9.00",
+         "id": 697779215391391957
+      },
+      {
+         "codigo": "A659",
+         "semestre": "6",
+         "nombre": "DESARROLLO DE APLICACIONES MÓVILES Y WEB",
+         "creditos": "9.00",
+         "id": 261014721218349719
+      },
+      {
+         "codigo": "A660",
+         "semestre": "6",
+         "nombre": "CÓMPUTO EN LA NUBE",
+         "creditos": "9.00",
+         "id": 122963514486792673
+      },
+      {
+         "codigo": "A661",
+         "semestre": "6",
+         "nombre": "FÍSICA COMPUTACIONAL",
+         "creditos": "9.00",
+         "id": 270979196551188356
+      },
+      {
+         "codigo": "A662",
+         "semestre": "6",
+         "nombre": "BIOLOGÍA COMPUTACIONAL",
+         "creditos": "9.00",
+         "id": 171139415133538475
+      },
+      {
+         "codigo": "A663",
+         "semestre": "6",
+         "nombre": "MATRICES ALEATORIAS",
+         "creditos": "9.00",
+         "id": 335984250072218404
+      },
+      {
+         "codigo": "A664",
+         "semestre": "6",
+         "nombre": "ADMINISTRACIÓN DE RIESGOS FINANCIEROS",
+         "creditos": "9.00",
+         "id": 187508796656704949
+      },
+      {
+         "codigo": "A665",
+         "semestre": "6",
+         "nombre": "TEORÍA DE JUEGOS",
+         "creditos": "9.00",
+         "id": 147246038717440535
+      },
+      {
+         "codigo": "A666",
+         "semestre": "6",
+         "nombre": "SEGURIDAD DIGITAL",
+         "creditos": "9.00",
+         "id": 201648666035188667
+      },
+      {
+         "codigo": "A101",
+         "semestre": "1",
+         "nombre": "INTRODUCCIÓN AL CÁLCULO",
+         "creditos": "10.50",
+         "id": 222838583552923503
+      },
+      {
+         "codigo": "A102",
+         "semestre": "1",
+         "nombre": "ÁLGEBRA SUPERIOR",
+         "creditos": "10.50",
+         "id": 119146598262658408
+      },
+      {
+         "codigo": "A103",
+         "semestre": "1",
+         "nombre": "FUNDAMENTOS DE PROGRAMACIÓN",
+         "creditos": "10.50",
+         "id": 254264252392278165
+      },
+      {
+         "codigo": "A104",
+         "semestre": "1",
+         "nombre": "PENSAMIENTO MATEMÁTICO",
+         "creditos": "6.00",
+         "id": 535211628669103640
+      },
+      {
+         "codigo": "A105",
+         "semestre": "1",
+         "nombre": "GEOMETRÍA",
+         "creditos": "7.50",
+         "id": 266918025381921353
+      },
+      {
+         "codigo": "A106",
+         "semestre": "1",
+         "nombre": "COMUNICACIÓN ASERTIVA",
+         "creditos": "7.50",
+         "id": 859262184562574004
+      },
+      {
+         "codigo": "A201",
+         "semestre": "2",
+         "nombre": "CÁLCULO",
+         "creditos": "10.50",
+         "id": 300617541220683787
+      },
+      {
+         "codigo": "A202",
+         "semestre": "2",
+         "nombre": "ÁLGEBRA LINEAL",
+         "creditos": "10.50",
+         "id": 314080555316082599
+      },
+      {
+         "codigo": "A203",
+         "semestre": "2",
+         "nombre": "PARADIGMAS DE PROGRAMACIÓN",
+         "creditos": "10.50",
+         "id": 174560703284382439
+      },
+      {
+         "codigo": "A204",
+         "semestre": "2",
+         "nombre": "CONSTRUCCIÓN MATEMÁTICA",
+         "creditos": "6.00",
+         "id": 276412945642479940
+      },
+      {
+         "codigo": "A205",
+         "semestre": "2",
+         "nombre": "PROBABILIDAD",
+         "creditos": "7.50",
+         "id": 283511900420561814
+      },
+      {
+         "codigo": "A206",
+         "semestre": "2",
+         "nombre": "RESOLUCIÓN DE PROBLEMAS COMPLEJOS",
+         "creditos": "7.50",
+         "id": 295255779500313881
+      },
+      {
+         "codigo": "A501",
+         "semestre": "5",
+         "nombre": "TEORÍA DE LA MEDIDA EN FINANZAS",
+         "creditos": "10.50",
+         "id": 327598936471978113
+      },
+      {
+         "codigo": "A502",
+         "semestre": "5",
+         "nombre": "ÁLGEBRA ABSTRACTA",
+         "creditos": "10.50",
+         "id": 279707057924948712
+      },
+      {
+         "codigo": "A503",
+         "semestre": "5",
+         "nombre": "OPTIMIZACIÓN",
+         "creditos": "10.50",
+         "id": 315541840040898987
+      },
+      {
+         "codigo": "A504",
+         "semestre": "5",
+         "nombre": "FUNDAMENTOS DE INTELIGENCIA ARTIFICIAL",
+         "creditos": "9.00",
+         "id": 547944117514448335
+      },
+      {
+         "codigo": "A505",
+         "semestre": "5",
+         "nombre": "MODELOS ESTADÍSTICOS",
+         "creditos": "10.50",
+         "id": 269898029280274262
+      },
+      {
+         "codigo": "A401",
+         "semestre": "4",
+         "nombre": "ANÁLISIS MATEMÁTICO",
+         "creditos": "10.50",
+         "id": 144262935449026056
+      },
+      {
+         "codigo": "A402",
+         "semestre": "4",
+         "nombre": "TEORÍA DE CONJUNTOS",
+         "creditos": "10.50",
+         "id": 174824063702659361
+      },
+      {
+         "codigo": "A403",
+         "semestre": "4",
+         "nombre": "MÉTODOS NUMÉRICOS",
+         "creditos": "10.50",
+         "id": 257441379162228312
+      },
+      {
+         "codigo": "A404",
+         "semestre": "4",
+         "nombre": "ECUACIONES DINÁMICAS",
+         "creditos": "10.50",
+         "id": 744224599867732262
+      },
+      {
+         "codigo": "A405",
+         "semestre": "4",
+         "nombre": "MODELOS ESTOCÁSTICOS",
+         "creditos": "10.50",
+         "id": 225650102113792725
+      },
+      {
+         "codigo": "A406",
+         "semestre": "4",
+         "nombre": "ÉTICA Y RESPONSABILIDAD SOCIAL",
+         "creditos": "7.50",
+         "id": 156109258698385433
+      },
+      {
+         "codigo": "A701",
+         "semestre": "7",
+         "nombre": "MODELADO DE PRECIOS EN TIEMPO DISCRETO",
+         "creditos": "10.50",
+         "id": 552972793437200896
+      },
+      {
+         "codigo": "A702",
+         "semestre": "7",
+         "nombre": "TRABAJO TERMINAL I",
+         "creditos": "12.00",
+         "id": 334214946537129611
+      },
+      {
+         "codigo": "A750",
+         "semestre": "7",
+         "nombre": "TOPOLOGÍA ALGORÍTMICA",
+         "creditos": "10.50",
+         "id": 150525366233949652
+      },
+      {
+         "codigo": "A751",
+         "semestre": "7",
+         "nombre": "CRIPTOLOGÍA",
+         "creditos": "10.50",
+         "id": 313820348656626612
+      },
+      {
+         "codigo": "A752",
+         "semestre": "7",
+         "nombre": "APRENDIZAJE DE MÁQUINA ESTADÍSTICO",
+         "creditos": "10.50",
+         "id": 667159176623261574
+      },
+      {
+         "codigo": "A753",
+         "semestre": "7",
+         "nombre": "TEORÍA DEL RIESGO",
+         "creditos": "10.50",
+         "id": 323569640380065317
+      },
+      {
+         "codigo": "A754",
+         "semestre": "7",
+         "nombre": "TEORÍA DE LA INFORMACIÓN",
+         "creditos": "10.50",
+         "id": 560506414326920102
+      },
+      {
+         "codigo": "A755",
+         "semestre": "7",
+         "nombre": "ANÁLISIS COMPLEJO",
+         "creditos": "10.50",
+         "id": 187914607424414965
+      },
+      {
+         "codigo": "A756",
+         "semestre": "7",
+         "nombre": "CÓMPUTO DE ALTO DESEMPEÑO",
+         "creditos": "9.00",
+         "id": 317181312352716548
+      },
+      {
+         "codigo": "A757",
+         "semestre": "7",
+         "nombre": "GEOMETRÍA ALGORÍTMICA",
+         "creditos": "9.00",
+         "id": 618021570270653171
+      },
+      {
+         "codigo": "A758",
+         "semestre": "7",
+         "nombre": "APRENDIZAJE PROFUNDO",
+         "creditos": "9.00",
+         "id": 279649657603764368
+      },
+      {
+         "codigo": "A759",
+         "semestre": "7",
+         "nombre": "DESARROLLO DE APLICACIONES MÓVILES Y WEB",
+         "creditos": "9.00",
+         "id": 586645443756002146
+      },
+      {
+         "codigo": "A760",
+         "semestre": "7",
+         "nombre": "CÓMPUTO EN LA NUBE",
+         "creditos": "9.00",
+         "id": 671106661652367724
+      },
+      {
+         "codigo": "A761",
+         "semestre": "7",
+         "nombre": "FÍSICA COMPUTACIONAL",
+         "creditos": "9.00",
+         "id": 214561868102454550
+      },
+      {
+         "codigo": "A762",
+         "semestre": "7",
+         "nombre": "BIOLOGÍA COMPUTACIONAL",
+         "creditos": "9.00",
+         "id": 264537027666769100
+      },
+      {
+         "codigo": "A763",
+         "semestre": "7",
+         "nombre": "MATRICES ALEATORIAS",
+         "creditos": "9.00",
+         "id": 159865499006693635
+      },
+      {
+         "codigo": "A764",
+         "semestre": "7",
+         "nombre": "ADMINISTRACIÓN DE RIESGOS FINANCIEROS",
+         "creditos": "9.00",
+         "id": 169908184353696354
+      },
+      {
+         "codigo": "A765",
+         "semestre": "7",
+         "nombre": "TEORÍA DE JUEGOS",
+         "creditos": "9.00",
+         "id": 147733012297187231
+      },
+      {
+         "codigo": "A766",
+         "semestre": "7",
+         "nombre": "SEGURIDAD DIGITAL",
+         "creditos": "9.00",
+         "id": 870483993392148344
+      }
+   ]
+}

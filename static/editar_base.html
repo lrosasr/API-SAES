@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+	</head>
+	<body>
+		<!-- Pongan toda la maquetacion dentro de este form
+			y usen los inputs con el mismo name. No cambien los name porque son los
+			campos que usa la API para generar el pdf
+		-->
+		<form id="datos" action="/api/gen_pdf" method="POST" target="_self">
+			<input type="hidden" name="name" value="{{ nombre }}">
+			<input type="hidden" name="ID" value="{{ boleta }}">
+			<input type="hidden" name="phone" value="{{ telefono }}">
+			<input type="hidden" name="personal_email" value="{{ mail }}">
+			<input type="hidden" name="admission_year" value="{{ ingreso_a }}">
+			<input type="hidden" name="credit_total" value="{{ total_creditos }}">
+			<input type="hidden" name="aproved_num" value="{{ acreditadas }}">
+			<input type="hidden" name="number_semester" value="{{ num_periodos }}">
+			<input type="hidden" name="school_email" value="{{ mail_escuela }}">
+			<input type="hidden" name="admission_month" value="{{ ingreso_m }}">
+			<input type="hidden" name="academic_program" value="{{ carrera }}">
+		</form>
+		<button onclick="triggerDownload()">Generar descarga</button>
+		<button onclick="showPDF()">Mostrar PDF en un iframe</button>
+		<input type="text" id="">
+	</body>
+	<script>
+		function triggerDownload(){
+			document.getElementById("datos").submit();
+		};
+		function autocompletarMateria(query){
+			//xhr a /api/autocomplete
+		}
+	</script>
+</html>

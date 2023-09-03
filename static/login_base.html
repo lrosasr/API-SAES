@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<header>
+			<h2 style="margin:0;">1. Ingresa tus datos de acceso del SAES</h2>
+		</header>
+		<main>
+				<section id="captcha-cont">
+					<!--
+					<img src="/static/assets/0.jpeg" id="captcha-img"/>-->
+					<img id="captcha-img"/>
+					<input type="text" id="captcha-input" autocomplete="off" autocorrect="off" spellcheck="false" autocapitalize="on" maxlength="3"><button onclick="main('captcha')" class="boton" style="width:30%;height: 34px;float: right;">Verificar</button>
+				</section>
+			<section class="login-cont">
+				<table>
+					<tr>
+						<td style="text-align: right;">Boleta:</td>
+						<td><input type="text" id="saes_usr" maxlength="13" class="test"></td>
+					</tr>
+					<tr>
+						<td style="text-align: right;">Contraseña:</td>
+						<td><input type="password" id="saes_psw"></td>
+					</tr>
+					<tr>
+						<td id="status-cont" colspan="2">
+							<div id="error"><p style="margin: 0px;">Error: XD</p></div>
+							<!-- aqui poner captcha y errores -->
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2"><div class="boton" id="botonLgn" onclick="main('getID')">Enviar datos</div></td>
+					</tr>
+				</table>
+			</section>
+		</main>
+		<footer>
+			<p>*datos de contacto*, , derechos de redistribucion**</p><p class="cpc_p">Hecho con <span>&hearts;</span> por el <a href="#">Club de Programacion Competitiva ESFM</a></p>
+			<p><em>version 0.0.2 (23/jul/2023)</em> git:<a href="github.com">**poner el hash del ultimo push a master con href al repo**</a></p>
+		</footer>
+	</body>
+	<script>
+		clientID = "";
+
+//	function postAndRedirect(url, data) {
+//   	var form = document.createElement('form');
+//   	document.body.appendChild(form);
+//   	form.target = '_blank';
+//   	form.method = 'post';
+//   	form.action = url;
+//   	for (var name in data) {
+//   		var input = document.createElement('input');
+//   		input.type = 'hidden';
+//   		input.name = name;
+//			input.value = data[name];
+//			form.appendChild(input);
+//		};
+//   	form.submit();
+//   	document.body.removeChild(form);
+//};
+
+		async function xhr(data){
+			let response = await fetch('/xhr', { 
+    			method: 'POST', 
+    			headers: { 'Content-Type': 'application/json' }, 
+    			body: JSON.stringify(data)
+				//mode: same-origin
+				//cache: no-cache
+			});
+			//TODO: Verificar si el response es json u otra cosa distinta, para que no se rompa el main()
+			return {"response":await response.json(), "status":response.status};
+		};
+
+		function mostrarError(info){
+			document.getElementById("captcha-wall").style.visibility = "hidden";
+			let tmp = document.getElementById("error");
+			tmp.style.display = "block";
+			tmp.innerHTML = info;
+		};
+
+		async function main(f=null){
+			switch(f){
+				case "getID": //Obtener ID del server
+					if(document.getElementById("saes_usr").value == "" || document.getElementById("saes_psw").value == ""){
+						mostrarError("Debes escribir tus credenciales de acceso para continuar");
+						return;
+					};
+					let respID = await xhr({});
+					clientID = respID["response"].id;
+					main("wait");
+					break;
+				case "wait": //Rutina de fila
+					respw = await xhr({"id":clientID,"req":"alive"});
+					switch(respw["status"]){
+						case 200: //pasar directo al captcha
+							//TODO: Cuenta regresiva de 20 seg
+							document.getElementById("captcha-img").style.backgroundImage = "url('" + respw["response"].img + "')";
+							document.getElementById("captcha-wall").style.visibility = "visible";
+							break;			
+						case 530: //seguir esperando en la fila y mostrar lugar recibido
+							mostrarError("Espera por favor. Lugar en la fila: " + respw["response"].pos);
+							setTimeout(() => {main("wait")}, 2500);
+							break;
+						case 552:
+							//TODO: EL server no reconoce el ID, recargar pagina(?)
+							break;
+						default:
+							//TODO: Mostrar un mensaje de error generico
+							break;
+					};
+					break;
+				case "captcha":
+					//verificar de nuevo credenciales escritas??
+					//TODO: Verificar que se haya escrito algo en el captcha-input
+					let data = {"id":clientID,"req":"captcha"};
+					data["boleta"] = document.getElementById("saes_usr").value;
+					data["password"] = document.getElementById("saes_psw").value;
+					data["captcha"] = document.getElementById("captcha-input").value;
+					let resp = await xhr(data);
+					if(resp["status"] == 200){
+					//	let iframe = document.getElementById("editar");
+						//iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(resp["response"].html);//renderizar respuesta (editar.html) en un iframe
+						//iframe.src = 'data:text/html;charset=utf-8,' + resp["response"].html;
+					//	document.getElementById("captcha-wall").style.visibility = "hidden";
+						//iframe.style.visibility = "visible";
+						window.location.href="/hoja/" + clientID;
+					}else{
+						mostrarError(resp["response"].error);
+						console.log(resp["status"]);
+						//mostrar el error y reiniciar proceseso
+					};
+					break;
+				default:
+					//main llamado sin argumentos
+					break;
+			}
+		};
+	</script>
+</html>

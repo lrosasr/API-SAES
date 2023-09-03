@@ -1,103 +1,36 @@
 <!DOCTYPE html>
 <html>
-	
-
 	<head>
 		<meta charset="utf-8">
-		<title></title>
-		<style>
-			body{
-				background-color: #808080;
-			}
-			main {
-				margin-left: auto;
-				margin-right: auto;
-				max-width: 80%;
-			}
-			header{
-				text-align: center;
-				margin-bottom: 40px;
-			}
-			section{
-				text-align: center;
-				margin-left: auto;
-				margin-right: auto;
-				width: 90%;
-				background-color: #fff;
-				padding: 30px 70px 10px 70px;
-			}
-			input{
-				border: 0px;
-				box-sizing: border-box;
-			}
-			input:placeholder-shown {
-				border-radius: 10px;
-    			border: 3px solid #fa2053;
-			}
-			table{
-				margin-bottom: 30px;
-				width: 100%;
-				border-collapse: collapse;
-				border: 2px solid #000;
-			}
-			td {
-				padding: 4px 5px 4px 5px;
-			}
-			.cabecera{
-				display: inline-block;
-			}
-			.cabecera p{
-				line-height: 0.5em;
-			}
-			.contenedor{
-				width: 100%;
-			}
-			.nb_cnt td{
-				padding-bottom: 10px;
-			}
-			.nb_cnt input{
-				width: 100%;
-			}
-			.ct_cnt p {
-				display: inline-block;
-				margin: 0px;
-				width: 100%;
-			}
-			.ct_ma input{
-				width:100%;
-			}
-			.ct_ma td{
-				padding-bottom: 5px;
-			}
-			.ct_cnt td {
-				padding-bottom: 10px;
-			}
-			.select_periodo td{
-				background-repeat: no-repeat;
-				background-size: 100% 100%;
-			}
-			.sel_ma input{
-				text-align: center;
-				font-size: 1.5em;
-				width: 50%;
-			}
-			.cociente_inp{
-				text-align: center;
-				width: 100%;
-				margin: 0px;
-				box-sizing: border-box;
-				font-size: 2em;
-			}
-			.tbl_creditos tr td{
-				border: 2px solid #000;
-			}
-		</style>
+		<link rel="preload" href="/static/styles/doc.css" as="style"/>
+		<link rel="preload" as="image" href="/static/assets/1.jpeg">
+		<link rel="preload" as="image" href="/static/assets/0.jpeg">
+		<link rel="stylesheet" href="/static/styles/doc.css">
 	</head>
 	
 	
 	<body>
+		<div class="bar">2. Verifica tu informacion antes de guardar</div>
+		<div class="guardar" onclick="getPDF()"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+			<path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg>
+			<p>GUARDAR</p>
+			<form id="datos" action="/api/gen_pdf" method="POST" target="_self">
+				<input type="hidden" name="name" value="{{ nombre }}">
+				<input type="hidden" name="ID" value="{{ boleta }}">
+				<input type="hidden" name="phone" value="{{ telefono }}">
+				<input type="hidden" name="personal_email" value="{{ mail }}">
+				<input type="hidden" name="admission_year" value="{{ ingreso_a }}">
+				<input type="hidden" name="credit_total" value="{{ total_creditos }}">
+				<input type="hidden" name="aproved_num" value="{{ acreditadas }}">
+				<input type="hidden" name="number_semester" value="{{ num_periodos }}">
+				<input type="hidden" name="school_email" value="{{ mail_escuela }}">
+				<input type="hidden" name="admission_month" value="{{ ingreso_m }}">
+				<input type="hidden" name="academic_program" value="{{ carrera }}">
+			</form>
+		</div>
 		<main>
-			<section>
+			
+			<section class="hoja">
 				<header>
 					<img style="float:left;width: 10%;height: 15%;" src="https://www.ipn.mx/assets/files/imageninstitucional/imagenes/identidad/LOGO-POLIGUINDA-PANTONE222.png"/>
 					<div class="cabecera">
@@ -109,7 +42,22 @@
 					<img style="float: right;width:10%;height: 15%;" src="https://www.esfm.ipn.mx/assets/files/esfm/img/ESCUDO_ESFM.png"/>
 				</header>
 				<div class="contenedor" style="text-align: right;">
-					<p>Ciudad de México a <input type="number" value="-1" style="max-width: 60px;"> de <input type="number" value="-1"> de 2023</p>
+					<p>Ciudad de México a <input type="number" id="dia" style="width: 50px;"> de 
+						<select id="mes" name="mes">
+							<option value="0">enero</option>
+							<option value="1">febrero</option>
+							<option value="2">marzo</option>
+							<option value="3">abril</option>
+							<option value="4">mayo</option>
+							<option value="5">junio</option>
+							<option value="6">julio</option>
+							<option value="7">agosto</option>
+							<option value="8">septiembre</option>
+							<option value="9">octubre</option>
+							<option value="10">noviembre</option>
+							<option value="11">diciembre</option>
+						</select>
+					de <input type="number" id="year" style="width:90px;"></p>
 				</div>
 				<table>
 					<colgroup>
@@ -121,8 +69,8 @@
 						<td style="text-align: left;">Número de Boleta</td>
 					</tr>
 					<tr class="nb_cnt">
-						<td><input type="text" name="nombre" placeholder="Nombre completo"></td>
-						<td><input type="text" name="boleta" placeholder="# de boleta"></td>
+						<td><input type="text" name="nombre" placeholder="Nombre completo" id="0" value="{{ nombre }}"></td>
+						<td><input type="text" name="boleta" placeholder="# de boleta" id="1" value="{{ boleta }}"></td>
 					</tr>
 				</table>
 
@@ -139,8 +87,8 @@
 						<td style="padding-right:0px;"><input type="text" style="text-align:right;width:100%;" placeholder="usuario"/></td>
 						<td style="padding-left:0px;text-align: left;">@alumno.ipn.mx</td>
 						<td style="text-align: right;"><p>Personal:</p></td>
-						<td><input style="width:100%;" type="text" placeholder="usuario@ejemplo.com"></td>
-						<td><input type="text" style="width:100%;"placeholder=" "></td>
+						<td><input style="width:100%;" type="text" placeholder="usuario@ejemplo.com" id="3" value="{{ mail }}"></td>
+						<td><input type="text" style="width:100%;"placeholder=" tel" id="2" value="{{ telefono }}"></td>
 					</tr>
 				</table>
 
@@ -155,7 +103,7 @@
 						<td style="text-align: right;">Mes:</td>
 						<td><input type="text" placeholder=" "/></td>
 						<td style="text-align: right;">Año:</td>
-						<td><input type="text" placeholder=" "/></td>
+						<td><input type="text" placeholder=" " value="{{ ingreso_a }}"/></td>
 					</tr>
 				</table>
 
@@ -165,7 +113,7 @@
 					<col/>
 					<col span="12" style="border-left: 2px solid #000;width: 4%;"/>
 					</colgroup>
-					<tr onclick="selecPeriodo(this, event.target.dataset.periodo);" class="select_periodo">
+					<tr onclick="selecPeriodo(this, event.target.dataset.periodo);" class="select_periodo" id="tr_periodo">
 						<td><input type="hidden" name="num_periodos" value="0"/>Click en el numero de periodos escolares desde el ingreso al programa académico (no contar bajas temporales)</td>
 						<td data-periodo="1">1</td>
 						<td data-periodo="2">2</td>
@@ -185,7 +133,7 @@
 				<table>
 					<tr class="sel_ma">
 						<td>Número de unidades de aprendizaje acreditadas</td>
-						<td style="border-left:2px solid #000;"><input type="text" placeholder="#" name="mat_acreditadas" oninput="calcCociente();"></td>
+						<td style="border-left:2px solid #000;"><input type="text" placeholder="#" name="mat_acreditadas" oninput="calcCociente();" value="{{ acreditadas }}"></td>
 					</tr>
 				</table>
 
@@ -199,7 +147,7 @@
 						<tr>
 							<td style="border-bottom:1px solid #000;">Número de unidades de aprendizaje acreditadas</td>
 							<td style="font-size:2em;" rowspan="2">=</td>
-							<td id="td_ua" style="border-bottom:1px solid #000;">0</td>
+							<td id="td_ua" style="border-bottom:1px solid #000;">{{ acreditadas }}</td>
 							<td style="font-size:2em;" rowspan="2">=</td>
 							<td style="border: 3px solid #000;" rowspan="2"><input type="text" name="cociente" value="?" class="cociente_inp"></td>
 							<td style="vertical-align: middle;"><button>calcular</button></td>
@@ -218,13 +166,13 @@
 						<col style="width: 7%;"/>
 					</colgroup>
 					<tr>
-						<td colspan="6">Marque en el recuadro su programa académico (especialidad)</td>
+						<td colspan="6">Click en el recuadro de su programa académico (especialidad)</td>
 					</tr>
 					<tr>
-						<td rowspan="2">#</td>
+						<td rowspan="2" class="esp_cnt"><div data-carrera="1" onclick="selecCarrera(this.dataset.carrera)" class="esp_chk"></div></td>
 						<td rowspan="2">Tronco común de la L.F. y M.</td>
 						<td>Créditos totales: 312</td>
-						<td rowspan="2">#</td>
+						<td rowspan="2" class="esp_cnt"><div data-carrera="1.4" onclick="selecCarrera(this.dataset.carrera)" class="esp_chk"></div></td>
 						<td rowspan="2">Opción en Matemática Educativa</td>
 						<td>Créditos totales: 318</td>
 					</tr>
@@ -233,10 +181,10 @@
 						<td>Carga media: 40</td>
 					</tr>
 					<tr>
-						<td rowspan="2">#</td>
+						<td rowspan="2" class="esp_cnt"><div data-carrera="1.1" onclick="selecCarrera(this.dataset.carrera)" class="esp_chk"></div></td>
 						<td rowspan="2">Opción en Matemáticas</td>
 						<td>Créditos totales:312</td>
-						<td rowspan="2">#</td>
+						<td rowspan="2" class="esp_cnt"><div data-carrera="2" onclick="selecCarrera(this.dataset.carrera)" class="esp_chk"></div></td>
 						<td rowspan="2">Ing. Matemática</td>
 						<td>Créditos totales: 336</td>
 					</tr>
@@ -245,10 +193,10 @@
 						<td>Carga media: 42</td>
 					</tr>
 					<tr>
-						<td rowspan="2">#</td>
+						<td rowspan="2" class="esp_cnt"><div data-carrera="1.2" onclick="selecCarrera(this.dataset.carrera)" class="esp_chk"></div></td>
 						<td rowspan="2">Opción en Física</td>
 						<td>Créditos totales:316</td>
-						<td rowspan="2">#</td>
+						<td rowspan="2" class="esp_cnt"><div data-carrera="3" onclick="selecCarrera(this.dataset.carrera)" class="esp_chk"></div></td>
 						<td rowspan="2">Matemática Algorítmica</td>
 						<td>Créditos totales: 394</td>
 					</tr>
@@ -257,7 +205,7 @@
 						<td>Carga media: 49</td>
 					</tr>
 					<tr>
-						<td rowspan="2">#</td>
+						<td rowspan="2" class="esp_cnt"><div data-carrera="1.3" onclick="selecCarrera(this.dataset.carrera)" class="esp_chk"></div></td>
 						<td rowspan="2">Opción en Ing. Nuclear</td>
 						<td>Créditos totales: 309</td>
 						<td rowspan="2" colspan="3"></td>
@@ -270,9 +218,42 @@
 				<table>
 					<tr>
 						<td style="text-align:left;">Total de créditos obtenidos hasta el momento:</td>
-						<td style="border-left: 2px solid #000;"><input type="text" placeholder=" " style="width:100%;"></td>
+						<td style="border-left: 2px solid #000;"><input type="text" placeholder=" " style="width:100%;" value="{{ total_creditos }}"></td>
 					</tr>
 				</table>
+
+
+				<table class="tbl_ind">
+					<colgroup>
+					<col>
+					<col span="3">
+					<col style="width:1%;border: 2px solid #000;">
+					<col style="width: 1%;">
+					</colgroup>
+					<tr style="border: 2px solid #000;">
+						<td colspan="4" style="font-size:1.1em;">Cálculo del indicador I, fórmula: </td>
+						<td>Valor numérico de I</td>
+						<td colspan="2" style="font-size:1.1em;">La reinscripción continúa si:</td>
+					</tr>
+					<tr>
+						<td rowspan="3" style="white-space: nowrap;font-size:1.5em;">I=</td>
+						<td>Total de créditos del programa académico</td>
+						<td>-</td>
+						<td>Total de créditos obtenidos hasta el momento</td>
+						<td rowspan="3"></td>
+						<td rowspan="3" style="white-space: nowrap;font-size:1.5em;">I ≤</td>
+						<td rowspan="3">Carga media de su programa académico</td>
+					</tr>
+					<tr>
+						<td colspan="3"><hr style="width: 90%;"></td>
+					</tr>
+					<tr>
+						<!--<td></td>-->
+						<td colspan="3">12 − Cantidad de periodos escolares desde el ingreso</td>
+						
+					</tr>
+				</table>
+
 
 
 			</section>
@@ -283,6 +264,8 @@
 		</main>
 	</body>
 	<script>
+		const fecha = new Date();
+
 		function calcCociente(){
 			let a = document.getElementsByName("mat_acreditadas")[0].value;
 			let b = document.getElementsByName("num_periodos")[0].value;
@@ -295,19 +278,57 @@
 
 		function selecPeriodo(e,num){
 			if(num===undefined){return;};
+			if(num == 0){return;}
+			if(typeof(e) != "object"){
+				e = document.getElementById("tr_periodo")
+			}
 			document.getElementById("td_pe").innerHTML = num;
-			elems = e.children;
+			let elems = e.children;
 			document.getElementsByName("num_periodos")[0].value = num;
 			calcCociente()
 			for(let i=1;i<=12;i++){
+				elems[i].style.border = "2px solid #000"
 				if(i<=num){
 					//seleccionar todos hasta num
-					elems[i].style.backgroundImage = "url('assets/1.jpeg')";
+					elems[i].style.backgroundImage = "url('/static/assets/1.jpeg')";
 				}else{
 					//hacer algo con los restantes
-					elems[i].style.backgroundImage = "url('assets/0.jpeg')";
+					elems[i].style.backgroundImage = "url('/static/assets/0.jpeg')";
 				};
 			};
 		};
+		function selecCarrera(num){
+			//alert(num);
+			//console.log(document.getElementsByClassName("esp_chk"))
+			Object.entries(document.getElementsByClassName("esp_chk")).forEach(function(element) {
+				element[1].style.border = "3px solid #000";
+				if(element[1].dataset.carrera == num){
+					element[1].style.backgroundImage = "url('/static/assets/1.jpeg')";
+				}else{
+					element[1].style.backgroundImage = "url('/static/assets/0.jpeg')";
+				};
+			});
+		};
+
+		function getPDF(){
+			let form = document.getElementById("datos");
+			form.submit();
+			//alert("TODO: Enviar al navegador el PDF generado en memoria")
+			//let link = document.createElement("a");
+    		//link.download = name;
+    		//link.href = uri;
+    		//link.click();
+			//eliminar link
+			//mostrar boton ir al inicio oseguir editango timeout 6 seg
+		}
+
+		window.addEventListener('load', function () {
+			document.getElementById("dia").value = fecha.getDate();
+			document.getElementById("year").value = fecha.getFullYear();
+			document.getElementById("mes").value = fecha.getMonth();
+			selecPeriodo(undefined, "{{ num_periodos }}");
+			calcCociente()
+		})
+
 	</script>
 </html>
