@@ -72,7 +72,7 @@ class main:
         self.can.drawString(360, 525, info['admission_month'])
         self.can.drawString(475, 525, info['admission_year'])
         self.can.setFont(font, 20)
-        self.can.drawString(semester_position[info['number_semester']], 480, 'X')
+        #self.can.drawString(semester_position[info['number_semester']], 480, 'X')
         self.can.setFont(font, 10)
         self.can.drawString(430, 435, str(info['aproved_num']))
         #self.can.drawString(480, 395, str((info['aproved_num']/info['number_semester'])))

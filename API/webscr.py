@@ -16,7 +16,7 @@ class main:
 	def limpiarNavegador(self):
 		#TODO: Limpiar cookies e historial
 		self.navegador.delete_all_cookies()
-	def setNav(self, name, headless=True)
+	def setNav(self, name, headless=True):
 		options = Options()
 		options.headless = headless
 		match(name):

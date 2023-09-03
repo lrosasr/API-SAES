@@ -79,8 +79,9 @@ def esta_es_la_api(req_type=""): # gen_pdf(datos) | autocomplete(string parcial)
 				dato = request.form.get(campo)
 				if dato:
 					req_data[campo] = dato
-					continue
-				return app.send_static_file('peticion_invalida.html'), 500
+				else:
+					req_data[campo] = "PENDIENTE"
+				#return app.send_static_file('peticion_invalida.html'), 500
 			#TODO:Poner esto dentro de un try except por si acaso
 			buffer = generar_pdf().crear_pdf_carga_ac(info=req_data) #objeto stringIO
 			resp = make_response(buffer.getvalue())
@@ -92,7 +93,7 @@ def esta_es_la_api(req_type=""): # gen_pdf(datos) | autocomplete(string parcial)
 		case("autocomplete"):
 			return None
 		case("leer_saes"):
-		return None
+			return None
 	#if request = GET
 	#    return send_file(
    #     buffer,
@@ -141,12 +142,12 @@ def index_login():
 					#r = quote(render_template('editar.html',\
 					#	nombre=d[0],boleta=d[1],telefono=d[2],mail=d[3],ingreso_a=d[1][0:4], total_creditos=d[7],\
 					#	acreditadas=d[6]))
-					#fila.clientes[data.get("id")].append(\
-					r = quote(render_template('editar_base.html',\
+					fila.clientes[data.get("id")].append(render_template('editar.html',\
+					#r = quote(render_template('editar_base.html',\
 							nombre=d[0],boleta=d[1],telefono=d[2],mail=d[3],ingreso_a=d[1][0:4], total_creditos=d[7],\
 							acreditadas=d[6],num_periodos=d[5]))
-					return jsonify({"html":r}), 200
-					#return jsonify({"html":"ok"}), 200
+					#return jsonify({"html":r}), 200
+					return jsonify({"html":"ok"}), 200
 				case _ :
 					print("default")
 					return ""
@@ -160,18 +161,18 @@ def index_login():
 
 
 #TODO: Aceptar peticion post para que los ids temporales no se queden el historial
-#@app.route("/hoja", methods = ['GET'])
-#@app.route("/hoja/<cliente_id>", methods = ['GET'])
-#def hoja_inscripcion(cliente_id=""):
-#	if cliente_id == "":
-#		return render_template("editar.html", \
-#		nombre="",boleta="",telefono="",num_periodos=0) 
-#	if cliente_id in fila.clientes:
-#		print(cliente_id)
-#		render_template_temp = fila.clientes[cliente_id][2]
-#		fila.eliminar(cliente_id)
-#		return render_template_temp
-#	return app.send_static_file('peticion_invalida.html'), 500
+@app.route("/hoja", methods = ['GET'])
+@app.route("/hoja/<cliente_id>", methods = ['GET'])
+def hoja_inscripcion(cliente_id=""):
+	if cliente_id == "":
+		return render_template("editar.html", \
+		nombre="",boleta="",telefono="",num_periodos=0) 
+	if cliente_id in fila.clientes:
+		print(cliente_id)
+		render_template_temp = fila.clientes[cliente_id][2]
+		fila.eliminar(cliente_id)
+		return render_template_temp
+	return app.send_static_file('peticion_invalida.html'), 500
 
 @app.route("/test")
 def testing_api():

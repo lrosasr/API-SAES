@@ -5,6 +5,7 @@
 		<link rel="preload" href="/static/styles/doc.css" as="style"/>
 		<link rel="preload" as="image" href="/static/assets/1.jpeg">
 		<link rel="preload" as="image" href="/static/assets/0.jpeg">
+		<link rel="stylesheet" href="/static/styles/doc.css">
 	</head>
 	
 	
@@ -13,7 +14,7 @@
 		<div class="guardar" onclick="getPDF()"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
 			<path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg>
 			<p>GUARDAR</p>
-			<form id="datos" action="/api/gen_pdf" method="POST">
+			<form id="datos" action="/api/gen_pdf" method="POST" target="_self">
 				<input type="hidden" name="name" value="{{ nombre }}">
 				<input type="hidden" name="ID" value="{{ boleta }}">
 				<input type="hidden" name="phone" value="{{ telefono }}">
@@ -310,7 +311,9 @@
 		};
 
 		function getPDF(){
-			alert("TODO: Enviar al navegador el PDF generado en memoria")
+			let form = document.getElementById("datos");
+			form.submit();
+			//alert("TODO: Enviar al navegador el PDF generado en memoria")
 			//let link = document.createElement("a");
     		//link.download = name;
     		//link.href = uri;
